@@ -1,0 +1,72 @@
+
+design poster and cups
+
+design newsletter template mail.
+add fucntionlity to add newletter subscriptoin form on the website--------------use mailchimp to manage email subscription
+
+
+add functionality to show debt/equity and current ratio from 0 to 10 in filter.php , take bhai help in this-------
+
+design t-shirt
+design cup
+
+add sales in the list of parameters - filter.php - need help of bhai to customized filter range from 0 to 1 lakh cr.add functiionbality to filter by sales-----------
+
+add investor education section
+
+
+add fucntionality to send newsletter mails to user (need to get user list from somewhere) via mailchimp or some digital mailer , see safal or bigbasket.com-----------
+
+send mail to contact using mail chimp- one time
+
+
+add fucntionality to send mail to my gmail  when user add any comment on already analyzed companies
+
+
+add fucntionality so that used can share the admin analysis via mail to his friends------------
+Search engine optimization-------------sharethis
+
+
+you can make can i invest and steps page using the talk boxes used in poster-----
+
+
+
+
+
+we should show consolidated data on all pages , including filter and analyze sheet.
+Currently only standalone data is considered.
+
+currently filter.php does not consider banks data , moreover ratios are not available for banks
+
+for some comapanies fy12 data is not updated so filter.php is returing zero results as in query we have mentioned search year as 12
+
+add industry type in filter.php
+
+add your articles on ezinearticles.com/
+
+add your profile on linked in
+
+use subscriptions of mailchimp
+
+add feedblitz
+
+google keyword tool - seo optimiidomain - 
+
+seo optimization - url should be like http://pupone.com/AnalyzedCompanies.php/mindtree instead of http://pupone.com/AnalyzedCompanies.php?frommyaccount=Y&number=6213
+
+
+add email page , facebook,twitter -http://sharethis.com
+------------------------------
+
+
+back button on analyze next page - data of analyze next page getting lost
+
+add some already filtered companies
+
+
+------------------------------------
+
+how to make sure that mails from pupone does not go to spam
+
+
+add twitter page

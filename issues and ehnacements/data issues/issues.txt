@@ -1,0 +1,8 @@
+yearly data for sales , op and eps will be wrong for bankes as fields like profit and sales is not present in yearly results page
+data on company details page is wrong for sun pharma
+
+not showing consolidated data - can be added later , one more problem here that in MC - for profit and loss only standalone
+data is present.So how will you show consolited data on profit and loss and balance sheet page
+
+
+profit and loss page failing for sun polytron industries 

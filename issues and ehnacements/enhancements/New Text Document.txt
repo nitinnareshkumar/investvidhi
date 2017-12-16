@@ -1,0 +1,40 @@
+
+add blog on blogger
+add twitter page
+
+add iframe to add video tutorials , may be from khan academy,
+for profit and loss statement and various ratios
+
+add xtranormal video, it converts text into videos , you can add introduction , steps of investments and help of various parameters like what is d/e ratio
+
+on the summary page ask user to give overall rating to the company - on nasdaq website rating given by all users 
+is displayed.
+so here we can display that 2 user gave 4 ratinig , 3 user gave 3 rating 
+
+
+add functionality to display date when company was analysed , display this date on listanalyzedcompanies.php
+
+email notification should have images , refer to forgot password mail from eduarrow
+
+add sample analysis for great companies , infosys from 2000-2005 , titan from 2000 to 2010 , taco bell, mcdonalds etc
+use heading field of master analyze table
+
+add article section , we should be able to add and show articles
+
+add industry type drop down on filter page
+
+add fucntionlity to show historic pe ratio ( we get get eps from Moneycontrol and avg price
+for the year from Bse website)
+
+add video using cam studio which can be used on "steps on investment" page , video should tell
+how to follow the said steps 
+
+add equity dividend in profit_loss and profit_loss_banks, it will show where retained earning is utlized -
+
+
+add functionality so that user can save the admin sheets to his account , means already analysed companies can be moved to my account section of the user
+
+
+user should not be able to submit beofre giving overall rating
+
+when rating 25 parameters , cloud is not appearing good.

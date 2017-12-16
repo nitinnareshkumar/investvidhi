@@ -1,0 +1,534 @@
+Company details
+------------------------------
+Sales
+Sales, Revenue is realized when goods and services are sold by the company.
+Great company generally shows consistently increasing sales figures , growing at a rate of 12-20%.<br>
+We can divide company into various types like low Growth, Stalwarts, Fast Growers , Turn arounds , Cyclicals based on its growth rate.<br>
+<strong>Low Growth</strong> - Big Companies which are growing at a low rate , 3 to 5% <br>
+<strong>Stalwarts</strong> - Big companies which are growing at a rate of 12-20%.These are generaly powerful companies with stable business model.E.g Infosys , TCS, Cipla , Sun Pharma , Tata Motors , ICICI Bank etc.<br>
+<strong>Fast Growers</strong> - Companies which are growing at more than 20% annually.These companies are in their early 
+stages , some of them will become Stalwarts , Some of them may not be able to sustain and may become a mediocare company.These companies are most risky to invest in but have the capability to offer maximum returns on investments.E.g Jubiliant foodworks, Thangamayil , Baja Finance, Manappuram Finance<br>
+<strong>Turn Arounds</strong> - Companies which which were doing good earlier but now struggling or Company which were
+in bad condition earlier but are now recovering can be put in this category.E.g Satyam is a example of company which was struggling in 2009 but it has start showing recovery from 2012.<Br>
+Knowing the growth type of the company helps us to calculate the potential upside in the investment.
+For e,g stalwarts may give 20% returns annuals and investment is less risky , on the other hand Fast grower can become  a multibagger in span of 3-4 years but he risk is higher.
+
+
+
+Gross profit is the difference between sales and the cost of sales.Cost of sales is the cost of raw material and labor used to make the goods or services.It does not include cost like selling and administrative cost, depreciation , interest etc.<br>
+<strong>GP</strong> = Sales - Cost of goods<br>
+Gross profit of colgate in 2011 was<br>
+<strong>GP</strong> = sales - raw materials - power & Fuel - Employee Cost - Other Manufacuting expenses<br>
+   = 2351 - 911 -14-193- 124 = 1109 cr<br>
+Great companies show consistently increasing Gross Profit years after years.
+
+<strong>Gross Profit(GP) Margin</strong> = GP/Sales 
+For colgate india FY11 = GP/Sales =  1109/2381 = 45%<br>
+GP Margin varies from industry to infustry.Companies in Service industry may have high GP Margin like<br> infosys has GP margin of 45 , TCS has around 40.<br>
+Automobiles companies like Maruti has GP margin of 16-17%.<br>
+For Titan it is 20% , as cost of raw material (gold) is very high in this case.<br>
+<strong>Companies with GP Margin of 40% or better tend to be companies with some sort of durable competitve advantage.</strong>
+GP margin below 20% is a indicator of very competitive industry, where no one company can create a sustainable competitive advantage over others.<br>
+Great companies generally show consistent GP margin years over years.You should avoid companies which
+shows lot of variations on GP margins unless you understand the company business very well and if you 
+have got an edge in the industry.
+
+
+SGA means Selling , General and Admin Expenses<br>
+Under which company reports its cost for direct and indirect selling expenses and all general and administrative expenses.These includes management salaries , advertising travel costs . legal fees, commissions, all payroll cost.<br>
+<strong>SGA%</strong> = SGA cost /Gross Profit<br>
+Infosys SGA% cost is 16%, Titan 37%, Colgate 42%.Maruti Suzuki 14-23%.<br>
+Great companies do not show much variance in SGA cost , you can refer last 5 year data for these companies. <br>
+<strong>Ideally SGA cost should be less than 30% of Gross profit.</strong>
+
+Depreciation 
+All machinery and builings eventually wear out over time.This wearing out is recognized on the income statement as depreciation.
+For e.g a manufacutring company buys building, plant and machinery for 100Cr, assume that life expectancy is 10 years for property , plant and machines.
+Now (100/10) 10 Cr will be deducted as deprecation amount from income statement.After 10 years company has to buy new building plant and machinery with additional cost.Deprecaition cost vary from industry and tends to be high for manufacturing industry and low for service industry.<br>
+<strong>Depreciation %</strong> = Depreciation/Gross profit.<br>
+Cipla has Dep% of 8 , Titan 2-4%, Infosys 5-8%, Maruti Suzuki 14-20%.<br>
+<strong>Great companies generally have less depreciation and is less than 7-8%.</strong><br>
+
+Operating Profit Margin 
+Operating profit or operating income is a measure of a firm's profit that excludes interest and income tax expenses.It represent the money which
+firm makes from operations.<br>
+<strong>Operating Profit (OP) = Revenue – Operating expenses.</strong><br>
+<strong>Operating expenses = SGA + Depreciation +  R&D Cost.</strong><br>
+For e.g Suppose Company A has sale of 100 Cr, Cost of Goods - 60Cr , SGA - 10Cr, Depreciation - 5Cr , R&D expense - 5Cr<br>
+Then OP Profit = Sale - Cost of Goods - SGA -  Depreciation  - R&D expense <br>
+        = (100 - 60 - 10 - 5 - 5 )/100
+        = 20Cr<br>
+<strong>OP Margin = OP / sales *100 = (20/100)*100 = 20%</strong><br>
+In a given industry , Company With greater OP Margin is supposed to be better as the company is generating greater amount of income from Operations.<br>
+For e.g in IT industry Infosys has OP margin of 32-37% , TCS  27-34% , HCL 20% , Mindtree 13%.<br>
+In 2 wheeler industry , Hero MotroCorp has OP Margin 11-16 in lasy 3 years whereas Bajaj Auto shows 19-24 in last 3 years.<br>
+<strong>Great companies show steady Operating Profit Margins years after years and their OP Margin are generally best in the industry</strong>
+
+
+Interest expense
+Interest expense is due the the interest that company has to pay on the debt present on balance sheet.Company may need debt for working capital or may need additional money for increasing capacity.For this debt , company has to pay interest.This interest expense is deducted from Profit of the company.
+Interest expense can  depend on industry type.Automobilies companies like Tata Motors , Maruti need large plants and machinery and hence debt needs to be taken.<br>
+<strong>Good companies generally have Interest expense less than 15% of Operating Profit.</strong>This is not applicable for Banks and Financial institutions as their business in taking debt at low cost and giving loan at higher interest rate.<br>
+<strong>Interest % = Interest Cost / Operating Profit</strong><br>
+Colgate has interest expense 0-2%, Tata Motors 37% for Fy11 , Titan used to pay 20% of its operating income in debt but now this cost has reduced to 8%.
+<strong>In any given industry the company with the lowest ratio of interest payment to operating income is usually the company with competitive advantage.</strong>
+
+PBT- 
+A profitability measure that looks at a company's profits before the company has to pay corporate income tax. This measure deducts all expenses from revenue including interest expenses and operating expenses, but it leaves out the payment of tax. <br>
+<strong>Good companies show consistent Profit before tax earnings which increases year after year.</strong><br>
+Infosys PBT has been increasing at a rate of 18% for last 5 years , for TCS it is 20% , for Colgate it is 17% , for Titan it is 36%.
+While investing we should looks for companies which have good track of last 5 years earnings before tax.
+
+
+
+Net Profit
+Net Profit or Net Income is a measure of the profitability of a venture after accounting for all costs.<br>
+<strong>Net Profit =  Sales - Cost of Goods - SGA - Depreciation - Interest - Tax.</strong><br>
+<strong>Good companies show consistent Net Profit which increases year after year.</strong><br>
+Titan's Net Profit is increasing at a average rate of 34% for last 5 years.For Infosys it is 14% .For Jubiliant foodworks 
+it increased at rate of 100% between 2007 and 2011.<br>
+For considering Investment in any given company , please check last 5 years net profit of the company.<br>
+Note that if company buy back its shares than its Net Profit may appear less compared to last years but
+ it is very good condition which reflect that company is doing good and it has enough cash to buy back its shares.<br>
+You can check if company has bought it shares back by checking number of shares in Balance sheet for previous years.
+
+Net Profit Margin 
+Net Profit or Net Income is a measure of the profitability of a venture after accounting for all costs.<br>
+<strong>Net Profit =  Sales - Cost of Goods - SGA - Depreciation - Interest - Tax.</strong><br>
+<strong>NP Margin = Net Profit/Sales * 100</strong><br>
+For e.g is a Company is doing sales of 100Cr and Net profit is 22Cr then it NP Margin is 22%.<br>
+Infosys NP Margin is 27% , Colgate 15%, Maruti Suzuki 5-7% , Eclerx Services 34% in Fy11.<br>
+If a Company is Showing NP Margin greater than 15% consistently for last 5 years then it is very much likely that this company has some 
+competitive advantage.<br>
+If NP Margin is less than 10% then company is either in very competitive industry or it is in industry which requires lot of cost on raw material , property,
+plant and machinary or it may be spending lot of money on R&D.<br>
+For e.g Titan has NP Margin of 6%.It is because that main source of Income for Titan is its jewellery business in which the cost of raw material , which
+is gold or diamond, is very high.So Despite being a Great Company , it has NP Margin of 6%.<br>
+NP Margin can very from industry to industry, for e.g Pharma and IT companies has high NP Margin but Automobiles and Heavy Machine industry has low NP Margin.
+<strong>The key is to look for the company with one of the best NP margin in the industry and moreover consistency in NP Margins for 5-10 years.</strong>
+
+Equity Shares.
+It reflects the number of shares that company has issued.We can calculate EPS (Earning per share ) by dividing 
+Net Profit by Number of shares.Here we should see if the Company has issued more shares in the past ,or whether
+ there has been any splits in shares or whther company has given any bonus shares.<br>
+Bonus and Split do not have negative impact on shareholders but if Company keeps on issuing more and more shares
+ to meet its capital needs then the company may be in the business which is capital intensive , requires lot of 
+money for meeting working capital needs and for plants and equipments.The Company is generating less cash than 
+what is needed.We should be very cautious in investing these companies.
+
+Equity Dividend
+Dividends are payments made by a corporation to its shareholder members. It is the portion of corporate profits paid 
+out to stockholders.When a corporation earns a profit or surplus, that money can be put to two uses: it can either be
+ re-invested in the business (called retained earnings), or it can be distributed to shareholders. There are two ways
+ to distribute cash to shareholders: share repurchases or dividends. Many corporations retain a portion of their earnings
+ and pay the remainder as a dividend.<br>
+We shoud check the dividend history to see if company has been regularly paying dividends to its shareholders.
+Many companies prefer not to give dividends rather they spend the excess money on future expansions which should
+be fine till the time the company is able to generate good return on incremental capital invested in the business.<br>
+But when we are investing in company for its dividends then we should also check dividend yield.<br>
+If face value of Company's share is 10 Rs and stock market price is 800 Rs.<br>
+So if a company is paying 100% dividend which is 10 Rs then the yield on dividend will be 10/800 = 1.25% as this is
+the value which we are getting on our investment of 800 Rs per share.
+
+EPS 
+Earning per Share is equal to Net Profit divided by number of outstanding shares.<br>
+<strong>EPS = Net Profit / Number of outstanding shares</strong>
+For e.g Titan has profit of 600 Cr in Fy12 , it has 88.77 Cr outstanding shares ,so EPS <br>
+= 600/88.77 = 6.75 Rs<br>
+We should look for atleast last 5 years of EPS figure to check if the company has competitive advantage.
+EPS is impacted by bonus shares , splits , issuance of more numbers of shares.<br>
+Bonus and Split do not have negative impact on shareholders but if Company keeps on issuing more and more shares
+to meet its capital needs then the company may be in the business which is capital intensive , requires lot of 
+money for meeting working capital needs and for plants and equipments.The Company is generating less cash than 
+what is needed.We should be very cautious in investing these companies.
+
+------------------------------------------------------------------------------------
+Balance sheet
+
+Equity Share Capital
+It  refers to the portion of a company's equity that has been obtained  by trading stock to a shareholder for cash or an equivalent item of capital value.
+EPS is impacted by bonus shares , share buyback , issuance of more numbers of shares.<br>
+Splits do not have negative impact on shareholders but if Company keeps on issuing more and more shares
+to meet its capital needs then the company may be in the business which is capital intensive , requires lot of 
+money for meeting working capital needs and for plants and equipments.The Company is generating less cash than 
+what is needed.We should be very cautious in investing these companies.
+
+
+Reserves 
+Company's Net Profit can either be paid out as dividends or can be used to keep the business growing.
+It can also be used for buy back the shares.When it is retained in the business, it is added to balance sheet under
+shareholder's equity, called Retained Earnings or Reserves.<br>
+<strong>Reserves (current year) = Reserves (previous year) + Net profit - Dividend</strong><br>
+If company is making profit after paying dividends then reserves will keep on increasing year after year.<br>
+If the company makes loss in a year and this loss is subtracted from reserves causing depletion of reserves.<br>
+<strong>Analyzing the growth of retained earing is a important factor while analyzing the company.</strong><br>
+Titan's Reserves have been increasing at average rate of 36% for last 5 years , for Colgate it is 30% , Maruti - 20%.<br>
+Reserves can also be increased when one company acquires another company , in this case retained earnings of both the companies 
+are added to the balance sheet.
+
+Networth
+When we subtract all liabilities of the company from all assets you we get Net Worth.It is also called ShareHolder's equity.
+This is the amount of money that company's owners /shareholders have intially put in and have left in the business to keep
+it running.<br>
+<strong>Networth = Total Assets - Total Liabilities</strong><br>
+OR<br>
+<strong>Networth = Equity Share Capital + Reserves.</strong><br>
+<strong>Analyzing the growth of Networth is a one of the factor while analyzing the company.</strong><br>
+Titan's Networth has been increasing at a rate of 35% for last 4 years , Maruti 19%.For Ashok Leyland it is 6% for last 3 years.
+
+Debt
+Debt is the money taken by company for meeting its working capital , future expansion, aquisitions.
+It can be a short term debt or long term debt.<br>
+Short term debt is money that is owned by the corporation and due within the year.It can be commorcial paper and short
+term bank loans.It is mainly used for meeting working capital needs.<br>
+Long term debt is the debt which has maturity of more than a year.It us usually used for capital expansion and acquisitions.<br>
+<strong>Companies with durable competitive advantage often carry little or no long term debt.</strong>
+This is because these companies are so profitable that they are self- financing when they need to expand the business or make 
+acquisitions , so there is never a need to borrow large sum of money.<br>
+<strong>If debt is there then debt/net earning should be less than 6.</strong><br>
+We should also check the rate of growth of debt on yearly basis , this should ideally be less than growth rate of Net profit.
+
+
+Gross Block
+Company's manufacturing plant, equipment and its property , and their collective value are carried on the balance sheet as 
+an asset.They are carried at their original cost.<br>
+Companies that don't have a long term competitive advantage are faced with constant competition , which means that they 
+constantly have to update their manufacturing facilities to try to stay in competition , often before such equipment is 
+worn out.<br>
+Great Companies do not have to constantly upgrade their plant and equipments to stay competitive.<br>
+<strong>We should avoid companies that needs to contantly spent lot of money on plant and equipments.</strong>
+
+Depreciation
+All machinery and builings eventually wear out over time.This wearing out is recognized as depreciation.<br>
+For e.g a manufacutring company buys building, plant and machinery for 100Cr, assume that life expectancy is 10 years for property , plant and machines.<br>
+Now (100/10) 10 Cr will be deducted as deprecation amount from income statement and in balace sheet 10Cr will be subtracted from Gross block as depreciation after one year.<br>So Net Block after first year will become :<br>
+<strong>Net Block = Gross Block - Depreciation </strong><br>
+         	 = 100 - 10 = 90 <br>
+
+After second year , 10 Cr + 10Cr will be subtracted from the Gross block.So the Accumulated depreciation for second year will be 20Cr, for third year it will be 30Cr.Here we have assumed that Company has not spend any new money on property , plant and equipment after first year till 10 years.<br>
+
+Capital Work in Progress
+Capital Work in Progress is referred to as Assets under Construction and are represented by a specific Asset class.<br>
+It is an asset on the balance sheet that is not considered to be a final product, but must still be accounted for because funds have been invested toward its production. It is thus a work that has not been completed but has already incurred a capital investment<br>
+Usually depreciation is not charged on Capital WIP.<br>
+Following are some examples of capital WIP: <br>
+- A machinery under installation <br>
+- A building under construction<br>
+
+Investments
+Company can use it retained earnings/ reserves for capacity expansion Or it can use access cash to invest.<br>
+It can invest it long term bonds, stocks , real estate ,fixed deposits or can acquire other companies.<br>
+Long term investment can also reflect investment in the company's affiliates and subsidiaries.<br>
+A company long term investments can tell us a lot about the investment mind-set of top management.<br>
+Do they invest in business that have durable competitive advantage or do they invest in business that
+are in highly competitive markets?<br>
+<strong>Beware of companies that use excess cash to make ambitious acquisitions as it can erode the entire reserves of the company.</strong><br>
+We should also look at the revenue , profitablity , return on equity and competitive advantage of the acquired company.<br>
+You can get details of long term investment in the balance sheet of the company.<br> 
+
+Inventory
+Inventory is the company's product that it has warehoused to sell to its vendors.Since a balance sheet is always for a specific day,<br>
+the amount found on the balance sheet for inventory is the value of the company's inventory on that date.<br>
+<strong>Cost of inventory mentioned on balance sheet may not be correct as the product might have become obsolete/outdated.</strong><br>
+For e.g if the Garment company shows inventory of 400Cr then we may not be rely on this number as some of the Garments may have become 
+obsolete and have no significance value but on balance sheet it is shown of full value.On the other hand if we take company in Jewellery 
+business than inventory should be of reasonable value as more than 90% cost of the product is either gold or diamond.<br>
+<strong>Second important point about inventory that if inventory is increasing year by year then its sales and net profit should have the same or 
+better growth rate than that of inventory.</strong><br>
+If inventory is increasing at much higher rate than that of earnings and sales then it may be due to insufficient demand for Company's products
+and company may be finding it difficult to sell it products on desired prices.
+
+Accounts receivable
+Accounts receivable also known as Debtors, is money owed to a business by its clients (customers) and shown on its balance sheet as an asset.
+When a company sells its products to a purchaser , it does so on the basis of either cash up front or payment due some days after the purchaser receive
+the goods.Sales in this state , where the cash is due , are called receivables.<br>
+When account receivables are increasing at a faster rate than sales and profit then company may be having some problems in getting back the money 
+from clients.If a company is consistently showing a lower percentage of Net Receivables to Gross Sales than its competitors , it usually
+has some kind of competitive advantage working in its favour that the others dont't have.
+
+Cash and Fixed Deposits
+Cash and Cash equivalents can be a money in bank , short term bonds , three month treasuries , or other highly liquid assets.
+Company for which cash and cash equivalents are increasing year by year , is most likely the company the company with some 
+durable competitive advantage as it is generating much more cash than what is need for operations and capex needs.
+Cash can be increased due to one of below resons:<br><br>
+1.Company has just sold new equity and bonds to the public , and it is yet to use this cash.Or Company has got new loans from Banks<br>
+2.Company may have sold some assets like property , some subsidiary.<br>
+3.Company operations are generating lot of cash after deducting all the expenses.<br><br>
+We should be looking companies which comes under third category as it is likely to the company which is having some competitive advanatge
+and is generating huge positive cash flows year after year.
+
+Current Assets
+Current Assets is made up of 'cash and cash equivalents' , 'short-term investments', 'net receivables', 'inventory' and 'other assets'.They are called current assets because they are
+cash or will be converted to cash in a short span of time (less than a year).
+Current assets are also called 'working assets'.
+
+
+Loans & Advances
+Companies sometimes pay for the goods & services that they will receive in near future,
+although they have not yet taken possession of the goods or received the benefits of the service.Even though the goods or services have not been received . they are paid for,so
+they are assets of the business.<br>
+For e.g Insurance premiums for the year ahead , which are paid in advance , would be such
+prepaid expanse.
+
+Current Liabilities
+Current Liabilities are the debt and obligations that the company owes that are coming
+due within the fiscal year.It inlclues Account Payables , Accured expenses, Short term debt,
+Long term debt coming due , and other Current Liabliites.<br>
+
+<strong>Account Payable</strong> is the money owned to suppliers that have provided goods and services to the
+company on credit.For e.g company orders 1000 litres of diesel on credit so in this company gets the invoice for diesel cost.The bill or invoice is account payable.<br>
+<strong>Accured expenses</strong> are the liabilities that company have incurred , but has yet to be invoiced for.sales tax , wages payable can come in this category.<br>
+
+Knowing current liabilites alone in not sufficient we need to look other ratios like current ratio ,debt/earnings etc.But Still comparing amount of current liabilities to current assets can tell us alot about the business of the company<br>
+
+Provisions
+It can be short term as well as long term.
+Long term provisions can be employee benefits such as gratuity , pension, indirect tax matters.
+Indirect Tax Matters represents estimates made for probable liabilities arising out of pending disputes/litigations with various tax authorities.
+Tax expense is a example of Short Term Provision.
+
+Net Current Assets
+Net Current assets can tell us if the company is able to meet short term capital needs.<br>
+<strong>Net Current Assets = Current Assets - Current Liabilities<strong>
+
+Book Value -
+It is the total value of the company's assets that shareholders would theoretically receive if a company were liquidated.When we say we generally refer to book value per share which is
+<strong>Book Value per share = Networth / Number of outstanding shares </strong><br>
+or <br>
+                   <strong>  =Total shareholder equity / Number of outstanding shares</strong><br>
+It is different from face value and stock price.
+For e.g is company's Networth is 100 Cr and it has issues 1Cr shares then Book value is 10 Rs.
+Book value often bears little relationship to the actual worth of the company.It often understates reality by a large margin.<br><br>
+Few point on book value:<br>
+-may not be a true indicator of company value.Machinery , inventory could be outdated
+and could only be sold for scrap.<br>
+-When you buy a stock for book value then you should be in a condition to calculate real
+book value of the company.You should know about business of the company and should have some
+edge in the industry to come up with realistic book value of the company<br>
+- Actual value can be more than book value as there can be real estate , mines which are
+shown on purchase price which may be 20 years old.In actual , the cost of property can be
+much more
+
+Current Ratio
+Current ratio tells about the liquidity of the company and also tells if it can meet
+the short term debt obligations.<br>
+<strong> Current Ratio = Current Assets / Current Liabilities </strong><br>
+The higher the ratio , the more liquid the company.<br>
+<strong>A current ratio of over one is considered good and anything below one bad.</strong><br>
+If it is below one , it is believed that the company may have a hard time meeting its
+short term obligations to it creditors.<br>
+Infosys current ratio is above 4, Colgate 1.09 , Cipla 2.26, Titan 1.32<br>
+Please note that lot of good companies often have their current ratio less than one.
+Bajaj Auto has current ratio is .88 , Hero Motorcorp .24 .Some may think that these companies 
+might have difficulties paying current liablities.What is really happening that their earning 
+power is so strong that they can easily cover their current liabilities.<br>
+There are many companies which have current ratio less than one but still they may be 
+great companies which have tremendous earning power and they are using their earnings for 
+long investments , good acquisitions instead of using their earnings in meeting working capital 
+needs.So current ratio alone cannot tell much about the company we need to look at consistent
+earning power of the company also.
+
+Debt to Equity (D/E)
+Debt to Equity ratio can tell us the relative proportion of shareholders' equity and debt that company is using to finance its assets.<br>
+<strong>D/E = Debt/Shareholders Equity.</strong><br>
+Debt used above is generally the long term debt and does not include current liablities and provisions.<br>
+<strong>Great companies generally use their earnings to finance its operations and therefore should have less debt in comparison to equity.
+For non finance institutions D/E should be preferably less than .8.</strong><br>
+Banks and finance institutions borrow large sum of money and then loan it back out, making money on the spread between what they paid
+for the money and what they can loan it our for.D/E equity ratio is of less relevance for financial institutions.<br>
+Infosys has D/E of 0 means no debt, Titan 0 , Maruti Suzuki 0.02 , Kingfisher Airlines(KFA) -2.39 , minus as it has negative shareholder equity. 
+KFA is making losses from last 8 years and all these losses are subtracted from shareholders equity.
+Vadilal Industries 3.29.<br>
+We should note one more point here that some comapnies can show less D/E due to buybacks.<br>
+There may be a very good company which is having very low debt but still D/E can be high.This can happen when company has tremendous earnings and
+company is using its earnings to buy back shares.This buyback decreases its retained earning/equity base leading to superficial high D/E.
+So we shoud check if company has bought back large amount of shares in past if D/E appears unusual.
+
+Debt/Earnings
+Besides knowing debt/equity ratio , it is also important to know how much debt company needs
+to pay and whether it has capability to repay its debt.<br>
+
+Consider an example in which a manufacturing company has 5000Cr in Debt.This money was used for
+building new plant and machinary.Now if this company has shown average net earning of 250Cr earnings in last 2-3 years then it should ideally take around 5000/250 = 20 years to pay its debt.Here we have assumed that earnings are not going to rise exceptionally.<br>
+Even if we consider than earnings will increase at a rate of 20% even then it will take 9
+years to just pay of its debt assuming that entire earnings is used to just pay the debt.<br>
+<strong>As a general rule if debt/earnings ratio is greater than 6 then we are dealing with business
+that require lot of money for operations and moreover the business is not generating enough 
+money</strong>
+
+
+Return on Equity
+Return on equity (ROE) refer to net profit generated on each unit of shareholder equity.
+<strong>ROE = Net Profit / Shareholders equity</strong><br>
+It measures management effecieny in allocating resouces to generate more and more profit.
+Great companies show higher than average ROE such as 20-25%.
+Titan has ROE of 41% , TCS 38-44%, Maruti 16%, Cipla 14%, Gitanjali Gems 9%.<br>
+<strong>Some companies use lot of debt to support its operations and this can result in high return on equity.
+But we should avoid companies which are using lot of debt to increase its earnings.</strong><br>
+For e.g Suppose a company A has equity of 100 Cr and Net earnings of 20Cr so ROE is 20%.
+Company B has 100 Cr equity and 200 Cr of Debt and net earning of 25 Cr , now ROE is  25%.
+Company B shows vurtually high ROE as it is using lot of much higher debt compared to equity.
+
+Return on Assets
+It indicates how profitable a company is relative to its total assets. ROA gives an idea as to how efficient management is at using its assets to generate earnings. Calculated by dividing a company's annual earnings by its total assets<br>
+<strong> ROA = Net Profit / Total Assets</strong><br>
+ROA is an indicator of how profitable a company is before leverage, and is compared with companies in the same industry.
+Titan has ROA of 41% , Infosys 28%, Gitanjali Gems 6%.
+
+
+17 - graph of stocks price
+-Long term graph of a stock can tell a lot about company.<br>
+<strong>Great companies do not generally show lot of spikes in the long term chart and their chart follows the earnings of the companies.</strong> <br> If there are unusual spikes we should check if the whole market is following same or it is just the concerned company. If there are unusual spikes during a particular then we should check the news and earnings of that company in that period. It may happened that company was suffering from a temporary problem due to which stock price was hammered but it got rebounded when the problem got resolved. What we should check if that problem should be a temporary one , if a company was facing a long term problem like losing its ground due to large number of competitors , or slowdown in the industry then stock price may have not rebounded.<br>
+Companies in cyclical industry shows lot of up and down in the stock price. Prices fell sharply when economy is declining and they rebound when economy is on the rise.<br>
+Sun Pharma has a shown  a very good chart for last 10 years , same for ITC and Colgate. These companies has shown that they were not very much impacted by various sow downs that we have seen in last 10 years.
+
+24- Competition
+Before investing in a company, it makes sense to a take  a look at competitors in the same industry.<br>
+<strong>We should compare the Gross Profit Margins , Operating Margins, Debt/Equity Ratio and  Sales / Profit growth rate for past
+years.</strong><br> This can tell how the company is performing compared to its competitors. We should also know the market share of 
+each of the company. <br>In most cases , the company with largest market share is the industry leader with better margins.
+For e.g Asian paints is the leader in paint industry , with better growth rate and better margins than all of its competitors. But it can be other way round also for e.g In sanitary ware business , among the listed companies , hindware 
+has the largest market share but its margin and growth rate is inferior to much smaller player Cera Sanitary ware , which is 
+continuously increasing its market share.<br>
+<strong>We should analyze why a particular company is doing better than its competitors and why it will continue to do so.</strong>
+
+25. Your Story on Company
+<strong>What the company does ? Why do you think that it will grow in future ? What are the factors by which company's business can be impacted.
+Is the industry stable , is the industry growing ?</strong><br>
+For e.g Energy companies had their time in 90s .Telecom had their time from 2000- 2010 , now companies in telecom industry are in strong
+competition.Information Technology has almost seen its best part from 1995 to 2010 now the industry has become stable and is growing at 10-12% rate.
+We should have strong reasons to believe that the company will continue to grow in future and can mention all these factors in this section.
+
+23. Understand business , edge in the industry
+We should appreciate the fact that there is a business behind every stock.If the underlying company does well the stock price will follow the 
+positive momentum and vice versa.<br>
+So it is important to know about the basic business of the company , to know about its business cycle , dependency on raw materials , operating costs
+currency fluctuation etc.There are infinite number of parameters but we should be able to identify and understand the main parameters which are responsible 
+for the business of the company.<br>
+<strong>Some people have edge in a particular industry and for them it is easy to invest in that industry.Do you have any edge in this industry?</strong><br>
+For e.g if somebody is working in telecom industry then he would be knowing about other players in the industry and may also be knowing 
+which company is performing best in the industry and why? This gives huge edge to the person over other investors who are just following the
+financial statements and have less practical knowledge about the industry.<br>
+One more point that we should look is that what do we know that market has not already factored in the stock price.
+For example Jubiliant Foodworks was trading at a PE of 75 in oct 2012 month , market has already factored all future growth of the company.<br>
+In this particular case lot of growth has already been factored.So now why do we think that this stock can go further?
+We should list all reason as in why we think market has not got the stock price right and why do we think that future market price would 
+be better than current price which market is offering.
+
+
+22.Growth type of company and room for expansion
+We can divide company into various types like low Growth, Stalwarts, Fast Growers , Turn arounds , Cyclicals based on its growth rate.<br>
+<strong>Low Growth</strong> - Big Companies which are growing at a low rate , 3 to 5% <br>
+<strong>Stalwarts</strong> - Big companies which are growing at a rate of 12-20%.These are generaly powerful companies with stable business model.E.g Infosys , TCS, Cipla , Sun Pharma , Tata Motors , ICICI Bank etc.<br>
+<strong>Fast Growers</strong> - Companies which are growing at more than 20% annually.These companies are in their early 
+stages , some of them will become Stalwarts , Some of them may not be able to sustain and may become a mediocare company.These companies are most risky to invest in but have the capability to offer maximum returns on investments.E.g Jubiliant foodworks, Thangamayil , Baja Finance, Manappuram Finance<br>
+<strong>Turn Arounds</strong> - Companies which which were doing good earlier but now struggling or Company which were
+in bad condition earlier but are now recovering can be put in this category.E.g Satyam is a example of company which was struggling in 2009 but it has start showing recovery from 2012.<Br>
+Knowing the growth type of the company helps us to calculate the potential upside in the investment.
+For e,g stalwarts may give 20% returns annuals and investment is less risky , on the other hand Fast grower can become  a multibagger in span of 3-4 years but he risk is higher.<br>
+<strong>Room for Expansion</strong>
+If we are buying company as it has shown good growth in the past then we should if the company can still grow further.
+For e.g a company may be into fast food business , it has added more than 1000 food chains in last 15 years and has been growing at a rate of 20%.
+In these 15 years , it has already opened food chains in almost all cities.Now we should see if the company can still grow further and till what extent?
+It cannot keep on adding more and more chains so it might have to change it business model like offering new dishes etc.Here growth may be compromised in
+future.
+
+21.Insider buying , Buyback of shares by Company 
+when insiders are buying then it is positive sign which indicates that company's management
+believe in the business of the company.When management owns stock , then rewarding the shareholders becomes the first priority , whereas when management simply collects a paycheck, then increasing salary becomes the first priority.<br>
+When you see that even the employees of the company are buying the shares of the company
+then it could be highly positive.Employees have edge than normal investors in terms of 
+better knowledge about operations of the company and it is generally a positive sign when they
+buy.<br>
+<strong>Buying back</strong>
+Buying back shares is the simplest way a company can reward its investors.Due to buy back , outstanding number of shares get reduced which have positive impact on EPS.
+Buying back of shares also stabilizes the share price if it is on the fall for a while.
+
+20. intangible assets , brand value
+Intangible assets are assets we can't physically touch; these include patents , copyrights, trademark, brand etc. <br>
+<strong>Brand value is one of the most important parameter for the success of the company.</strong><br>
+The important point about brand value is that it is not considered as a asset on balance sheet.
+Titan , Asian Paints , TCS also these companies have tremendous brand value due to which
+they can sell their product and services at a premium compared to their competitors and hence
+can enjoy better margins.So this piece is hidden which is not present in financial statement 
+and can only be found out by doing research on the company and its industry.
+One can mention brand value as a asset on balance sheet if this brand value is acquired
+through acquisition.<br>
+For example , if a company A buys a Company B , which has book value of 100Cr.
+Company A pays 300Cr to acquire Company B.Now this extra 200cr has been paid for the brand value and it will mentioned as goodwill asset of 200Cr on the balance sheet of company A.<br>
+Internaly developed brand value is not mentioned as assets on balance sheet.
+We should look for companies which have good brand value.Asian Paints , Titan etc have brand 
+value of thousands of crores due to which they enjoy leadership in their respective industries.
+<strong> Check if company has good brand value and other intangible assets</strong>
+
+19 P/E Ratio
+This ratio shows the relationship between the stock price and the earnings of the company.
+It is simply calculated as stock price divided by earning per share.<br>
+Trailing p/E - in this stock price is divided by last 12 months eps.<br>
+Forward P/E - in this stock price is divided by forecasted eps for the next 12 months.
+P/E ratio can be thought of as the number of years it will take the company to earn back the amount of your initial investment assuming that the 
+company's earning remains constant.<br>
+
+<strong>P/E ratio is often useful to measure any stock is overpriced , fairly priced , or underpriced relative to
+company's money making potential.</strong><br>
+<strong>p/E varies from industry to industry </strong>for e.g FMCG are currently priced in 35-40 PE , Software companies used to have PE of 25 before 2010 but 
+now are running at PE 15-20 as the whole IT industry has slowed down a bit.Automobiles generally have PE 10-14 etc.<br>
+<strong>The P/E ratio of any company that's fairly priced should equal to its growth rate.</strong>If TCS is having a P/E ratio of 20 , we would expect it to grow
+at 20% per year.<br>
+
+Below is the useful table to describe various ranges of P/E<br>
+<strong>N/A -</strong> 	A company with no earnings has an undefined P/E ratio. By convention, companies with losses (negative earnings) are usually treated as having an undefined P/E ratio, even though a negative P/E ratio can be mathematically determined.<br>
+<strong>0–10</strong>	Either the stock is undervalued or the company's earnings are thought to be in decline. Alternatively, current earnings may be substantially above historic trends or the company may have profited from selling assets.<br>
+<strong>10–17</strong>	For many companies a P/E ratio in this range may be considered fair value.<br>
+<strong>17–25</strong>	Either the stock is overvalued or the company's earnings have increased since the last earnings figure was published. The stock may also be a growth stock with earnings expected to increase substantially in future.<br>
+<strong>25+</strong>	A company whose shares have a very high P/E may have high expected future growth in earnings, or this year's earnings may be considered to be exceptionally low, or the stock may be the subject of a speculative bubble.<br>
+<strong>Avoid companies with unrealistic P/E ratio , some companies may be operating at a P/E of 40-60 or even more.Market is assuming that these
+companies are going to grow at 40-60% per annum.In most cases , companies fail to deliver that much growth</strong> 
+
+18. Retained earnings or reserves
+Company's Net Profit can either be paid out as dividends or can be used to keep the business growing.
+It can also be used for buy back the shares.When it is retained in the business, it is added to balance sheet under
+shareholder's equity, called Retained Earnings or Reserves.<br>
+<strong>Reserves (current year) = Reserves (previous year) + Net profit - Dividend</strong><br>
+If company is making profit after paying dividends then reserves will keep on increasing year after year.<br>
+If the company makes loss in a year and this loss is subtracted from reserves causing depletion of reserves.<br>
+<strong>Analyzing the growth of retained earing is a important factor while analyzing the company.</strong><br>
+Titan's Reserves have been increasing at average rate of 36% for last 5 years , for Colgate it is 30% , Maruti - 20%.<br>
+Reserves can also be increased when one company acquires another company , in this case retained earnings of both the companies 
+are added to the balance sheet.
+Company can use it retained earnings/ reserves for capacity expansion Or it can use access cash to invest.<br>
+It can invest it long term bonds, stocks , real estate ,fixed deposits or can acquire other companies.<br>
+Long term investment can also reflect investment in the company's affiliates and subsidiaries.<br>
+A company long term investments can tell us a lot about the investment mind-set of top management.<br>
+Do they invest in business that have durable competitive advantage or do they invest in business that
+are in highly competitive markets?<br>
+<strong>Beware of companies that use excess cash to make ambitious acquisitions as it can erode the entire reserves of the company.</strong><br>
+We should also look at the revenue , profitablity , return on equity and competitive advantage of the acquired company.<br>
+You can get details of long term investment in the balance sheet of the company.<br> 
+<Strong>Check how company is using its retained earnings based on above points</strong>
+
+15 Operating Cash Flow , Free Cash Flow and capital expenditure
+A company can have a lot of sales and Net Profit on income statements but still may be deprived 
+of cash so it becomes important to check cash flow of the income along with income statements.<br>
+Cash flow from Operations and Free Cash flow are 2 important parameters which are calculated as<br>
+<strong>Cash flow from Operations = Net income + depreciation+ amortization+ other non-cash charges(income) - increase in working capital</strong><br>
+
+Net working capital = Net current assets - current liabilities <br>
+A company may be showing lot of profit on income statements but it may be having problem in getting money from the sales of goods in this case
+net recievables will increase drastically so cash from operations can tell us the true picture.
+We should check how Cash flow from operations is doing against net profit.<br><strong>Cash from Operations should ideally be greater than net profit
+so check the track record of net profit vs operating cash flow for past years.</strong><br>
+<strong>Free Cash Flow = Operating cash flow - capital expenditure</strong><br>
+<strong>Capital expenditure</Strong> are outlays of cash in assets that are more permanent in nature - held longer than a year-such as property, plant
+and equipment.They can also include intangibles like patents , rights.Capital expenditures are recorded on the cash flow statement under investment operations.
+<strong>Great companies use a smaller portion of its net earnings for capital expenditures for continuing operations.
+If a company is historically using 50% or less of its annual earnings for capital expenditures then it is likely that company has some sort 
+of advantage in its favour.If it is consistently using less than 25% of its net earnings for capital expenditures than even better.</strong>
+ 
+11.Business
+How stable is the business of the company?<br>
+Does the company have any sort of competitive advantage?<br>
+Quality of Managment team and is the background clean?<br>
+----------------------------
+
+Infosys Colgate titan 

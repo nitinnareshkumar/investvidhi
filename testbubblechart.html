@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	
+	<title>Bubble Charts</title>
+
+    <link class="include" rel="stylesheet" type="text/css" href="jquerychart/jquery.jqplot.min.css" />
+ 
+  
+  <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../excanvas.js"></script><![endif]-->
+    <script class="include" type="text/javascript" src="jquerychart/jquery.min.js"></script>
+    
+   
+</head>
+<body>
+ 
+
+
+      
+<!-- Example scripts go here -->
+
+  <style type="text/css">
+    .jqplot-target {
+        margin-bottom: 2em;
+    }
+    
+    .note {
+        font-size: 0.8em;
+    }
+    
+    #tooltip1b {
+        font-size: 12px;
+        color: rgb(15%, 15%, 15%);
+        padding:2px;
+        background-color: #cdcdcd;
+    }
+    
+    #legend1b {
+        font-size: 12px;
+        border: 1px solid #cdcdcd;
+        border-collapse: collapse;
+    }
+    #legend1b td, #legend1b th {
+        border: 1px solid #cdcdcd;
+        padding: 1px 4px;
+    }
+  </style>
+
+ 
+
+
+
+<div style="position:absolute;z-index:99;display:none;" id="tooltip1b"></div>
+
+<table><tr>
+    <td><div id="chart1b" class="plot" style="width:460px;height:340px;"></div></td>
+    <td><div style="height:340px;"><table id="legend1b"><tr><th>Paramter</th><th>Rating </th></tr></table></div></td>
+</tr></table>
+
+
+
+
+
+
+<script  language="javascript" type="text/javascript">$(document).ready(function(){
+    
+    var arr = [[11, 123, 1236, {label:"orangered", color:'orangered'}], 
+    [45, 92, 1067, {label:"orange", color:'orange'}], 
+    [24, 104, 1176, {label:"aquamarine", color:"aquamarine"}], [50, 23, 610, {label:"lightgreen", color:"lightgreen"}], 
+    [18, 17, 539, {label:"limegreen", color:"limegreen"}], [7, 89, 864], [2, 13, 1026, "MediumSeaGreen"]];
+    
+    plot1b = $.jqplot('chart1b',[arr],{
+        title: 'Tooltip and Custom Legend Highlighting',
+        seriesDefaults:{
+            renderer: $.jqplot.BubbleRenderer,
+            rendererOptions: {
+                bubbleAlpha: 0.6,
+                highlightAlpha: 0.8,
+                showLabels: true
+            },
+            shadow: true,
+            shadowAlpha: 0.05
+        }
+    });
+    
+    // Legend is a simple table in the html.
+    // Now populate it with the labels from each data value.
+    $.each(arr, function(index, val) {
+        $('#legend1b').append('<tr><td>'+val[3]+'</td><td>'+val[2]+'</td></tr>');
+    });
+    
+    // Now bind function to the highlight event to show the tooltip
+    // and highlight the row in the legend. 
+    $('#chart1b').bind('jqplotDataHighlight', 
+        function (ev, seriesIndex, pointIndex, data, radius) {    
+            var chart_left = $('#chart1b').offset().left,
+                chart_top = $('#chart1b').offset().top,
+                x = plot1b.axes.xaxis.u2p(data[0]),  // convert x axis unita to pixels on grid
+                y = plot1b.axes.yaxis.u2p(data[1]);  // convert y axis units to pixels on grid
+            var color = 'rgb(50%,50%,100%)';
+            $('#tooltip1b').css({left:chart_left+x+radius+5, top:chart_top+y});
+            $('#tooltip1b').html('<span style="font-size:14px;font-weight:bold;color:'+color+';">' + 
+            data[3] + '</span><br />' + 'x: '+data[0] + '<br />' + 'y: ' + 
+            data[1] + '<br />' + 'r: ' + data[2]);
+            $('#tooltip1b').show();
+            $('#legend1b tr').css('background-color', '#ffffff');
+            $('#legend1b tr').eq(pointIndex+1).css('background-color', color);
+        });
+    
+    // Bind a function to the unhighlight event to clean up after highlighting.
+    $('#chart1b').bind('jqplotDataUnhighlight', 
+        function (ev, seriesIndex, pointIndex, data) {
+            $('#tooltip1b').empty();
+            $('#tooltip1b').hide();
+            $('#legend1b tr').css('background-color', '#ffffff');
+        });
+});</script>
+
+
+
+
+
+
+<!-- End example scripts -->
+
+<!-- Don't touch this! -->
+
+</div>	
+    <script class="include" type="text/javascript" src="jquerychart/jquery.jqplot.min.js"></script>
+    
+<!-- Additional plugins go here -->
+
+  <script class="include" type="text/javascript" src="jquerychart/jqplot.bubbleRenderer.min.js"></script>
+
+<!-- End additional plugins -->
+
+
+	
+
+</body>
+
+
+</html>

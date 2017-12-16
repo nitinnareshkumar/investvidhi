@@ -1,0 +1,35 @@
+never change the company number while adding quaterly and yearly data 
+
+compare list of companies from money control and name_code , add the companies which are not present in name_code , add after the last record
+
+use AddNameCode.php to update name_code table - it has list of companies
+
+
+
+
+update yearly results
+------------------------------------------
+
+data base impacts - dont delete any table just import rows from naidu's DB
+
+in data_companies_curr ,we need to update 2010 results starting from june 10,  no need to remove comma
+
+need to remove comma from sales , profit table use removecommasalesepsproft.php, update removecomma.php to include additional columns remove comma from 2010 data.
+
+update growth indicator in sales , profit and eps (use files calculatepositiveind and calculategrowth for all 3 - sales ,profilt and eps , need to update these files)
+
+view will be updated automatically , just click on browse view.
+
+update customized query.
+
+
+
+
+-----------------
+quartely results
+
+ask naidu to use removecomma.php  code to remove comma from data_companies_curr (data_companies_10 name changed to data_companies_curr)
+companydetails and reports.php should already have all column for current year data , no need to update any code ,just add
+data in data_companies_curr for the previous quarter.
+
+

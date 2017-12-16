@@ -1,0 +1,1 @@
+[04-Jul-2012 15:11:07] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '../config/functions.inc.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/magiecom/public_html/investvidhi/invest/facebook/test.php on line 4

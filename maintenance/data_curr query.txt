@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS `data_companies_curr_updated` (
+  `CompNumber` varchar(20) NOT NULL,
+  `Comp_Code` varchar(20) NOT NULL,
+  `Jun_EPS` varchar(20) NOT NULL,
+  `Jun_Operating_Profit` varchar(20) NOT NULL,
+  `Jun_Sales` varchar(20) NOT NULL,
+  `Jun_Year` varchar(20) NOT NULL,
+  `Sep_EPS` varchar(20) NOT NULL,
+  `Sep_Operating_Profit` varchar(20) NOT NULL,
+  `Sep_Sales` varchar(20) NOT NULL,
+  `Sep_Year` varchar(20) NOT NULL,
+  `Dec_EPS` varchar(20) NOT NULL,
+  `Dec_Operating_Profit` varchar(20) NOT NULL,
+  `Dec_Sales` varchar(20) NOT NULL,
+  `Dec_Year` varchar(20) NOT NULL,
+  `Mar_EPS` varchar(20) NOT NULL,
+  `Mar_Operating_Profit` varchar(20) NOT NULL,
+  `Mar_Sales` varchar(20) NOT NULL,
+  `Mar_Year` varchar(20) NOT NULL,
+  PRIMARY KEY (`Comp_Code`),
+  UNIQUE KEY `CompNumber` (`CompNumber`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;

@@ -1,0 +1,2027 @@
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting data --
+Error inserting data --
+Error inserting data --
+Error inserting data 1--AKS
+Error inserting data 1--AKS
+Error inserting data 1--AKS
+Error inserting data 2--APT01
+Error inserting data 3--AKC01
+Error inserting data 7--AEM
+Error inserting data 7--AEM
+Error inserting data 37--AP01
+Error inserting data 43--AE12
+Error inserting data 64--AC01
+Error inserting data 68--ACF
+Error inserting data 73--ALP
+Error inserting data 79--AS
+Error inserting data 80--AY
+Error inserting data 127--AME01
+Error inserting data 139--AWE
+Error inserting data 146--AJB
+Error inserting data 171--AE02
+Error inserting data 174--AM03
+Error inserting data 186--AF04
+Error inserting data 226--AI42
+Error inserting data 229--AMH
+Error inserting data 239--AAF
+Error inserting data 271--ACI04
+Error inserting data 275--AF06
+Error inserting data 360--AAI02
+Error inserting data 413--AS14
+Error inserting data 429--AM05
+Error inserting data 431--AP14
+Error inserting data 484--AB13
+Error inserting data 539--AFS03
+Error inserting data 541--ASW
+Error inserting data 547--ATN01
+Error inserting data 573--AT10
+Error inserting data 674--BCL06
+Error inserting data 698--BEM01
+Error inserting data 711--BT07
+Error inserting data 732--BC05
+Error inserting data 747--B
+Error inserting data 751--BMC01
+Error inserting data 822--BI08
+Error inserting data 830--BTI01
+Error inserting data 1060--CS01
+Error inserting data 1076--CPI01
+Error inserting data 1106--CP08
+Error inserting data 1107--CIL03
+Error inserting data 1122--CGE
+Error inserting data 1144--CS12
+Error inserting data 1147--CS13
+Error inserting data 1153--CSI
+Error inserting data 1155--CFC01
+Error inserting data 1200--CO01
+Error inserting data 1204--CBE
+Error inserting data 1244--CW
+Error inserting data 1249--C11
+Error inserting data 1264--CKD
+Error inserting data 1271--CC11
+Error inserting data 1277--VIT02
+Error inserting data 1283--CH01
+Error inserting data 1303--CSE
+Error inserting data 1340--CSJ
+Error inserting data 1342--CTC
+Error inserting data 1367--DMI
+Error inserting data 1377--DI01
+Error inserting data 1386--DO
+Error inserting data 1391--DIT
+Error inserting data 1392--DS
+Error inserting data 1438--DP02
+Error inserting data 1455--DAS01
+Error inserting data 1457--DF02
+Error inserting data 1465--DRI01
+Error inserting data 1486--DP05
+Error inserting data 1516--DM01
+Error inserting data 1538--DB03
+Error inserting data 1542--DIL
+Error inserting data 1571--DSQ
+Error inserting data 1584--DS05
+Error inserting data 1603--EMI01
+Error inserting data 1606--ESI03
+Error inserting data 1622--EP06
+Error inserting data 1652--ES02
+Error inserting data 1655--EFI
+Error inserting data 1662--EI01
+Error inserting data 1663--ECG
+Error inserting data 1696--EP04
+Error inserting data 1721--ETI
+Error inserting data 1731--ECS01
+Error inserting data 1733--ET07
+Error inserting data 1766--ES04
+Error inserting data 1767--ET06
+Error inserting data 1772--EL
+Error inserting data 1781--ESA
+Error inserting data 1850--FI05
+Error inserting data 1856--FEI
+Error inserting data 1967--GA02
+Error inserting data 1976--GPI02
+Error inserting data 2035--GS08
+Error inserting data 2052--GP02
+Error inserting data 2059--GF02
+Error inserting data 2070--GI08
+Error inserting data 2081--GIL06
+Error inserting data 2137--GBL
+Error inserting data 2154--GOM
+Error inserting data 2182--GFS02
+Error inserting data 2184--GHP
+Error inserting data 2217--GSA01
+Error inserting data 2225--GTC02
+Error inserting data 2248--GC11
+Error inserting data 2259--GIK
+Error inserting data 2274--GPE01
+Error inserting data 2289--GT02
+Error inserting data 2306--GRL
+Error inserting data 2326--GSC05
+Error inserting data 2345--HPC02
+Error inserting data 2346--HTC
+Error inserting data 2352--HC
+Error inserting data 2366--HCM
+Error inserting data 2369--HMS
+Error inserting data 2375--HSG
+Error inserting data 2376--HSA
+Error inserting data 2395--HDC
+Error inserting data 2450--HF08
+Error inserting data 2517--HJI
+Error inserting data 2520--HC10
+Error inserting data 2536--HG01
+Error inserting data 2537--HTC01
+Error inserting data 2574--ICO
+Error inserting data 2586--IHI
+Error inserting data 2624--I01
+Error inserting data 2631--IE01
+Error inserting data 2673--IR03
+Error inserting data 2674--IR01
+Error inserting data 2704--BLF01
+Error inserting data 2726--IBA
+Error inserting data 2732--IFB05
+Error inserting data 2745--IVC
+Error inserting data 2751--IWC
+Error inserting data 2779--IT01
+Error inserting data 2796--IC07
+Error inserting data 2821--IKC
+Error inserting data 2833--I05
+Error inserting data 2841--IH02
+Error inserting data 2871--IPI02
+Error inserting data 2872--ISP01
+Error inserting data 2917--JMI
+Error inserting data 2975--JFM
+Error inserting data 3033--JKP
+Error inserting data 3043--JMP
+Error inserting data 3053--JR
+Error inserting data 3065--II
+Error inserting data 3082--JPV
+Error inserting data 3125--KTC01
+Error inserting data 3175--KSS
+Error inserting data 3181--KFS
+Error inserting data 3183--KAI01
+Error inserting data 3204--KCI04
+Error inserting data 3215--KCI02
+Error inserting data 3226--KIE
+Error inserting data 3229--KI07
+Error inserting data 3233--KRR
+Error inserting data 3280--KMC
+Error inserting data 3307--KJI
+Error inserting data 3338--KIF01
+Error inserting data 3351--KG02
+Error inserting data 3376--KS12
+Error inserting data 3380--KES
+Error inserting data 3383--KRM
+Error inserting data 3449--LES01
+Error inserting data 3455--LF08
+Error inserting data 3482--LF03
+Error inserting data 3532--LIC04
+Error inserting data 3543--LA
+Error inserting data 3598--MDC
+Error inserting data 3615--MRI
+Error inserting data 3641--MS04
+Error inserting data 3663--ME11
+Error inserting data 3664--MS05
+Error inserting data 3689--MP04
+Error inserting data 3741--MI30
+Error inserting data 3760--MS25
+Error inserting data 3769--MS10
+Error inserting data 3820--MS11
+Error inserting data 3854--MEI
+Error inserting data 3871--MP12
+Error inserting data 3899--MEE
+Error inserting data 3915--MFC03
+Error inserting data 3929--MH03
+Error inserting data 3937--M06
+Error inserting data 3940--MH04
+Error inserting data 3951--MI15
+Error inserting data 3960--MI17
+Error inserting data 3963--ML05
+Error inserting data 3982--MMF01
+Error inserting data 3986--MPI02
+Error inserting data 3990--MSO
+Error inserting data 3995--MI22
+Error inserting data 4020--MTZ
+Error inserting data 4027--MP15
+Error inserting data 4036--MAI02
+Error inserting data 4041--MC12
+Error inserting data 4048--MI23
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data 4068--NK
+Error inserting data 4074--NF
+Error inserting data 4116--NP02
+Error inserting data 4128--NS01
+Error inserting data 4134--NSE01
+Error inserting data 4144--NE05
+Error inserting data 4145--NPP01
+Error inserting data 4161--NMH
+Error inserting data 4167--NP06
+Error inserting data 4186--NWT
+Error inserting data 4207--NS03
+Error inserting data 4226--NAP
+Error inserting data 4273--NA02
+Error inserting data 4320--NE04
+Error inserting data 4322--NUP
+Error inserting data 4329--OMM01
+Error inserting data 4331--UI06
+Error inserting data 4335--OI08
+Error inserting data 4346--OVC
+Error inserting data 4423--OA03
+Error inserting data 4428--OI05
+Error inserting data 4453--OPE
+Error inserting data 4465--PRC01
+Error inserting data 4471--PC12
+Error inserting data 4477--PT08
+Error inserting data 4490--PTL03
+Error inserting data 4506--PCC01
+Error inserting data 4533--PI03
+Error inserting data 4559--PP07
+Error inserting data 4561--PS03
+Error inserting data 4604--PST
+Error inserting data 4605--PGS
+Error inserting data 4616--PCT
+Error inserting data 4675--PIS02
+Error inserting data 4686--PFL
+Error inserting data 4727--PGC01
+Error inserting data 4745--PL03
+Error inserting data 4770--PEI04
+Error inserting data 4791--PF05
+Error inserting data 4792--PHM
+Error inserting data 4806--PSE02
+Error inserting data 4829--PSI03
+Error inserting data 4835--PII01
+Error inserting data 4865--PF06
+Error inserting data 4877--PI23
+Error inserting data 4886--PST01
+Error inserting data 4907--RF01
+Error inserting data 4920--RSM
+Error inserting data 4922--RR04
+Error inserting data 4965--RP03
+Error inserting data 5018--RMP
+Error inserting data 5033--RCI04
+Error inserting data 5037--RE02
+Error inserting data 5038--RPL
+Error inserting data 5055--RI07
+Error inserting data 5061--RVL
+Error inserting data 5065--RHT
+Error inserting data 5068--RS06
+Error inserting data 5106--RC05
+Error inserting data 5111--RT04
+Error inserting data 5149--RCI03
+Error inserting data 5153--REP
+Error inserting data 5207--RMI03
+Error inserting data 5215--RPL03
+Error inserting data 5229--RI16
+Error inserting data 5231--RI18
+Error inserting data 5239--RI19
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data 5256--RSP
+Error inserting data 5306--SI59
+Error inserting data 5316--SSI01
+Error inserting data 5338--STM01
+Error inserting data 5356--STI08
+Error inserting data 5367--SS46
+Error inserting data 5376--STF04
+Error inserting data 5386--SL01
+Error inserting data 5396--SP04
+Error inserting data 5397--SAC
+Error inserting data 5419--SI53
+Error inserting data 5428--SF02
+Error inserting data 5436--SP06
+Error inserting data 5451--SAI03
+Error inserting data 5454--SE05
+Error inserting data 5460--SP08
+Error inserting data 5481--SBI02
+Error inserting data 5495--SBL03
+Error inserting data 5496--SO02
+Error inserting data 5508--SST
+Error inserting data 5518--SL09
+Error inserting data 5555--SP12
+Error inserting data 5563--SC07
+Error inserting data 5564--SM01
+Error inserting data 5565--SS07
+Error inserting data 5586--SP28
+Error inserting data 5611--SL05
+Error inserting data 5623--SPM
+Error inserting data 5633--SV02
+Error inserting data 5635--STI07
+Error inserting data 5642--SAP
+Error inserting data 5649--SGK
+Error inserting data 5654--SJP
+Error inserting data 5663--SPM01
+Error inserting data 5679--SST04
+Error inserting data 5680--SS11
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data --
+Error inserting sales 
+Error inserting data 5680--SS11
+Error inserting data 5685--SYP01
+Error inserting data 5689--SP35
+Error inserting data 5723--SSP07
+Error inserting data 5735--SFC01
+Error inserting data 5778--SM03
+Error inserting data 5788--SI25
+Error inserting data 5829--SP30
+Error inserting data 5840--SC35
+Error inserting data 5841--ST15
+Error inserting data 5890--SOI02
+Error inserting data 5891--SC19
+Error inserting data 5908--SS18
+Error inserting data 5910--SI32
+Error inserting data 5919--SPS02
+Error inserting data 5932--WT02
+Error inserting data 5967--SRH
+Error inserting data 5988--SJS
+Error inserting data 5997--SSI09
+Error inserting data 6008--SM15
+Error inserting data 6039--SML04
+Error inserting data 6096--SI39
+Error inserting data 6103--SB10
+Error inserting data 6115--ST10
+Error inserting data 6142--SM06
+Error inserting data 6152--SEC01
+Error inserting data 6156--KS06
+Error inserting data 6178--SA08
+Error inserting data 6184--SZ
+Error inserting data 6197--SSM07
+Error inserting data 6198--SS30
+Error inserting data 6219--SP22
+Error inserting data 6291--SRP03
+Error inserting data 6318--SI74
+Error inserting data 6333--TM01
+Error inserting data 6342--THL
+Error inserting data 6421--TC02
+Error inserting data 6428--TI05
+Error inserting data 6435--TT05
+Error inserting data 6449--TI08
+Error inserting data 6476--TF08
+Error inserting data 6508--TT10
+Error inserting data 6519--TIE01
+Error inserting data 6529--TP07
+Error inserting data 6530--TTF01
+Error inserting data 6543--TE05
+Error inserting data 6575--TBT01
+Error inserting data 6577--TO01
+Error inserting data 6647--UMM
+Error inserting data 6659--UO
+Error inserting data 6675--UI05
+Error inserting data 6677--UC01
+Error inserting data 6734--UI
+Error inserting data 6736--UIF01
+Error inserting data 6737--UI10
+Error inserting data 6787--VB02
+Error inserting data 6798--VT07
+Error inserting data 6813--VPO
+Error inserting data 6816--VA03
+Error inserting data 6841--VIP01
+Error inserting data 6847--VP05
+Error inserting data 6857--VL01
+Error inserting data 6916--VF07
+Error inserting data 6927--VC
+Error inserting data 6950--VEO
+Error inserting data 6967--VO02
+Error inserting data 7012--VP04
+Error inserting data 7028--WCI
+Error inserting data 7058--WI12
+Error inserting data 7104--WP01
+Error inserting data 7151--Z01
+Error finding the BSE script code forTAR
+Error finding the BSE script code forEET
+Error finding the BSE script code forGAR
+Error finding the BSE script code forKBE
+Error finding the BSE script code forKNV
+Error finding the BSE script code forLIC07
+Error finding the BSE script code forLIC06
+Error finding the BSE script code forNIF9
+Error finding the BSE script code forNIF02
+Error finding the BSE script code forNIF06
+Error finding the BSE script code forNIF04
+Error finding the BSE script code forNIF03
+Error finding the BSE script code forNIF07
+Error finding the BSE script code forNIF01
+Error finding the BSE script code forNIF05
+Error finding the BSE script code forNGS
+Error finding the BSE script code forNIF
+Error finding the BSE script code forNIF08
+Error finding the BSE script code forNV01
+Error finding the BSE script code forSPB15
+Error finding the BSE script code forSPB11
+Error finding the BSE script code forSPB12
+Error finding the BSE script code forSPB16
+Error finding the BSE script code forSPB10
+Error finding the BSE script code forSPB17
+Error finding the BSE script code forSPB13
+Error finding the BSE script code forSPB14
+Error finding the BSE script code forSBI27
+Error finding the BSE script code forUTI19
+Error finding the BSE script code for
