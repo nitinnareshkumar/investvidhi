@@ -17,8 +17,9 @@ set_time_limit(20000);
 $myFile = "Profit_Loss_logs.txt";
 $fh = fopen($myFile, 'a') or die("can't open file");
 //loop to parse records
-$getcompanies = mysql_query("select * from name_code where company_type IN ('banks-public-sector','banks-private-sector')");
-while($row=mysql_fetch_array($getcompanies))
+$getcompanies = mysqli_query($link,"select * from name_code where company_type IN ('bankspublicsector','banksprivatesector')");
+echo "aaaa".mysqli_fetch_array($getcompanies);
+while($row=mysqli_fetch_array($getcompanies))
 {
 	$moneycontrol_code = $row['code'];
 	$UrlName="http://www.moneycontrol.com/stocks/company_info/print_financials.php?sc_did=$moneycontrol_code&type=profit";
@@ -228,21 +229,23 @@ while($row=mysql_fetch_array($getcompanies))
 
 		echo "before insert of ".$row[number]."<br>";
 		if ($tempyearData != NULL) 
-			{
-			$res=mysql_query("insert into profit_loss_banks set  companynumber='$row[number]',companycode= '$row[code]', year='$tempyearData', InterestEarned ='$tempInterestEarnedData' , OtherIncome = '$tempOtherIncomeData' , TotalIncome = '$temptotalIncomeData' , InterestExpended = '$tempInterestExpendedData' , EmployeeCost ='$tempEmployeeCostData', SGA ='$tempSGA1Data' , Depreciation = '$tempDepreciationData' , MiscellaneousExpenses = '$tempmiscCostData', OperatingExpenses = '$tempOperatingExpensesData' , Provisions ='$tempProvisionsData' , TotalExpenses = '$tempTotalExpensesData' , NetProfit ='$tempNetProfit1Data' , Eps ='$tempEpsData' , EquityDividend ='$tempEquityDividendData' ,BookValue ='$tempBookValueData' ");
-			}
+		{
+			//$res=mysqli_query($link,"insert into profit_loss_banks set  companynumber='$row[number]',companycode= '$row[code]', year='$tempyearData', InterestEarned ='$tempInterestEarnedData' , OtherIncome = '$tempOtherIncomeData' , TotalIncome = '$temptotalIncomeData' , InterestExpended = '$tempInterestExpendedData' , EmployeeCost ='$tempEmployeeCostData', SGA ='$tempSGA1Data' , Depreciation = '$tempDepreciationData' , MiscellaneousExpenses = '$tempmiscCostData', OperatingExpenses = '$tempOperatingExpensesData' , Provisions ='$tempProvisionsData' , TotalExpenses = '$tempTotalExpensesData' , NetProfit ='$tempNetProfit1Data' , Eps ='$tempEpsData' , EquityDividend ='$tempEquityDividendData' ,BookValue ='$tempBookValueData' ");// naidu uncomment
+			echo "companynumber=".$row[number]."companycode".$row[code]." year".$tempyearData." InterestEarned ".$tempInterestEarnedData." OtherIncome ".$tempOtherIncomeData." TotalIncome ".$temptotalIncomeData." InterestExpended ".$tempInterestExpendedData." EmployeeCost ".$tempEmployeeCostData." SGA ".$tempSGA1Data." Depreciation ".$tempDepreciationData." MiscellaneousExpenses ".$tempmiscCostData." OperatingExpenses ".$tempOperatingExpensesData." Provisions ".$tempProvisionsData." TotalExpenses ".$tempTotalExpensesData." NetProfit ".$tempNetProfit1Data." Eps ".$tempEpsData." EquityDividend ".$tempEquityDividendData."BookValue ".$tempBookValueData;
+		}
 		if(!$res)
 		{
 			//echo "Error inserting sales ". $row[code];
-			echo "Error inserting sales ". $row[number].mysql_error();
+			echo "Error inserting sales ". $row[number].mysqli_error();
 		}
 	
 	} 
 
-echo "after insert of ".$iLoop;
+echo "after insert of ";
+			break;//naidu delete
 }
 		
-//		fclose($fh);
+		fclose($fh);
 //} //For loop closing brace
 		
 		echo "PROCESSING COMPLETED!!!!!!!";

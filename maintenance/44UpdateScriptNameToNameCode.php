@@ -1,9 +1,10 @@
 <?php
 /***********************************************************************************************
-PHP File to read the data company ocde from NAme_Code table and get the BSE Script name of the 
+PHP File to read the data company code from NAme_Code table and get the BSE Script name of the 
 company and insert in to the name_code table.
 Url Used is :
 "http://www.moneycontrol.com/financials/". $row['nameinmc']."/results/yearly/".$row['code'];"S
+
 ***********************************************************************************************/
 
 
@@ -13,17 +14,18 @@ set_time_limit(20000);
 //$result=mysql_query("select max(number) as maxnum from name_code");
 //$row = mysql_fetch_array($result);
 //$iCount= $row[maxnum]; //commented ************************************************************
-$iCount=7992;//hard coded for fetching 2000 records.
+//Gaurav as of 15 April 2018 we have 8315 companies listed in MonyeControl . this excludes the 10-15 companies that are listed under Others.
+$iCount=2000;//hard coded for fetching 2000 records. 
 // Open error log file
 $myFile = "error_logs.txt";
 $fh = fopen($myFile, 'a') or die("can't open file");
 //loop to parse records
-for ($iLoop= 7852; $iLoop<($iCount+1);$iLoop++)
+for ($iLoop= 19023; $iLoop<($iCount+1);$iLoop++)
 {
-	$result=mysql_query("select * from name_code where number=$iLoop");
+	$result=mysqli_query($link,"select * from name_code where number=$iLoop");
 	//$result=mysql_query("select * from name_code where number=1");
 	
-	$row = mysql_fetch_array($result);
+	$row = mysqli_fetch_array($result);
 	$UrlName="http://www.moneycontrol.com/financials/".$row['nameinmc']."/results/yearly/".$row['code'];
 	echo $UrlName;
 	
@@ -43,14 +45,14 @@ for ($iLoop= 7852; $iLoop<($iCount+1);$iLoop++)
 		$BSE_ScriptName_Temp = substr($BSE_ScriptName_Temp, 0, strpos($BSE_ScriptName_Temp, "<span")); // $result = php
 			
 			$BSE_ScriptName_Temp = substr($BSE_ScriptName_Temp, 4); 
-echo $BSE_ScriptName_Temp;
+		echo $BSE_ScriptName_Temp."<br>";
 		//$iPos1 = strpos($sales,"BSE:</b>");
 		//$iPos2 = strpos($sales," ");
 	
 		//$BSE_ScriptName_Temp = substr($BSE_ScriptName_Temp,($iPos1+9), ($iPos2-($iPos1+8)));    // Get the script code within the iPos1 n iPos2		
 		//echo $BSE_ScriptName_Temp."naya wala";
 		//Insert in to Table
-		$res=mysql_query("UPDATE name_code SET BSE_Script='$BSE_ScriptName_Temp' WHERE code='$row[code]'");
+		$res=mysqli_query($link,"UPDATE name_code SET BSE_Script='$BSE_ScriptName_Temp' WHERE code='$row[code]'");
 	}	
 	//echo $iLoop."--";
 } //For loop closing brace

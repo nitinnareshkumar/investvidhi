@@ -6,20 +6,20 @@ this file should be run after deleting all data from balance_sheet
 include("config.inc.php");
 set_time_limit(20000);
 //$res=mysql_query("select max(number) as maxi from name_code");
-$result=mysql_query("select max(number) as maxnum from name_code");
-$row = mysql_fetch_array($result);
+$result=mysqli_query($link,"select max(number) as maxnum from name_code");
+$row = mysqli_fetch_array($result);
 //$iCount= $row[maxnum]; //commented ************************************************************
-$iCount=6495;//hard coded for fetching 100 records.
+$iCount=19081;//hard coded for fetching 100 records.
 // Open error log file
 
 $myFile = "BalanceSheet_logs.txt";
 $fh = fopen($myFile, 'a') or die("can't open file");
 //loop to parse records
-for ($iLoop= 6494; $iLoop<($iCount+1);$iLoop++)
+for ($iLoop= 19081; $iLoop<($iCount+1);$iLoop++)
 {
-	$result=mysql_query("select * from name_code where number=$iLoop and Company_type NOT IN ('banks-public-sector','banks-private-sector')");
+	$result=mysqli_query($link,"select * from name_code where number=$iLoop and Company_type NOT IN ('banks-public-sector','banks-private-sector')");
 	//$result=mysql_query("select * from name_code where number=1");
-	$row = mysql_fetch_array($result);;
+	$row = mysqli_fetch_array($result);;
 	$moneycontrol_code = $row['code'];
 $UrlName="http://www.moneycontrol.com/stocks/company_info/print_financials.php?sc_did=$moneycontrol_code&type=balance";
 		
@@ -130,7 +130,7 @@ $UrlName="http://www.moneycontrol.com/stocks/company_info/print_financials.php?s
 		$iPos2 = strpos($yearData,"</td>");
 		$tempyearData = substr($yearData,($iPos1+44), ($iPos2-$iPos1 -44));           		
 		$yearData = strstr($yearData,$tempyearData);
-		$arrayyearData[icnt-1] = $tempyearData;
+		$arrayyearData['icnt'-1] = $tempyearData;
 
 		$reservesData = strstr($reservesData,"<td align=right class=\"det brdL brdR\">");			
 		$iPos1 = strpos($reservesData,"<td align=right class=\"det brdL brdR\">");
@@ -330,9 +330,9 @@ $UrlName="http://www.moneycontrol.com/stocks/company_info/print_financials.php?s
 	
 		}
 		
-		$getnetprofit=mysql_query("select * from profit_loss where companynumber  = '$row[number]' and year = '$tempyearData'");
+		$getnetprofit=mysqli_query($link,"select * from profit_loss where companynumber  = '$row[number]' and year = '$tempyearData'");
 	//$result=mysql_query("select * from name_code where number=1");
-	$row1 = mysql_fetch_array($getnetprofit);;
+	$row1 = mysqli_fetch_array($getnetprofit);;
 	$tempnetprofit = $row1['netProfit'];
 	
 	echo "netprofit is ".$tempnetprofit."---";
@@ -373,12 +373,13 @@ $UrlName="http://www.moneycontrol.com/stocks/company_info/print_financials.php?s
 		// end of ratios
 		if ($tempyearData != NULL) 
 			{
-				$res=mysql_query("insert into balanceSheet set companynumber='$row[number]',companycode= '$row[code]',  year='$tempyearData', equityShareCapital = '$tempequityShareCapitalData' , networth ='$tempnetworthData' , totalDebt ='$temptotalDebtData' , grossBlock ='$tempgrossBlockData' , lessAccumDepcreciation ='$templessAccumDepcreciationData' , netBlock= '$tempnetBlockData' ,CapitalProgress ='$templesscapitalProgressData' , totalCALoansAdvances='$temptotalCALoansAdvancesData' , totalClProvisions ='$temptotalClProvisionsData ' , bookvalue='$tempbookvalueData',reserves ='$tempreservesData', securedLoans ='$tempsecuredLoansData',	unsecuredLoans ='$tempunsecuredLoansData',	cash ='$tempcashData',	fixedDeposit ='$tempfixedDepositData',	inventories ='$tempinventoriesData',	sundryDebtors ='$tempsundryDebtorsData',		totalCurrAssets ='$temptotalCurrAssetsData',	totalAssets ='$temptotalAssetsData',	loans ='$temploansData',	currLiabilities = '$tempcurrLiabilitiesData',	provisions = '$tempprovisionsData',	investments = '$tempinvestmentsData' , CurretRatio = '$currentratio' , DebtEquityRatio = '$debtequityratio' , ReturnOnAssests ='$tempReturnOnAssests' , DebtUponEarnings = '$tempDebtUponEarnings' , ReturnOnEquity = '$tempReturnOnEquity'");
+				$res=mysqli_query($link,"insert into balanceSheet set companynumber='$row[number]',companycode= '$row[code]',  year='$tempyearData', equityShareCapital = '$tempequityShareCapitalData' , networth ='$tempnetworthData' , totalDebt ='$temptotalDebtData' , grossBlock ='$tempgrossBlockData' , lessAccumDepcreciation ='$templessAccumDepcreciationData' , netBlock= '$tempnetBlockData' ,CapitalProgress ='$templesscapitalProgressData' , totalCALoansAdvances='$temptotalCALoansAdvancesData' , totalClProvisions ='$temptotalClProvisionsData ' , bookvalue='$tempbookvalueData',reserves ='$tempreservesData', securedLoans ='$tempsecuredLoansData',	unsecuredLoans ='$tempunsecuredLoansData',	cash ='$tempcashData',	fixedDeposit ='$tempfixedDepositData',	inventories ='$tempinventoriesData',	sundryDebtors ='$tempsundryDebtorsData',		totalCurrAssets ='$temptotalCurrAssetsData',	totalAssets ='$temptotalAssetsData',	loans ='$temploansData',	currLiabilities = '$tempcurrLiabilitiesData',	provisions = '$tempprovisionsData',	investments = '$tempinvestmentsData' , CurretRatio = '$currentratio' , DebtEquityRatio = '$debtequityratio' , ReturnOnAssests ='$tempReturnOnAssests' , DebtUponEarnings = '$tempDebtUponEarnings' , ReturnOnEquity = '$tempReturnOnEquity'"); //naidu uncomment
+				//echo "companynumber=".$row['number']."companycode".$row['code']."  year".$tempyearData." equityShareCapital ".$tempequityShareCapitalData." networth ".$tempnetworthData." totalDebt ".$temptotalDebtData." grossBlock ".$tempgrossBlockData." lessAccumDepcreciation ".$templessAccumDepcreciationData." netBlock".$tempnetBlockData."CapitalProgress ".$templesscapitalProgressData." totalCALoansAdvances".$temptotalCALoansAdvancesData." totalClProvisions ".$temptotalClProvisionsData ." bookvalue".$tempbookvalueData."reserves ".$tempreservesData." securedLoans ".$tempsecuredLoansData."	unsecuredLoans ".$tempunsecuredLoansData."	cash ".$tempcashData."	fixedDeposit ".$tempfixedDepositData."	inventories ".$tempinventoriesData."	sundryDebtors ".$tempsundryDebtorsData."		totalCurrAssets ".$temptotalCurrAssetsData."	totalAssets ".$temptotalAssetsData."	loans ".$temploansData."	currLiabilities ".$tempcurrLiabilitiesData."	provisions ".$tempprovisionsData."	investments ".$tempinvestmentsData." CurretRatio ".$currentratio." DebtEquityRatio ".$debtequityratio." ReturnOnAssests ".$tempReturnOnAssests." DebtUponEarnings ".$tempDebtUponEarnings." ReturnOnEquity ".$tempReturnOnEquity;
 			}
 	if(!$res)
 		{
 			//echo "Error inserting sales ". $row[code];
-			echo "Error inserting sales ". $row[number].mysql_error();
+			echo "Error inserting sales ". $row['number'].mysqli_error($link);
 		}
 	}
 	

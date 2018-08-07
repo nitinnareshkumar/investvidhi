@@ -3,6 +3,8 @@ session_start();
 
 /*mysql_connect("localhost","shop2006","shop30");
 mysql_select_db("shop");*/
+global $HTTP_SERVER_VARS;
+$HTTP_SERVER_VARS = $_SERVER;
 if($HTTP_SERVER_VARS['HTTP_HOST']=="localhost")
 {
 	 $DB["dbName"] = "invidhi_automated";
@@ -10,9 +12,9 @@ if($HTTP_SERVER_VARS['HTTP_HOST']=="localhost")
 	 $DB["user"]   = "root";
 	$DB["pass"]   = "";
 	 
-	 $link = mysql_pconnect($DB["host"],$DB["user"],$DB["pass"]) or die("Connection Failed");
-	 mysql_select_db($DB["dbName"]);
-	 echo mysql_errno($link) . ": " . mysql_error($link). "\n";
+	$link = mysqli_connect($DB["host"],$DB["user"],$DB["pass"]) or die("Connection Failed");
+	 mysqli_select_db($link,$DB["dbName"]);
+	 echo mysqli_errno($link) . ": " . mysqli_error($link). "\n";
 	
 }
 else
@@ -23,9 +25,9 @@ else
 	 $DB["user"]   = "root";
 	 $DB["pass"]   = "";
 	 //$DB["pass"]   = "";		
-	 $link = mysql_pconnect($DB["host"],$DB["user"],$DB["pass"]) or die("Connection Failed");
-	 mysql_select_db($DB["dbName"]);
-	 echo mysql_errno($link) . ": " . mysql_error($link). "\n";
+	 $link = mysqli_pconnect($link,$DB["host"],$DB["user"],$DB["pass"]) or die("Connection Failed");
+	 mysqli_select_db($DB["dbName"]);
+	 echo mysqli_errno($link) . ": " . mysqli_error($link). "\n";
 	  echo "in if";
 }
 

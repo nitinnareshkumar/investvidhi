@@ -2025,3 +2025,687 @@ Error finding the BSE script code forSPB14
 Error finding the BSE script code forSBI27
 Error finding the BSE script code forUTI19
 Error finding the BSE script code for
+Error finding the BSE script code forABC05
+Error finding the BSE script code forABM02
+Error finding the BSE script code forAP25
+Error finding the BSE script code forABC05
+Error finding the BSE script code forABM02
+Error finding the BSE script code forAP25
+Error finding the BSE script code forAS21
+Error finding the BSE script code forAML03
+Error finding the BSE script code forABP
+Error finding the BSE script code forTAR
+Error finding the BSE script code forASB
+Error finding the BSE script code forASH
+Error finding the BSE script code forAT13
+Error finding the BSE script code forAF24
+Error finding the BSE script code forAI46
+Error finding the BSE script code forAT12
+Error finding the BSE script code forACI09
+Error finding the BSE script code forAC27
+Error finding the BSE script code forAI48
+Error finding the BSE script code forAPM02
+Error finding the BSE script code forAET02
+Error finding the BSE script code forBU02
+Error finding the BSE script code forBAL
+Error finding the BSE script code forBS12
+Error finding the BSE script code forBN01
+Error finding the BSE script code forBAN01
+Error finding the BSE script code forBPA02
+Error finding the BSE script code forBCF01
+Error finding the BSE script code forBSL03
+Error finding the BSE script code forBI22
+Error finding the BSE script code forBSE25
+Error finding the BSE script code forSPB05
+Error finding the BSE script code forSPB02
+Error finding the BSE script code forBSN
+Error finding the BSE script code forCAC01
+Error finding the BSE script code forC12
+Error finding the BSE script code forCI50
+Error finding the BSE script code forCE01
+Error finding the BSE script code forCI24
+Error finding the BSE script code forCI36
+Error finding the BSE script code forCV02
+Error finding the BSE script code forCMS02
+Error finding the BSE script code forCPI06
+Error finding the BSE script code forCRB01
+Error finding the BSE script code forCRB02
+Error finding the BSE script code forCM02
+Error finding the BSE script code forCIS
+Error finding the BSE script code forDS07
+Error finding the BSE script code forDS9
+Error finding the BSE script code forSNC02
+Error finding the BSE script code forDAI
+Error finding the BSE script code forDM03
+Error finding the BSE script code forDTI02
+Error finding the BSE script code forDAX
+Error finding the BSE script code forDFR
+Error finding the BSE script code forDI29
+Error finding the BSE script code forDPS
+Error finding the BSE script code forDIL02
+Error finding the BSE script code forDPE
+Error finding the BSE script code forEWT
+Error finding the BSE script code forEET
+Error finding the BSE script code forEET01
+Error finding the BSE script code forEML
+Error finding the BSE script code forEMF
+Error finding the BSE script code forESS
+Error finding the BSE script code forEIS
+Error finding the BSE script code forEXL
+Error finding the BSE script code forEE03
+Error finding the BSE script code forFIS01
+Error finding the BSE script code forFF07
+Error finding the BSE script code forFI16
+Error finding the BSE script code forFI18
+Error finding the BSE script code forFTS
+Error finding the BSE script code forFI15
+Error finding the BSE script code forGE03
+Error finding the BSE script code forGI21
+Error finding the BSE script code forGE06
+Error finding the BSE script code forGBV
+Error finding the BSE script code forGBV01
+Error finding the BSE script code forGT05
+Error finding the BSE script code forGTP01
+Error finding the BSE script code forHS07
+Error finding the BSE script code forH04
+Error finding the BSE script code forHNG
+Error finding the BSE script code forHI13
+Error finding the BSE script code forH06
+Error finding the BSE script code forICI13
+Error finding the BSE script code forIDB02
+Error finding the BSE script code forIDF02
+Error finding the BSE script code forIIF
+Error finding the BSE script code forIMA01
+Error finding the BSE script code forIH
+Error finding the BSE script code forIND01
+Error finding the BSE script code forIND02
+Error finding the BSE script code forII10
+Error finding the BSE script code forIIN
+Error finding the BSE script code forISI
+Error finding the BSE script code forITT
+Error finding the BSE script code forJS06
+Error finding the BSE script code forJFA
+Error finding the BSE script code forJ01
+Error finding the BSE script code forJMA
+Error finding the BSE script code forKCC02
+Error finding the BSE script code forKIS
+Error finding the BSE script code forKC18
+Error finding the BSE script code forKO03
+Error finding the BSE script code forKS16
+Error finding the BSE script code forKOS
+Error finding the BSE script code forKMM03
+Error finding the BSE script code forKNV
+Error finding the BSE script code forKPB
+Error finding the BSE script code forKIT02
+Error finding the BSE script code forKIA01
+Error finding the BSE script code forLFI01
+Error finding the BSE script code forLIC05
+Error finding the BSE script code forLIC9
+Error finding the BSE script code forLIC07
+Error finding the BSE script code forLIC08
+Error finding the BSE script code forLIC06
+Error finding the BSE script code forLKB
+Error finding the BSE script code forLTF03
+Error finding the BSE script code forMRO02
+Error finding the BSE script code forMMF02
+Error finding the BSE script code forMFS02
+Error finding the BSE script code forLKB
+Error finding the BSE script code forMRO02
+Error finding the BSE script code forMMF02
+Error finding the BSE script code forMFS02
+Error finding the BSE script code forMI60
+Error finding the BSE script code forMDC01
+Error finding the BSE script code forMIL01
+Error finding the BSE script code forMCC03
+Error finding the BSE script code forMTI02
+Error finding the BSE script code forMI49
+Error finding the BSE script code forMPC02
+Error finding the BSE script code forMPA01
+Error finding the BSE script code forMDM
+Error finding the BSE script code forMSS03
+Error finding the BSE script code forNDG
+Error finding the BSE script code forNC10
+Error finding the BSE script code forNBI02
+Error finding the BSE script code forNAS
+Error finding the BSE script code forNCS01
+Error finding the BSE script code forNI18
+Error finding the BSE script code forCNX03
+Error finding the BSE script code forNIF9
+Error finding the BSE script code forNIF02
+Error finding the BSE script code forN50
+Error finding the BSE script code forNIF06
+Error finding the BSE script code forCNX02
+Error finding the BSE script code forCNX04
+Error finding the BSE script code forNIF04
+Error finding the BSE script code forNIF03
+Error finding the BSE script code forNIF07
+Error finding the BSE script code forNIF01
+Error finding the BSE script code forCNX05
+Error finding the BSE script code forNIF05
+Error finding the BSE script code forCNX06
+Error finding the BSE script code forNGS
+Error finding the BSE script code forCNX07
+Error finding the BSE script code forCNX
+Error finding the BSE script code forCNX09
+Error finding the BSE script code forCNX08
+Error finding the BSE script code forCNX01
+Error finding the BSE script code forNM02
+Error finding the BSE script code forCNX10
+Error finding the BSE script code forNIF
+Error finding the BSE script code forCNX11
+Error finding the BSE script code forCNX12
+Error finding the BSE script code forCNX13
+Error finding the BSE script code forCNX14
+Error finding the BSE script code forCNX15
+Error finding the BSE script code forNIF08
+Error finding the BSE script code forNV01
+Error finding the BSE script code forNN
+Error finding the BSE script code forNIK
+Error finding the BSE script code forN51
+Error finding the BSE script code forNII03
+Error finding the BSE script code forNP12
+Error finding the BSE script code forNCT
+Error finding the BSE script code forNSC
+Error finding the BSE script code forJNI
+Error finding the BSE script code forNV
+Error finding the BSE script code forOI10
+Error finding the BSE script code forOSS
+Error finding the BSE script code forOS06
+Error finding the BSE script code forOM02
+Error inserting Operating Profit ACC06
+Error inserting EPS ACC06
+Error inserting Operating Profit ACC06
+Error inserting EPS ACC06
+Error inserting Operating Profit ACC06
+Error inserting EPS ACC06
+Error inserting Operating Profit ACC06
+Error inserting EPS ACC06
+Error inserting Operating Profit ACC06
+Error inserting EPS ACC06
+Error inserting Operating Profit ACC06
+Error inserting EPS ACC06
+Error inserting Operating Profit ACC06
+Error inserting EPS ACC06
+Error inserting Operating Profit ACC06
+Error inserting EPS ACC06
+Error inserting Operating Profit ACC06
+Error inserting EPS ACC06
+Error inserting Operating Profit ACC06
+Error inserting EPS ACC06
+Error inserting Operating Profit ACC06
+Error inserting EPS ACC06
+Error inserting Operating Profit ACC06
+Error inserting EPS ACC06
+Error inserting data 19036--AEM
+Error inserting sales AEM
+Error inserting Operating Profit AEM
+Error inserting EPS AEM
+Error inserting sales AGL
+Error inserting Operating Profit AGL
+Error inserting EPS AGL
+Error inserting data 19056--ABM01
+Error inserting sales ABM01
+Error inserting Operating Profit ABM01
+Error inserting EPS ABM01
+Error inserting sales ABL
+Error inserting Operating Profit ABL
+Error inserting EPS ABL
+Error inserting data 19080--AP01
+Error inserting sales AP01
+Error inserting Operating Profit AP01
+Error inserting EPS AP01
+Error inserting sales AT19
+Error inserting Operating Profit AT19
+Error inserting EPS AT19
+Error inserting sales EP12
+Error inserting Operating Profit EP12
+Error inserting EPS EP12
+Error inserting data 19088--AE12
+Error inserting sales AE12
+Error inserting Operating Profit AE12
+Error inserting EPS AE12
+Error inserting sales ATL03
+Error inserting Operating Profit ATL03
+Error inserting EPS ATL03
+Error inserting data 19115--AC01
+Error inserting sales AC01
+Error inserting Operating Profit AC01
+Error inserting EPS AC01
+Error inserting data 19120--ACF
+Error inserting sales ACF
+Error inserting Operating Profit ACF
+Error inserting EPS ACF
+Error inserting data 19126--ALP
+Error inserting data 19134--AS
+Error inserting sales AS
+Error inserting Operating Profit AS
+Error inserting EPS AS
+Error inserting data 19135--AY
+Error inserting sales AY
+Error inserting Operating Profit AY
+Error inserting EPS AY
+Error inserting sales ABL02
+Error inserting Operating Profit ABL02
+Error inserting EPS ABL02
+Error inserting data 19170--AMD
+Error inserting sales AMD
+Error inserting Operating Profit AMD
+Error inserting EPS AMD
+Error inserting data 19187--AME01
+Error inserting sales AME01
+Error inserting Operating Profit AME01
+Error inserting EPS AME01
+Error inserting data 19195--ATF
+Error inserting sales ATF
+Error inserting Operating Profit ATF
+Error inserting EPS ATF
+Error inserting sales AGS02
+Error inserting Operating Profit AGS02
+Error inserting EPS AGS02
+Error inserting data 19201--AWE
+Error inserting sales AWE
+Error inserting Operating Profit AWE
+Error inserting EPS AWE
+Error inserting data 19211--AJB
+Error inserting sales AJB
+Error inserting Operating Profit AJB
+Error inserting EPS AJB
+Error inserting data 19240--AE02
+Error inserting sales AE02
+Error inserting Operating Profit AE02
+Error inserting EPS AE02
+Error inserting sales AH01
+Error inserting Operating Profit AH01
+Error inserting EPS AH01
+Error inserting data 19245--AM03
+Error inserting sales AM03
+Error inserting Operating Profit AM03
+Error inserting EPS AM03
+Error inserting data 19252--AM04
+Error inserting sales AM04
+Error inserting Operating Profit AM04
+Error inserting EPS AM04
+Error inserting data 19259--AF04
+Error inserting sales AF04
+Error inserting Operating Profit AF04
+Error inserting EPS AF04
+Error inserting data 19266--EC06
+Error inserting sales EC06
+Error inserting Operating Profit EC06
+Error inserting EPS EC06
+Error inserting data 19267--ADI01
+Error inserting sales ADI01
+Error inserting Operating Profit ADI01
+Error inserting EPS ADI01
+Error inserting data 19300--AI42
+Error inserting sales AI42
+Error inserting Operating Profit AI42
+Error inserting EPS AI42
+Error inserting data 19304--AMH
+Error inserting sales AMH
+Error inserting Operating Profit AMH
+Error inserting EPS AMH
+Error inserting data 19310--AP05
+Error inserting sales AP05
+Error inserting Operating Profit AP05
+Error inserting EPS AP05
+Error inserting data 19312--AAF
+Error inserting sales AAF
+Error inserting Operating Profit AAF
+Error inserting EPS AAF
+Error inserting data 19349--ACI04
+Error inserting sales ACI04
+Error inserting Operating Profit ACI04
+Error inserting EPS ACI04
+Error inserting data 19353--AF06
+Error inserting sales AF06
+Error inserting Operating Profit AF06
+Error inserting EPS AF06
+Error inserting sales AP33
+Error inserting Operating Profit AP33
+Error inserting EPS AP33
+Error inserting sales AI26
+Error inserting Operating Profit AI26
+Error inserting EPS AI26
+Error inserting sales AL12
+Error inserting Operating Profit AL12
+Error inserting EPS AL12
+Error inserting data 19516--AGI01
+Error inserting sales AGI01
+Error inserting Operating Profit AGI01
+Error inserting EPS AGI01
+Error inserting data 19517--AS14
+Error inserting sales AS14
+Error inserting Operating Profit AS14
+Error inserting EPS AS14
+Error inserting sales ACI06
+Error inserting Operating Profit ACI06
+Error inserting EPS ACI06
+Error inserting sales AF13
+Error inserting Operating Profit AF13
+Error inserting EPS AF13
+Error inserting sales ABI
+Error inserting Operating Profit ABI
+Error inserting EPS ABI
+Error inserting data 19532--AE10
+Error inserting sales AE10
+Error inserting Operating Profit AE10
+Error inserting EPS AE10
+Error inserting data 19533--AM05
+Error inserting sales AM05
+Error inserting Operating Profit AM05
+Error inserting EPS AM05
+Error inserting data 19535--AP14
+Error inserting sales AP14
+Error inserting Operating Profit AP14
+Error inserting EPS AP14
+Error inserting data 19544--AP27
+Error inserting sales AP27
+Error inserting Operating Profit AP27
+Error inserting EPS AP27
+Error inserting sales AR06
+Error inserting Operating Profit AR06
+Error inserting EPS AR06
+Error inserting data 19547--AI72
+Error inserting sales AG02
+Error inserting Operating Profit AG02
+Error inserting EPS AG02
+Error inserting data 19170--AMD
+Error inserting sales AMD
+Error inserting Operating Profit AMD
+Error inserting EPS AMD
+Error inserting data 19170--AMD
+Error inserting sales AMD
+Error inserting Operating Profit AMD
+Error inserting EPS AMD
+Error inserting data 19187--AME01
+Error inserting sales AME01
+Error inserting Operating Profit AME01
+Error inserting EPS AME01
+Error inserting data 19195--ATF
+Error inserting sales ATF
+Error inserting Operating Profit ATF
+Error inserting EPS ATF
+Error inserting sales AGS02
+Error inserting Operating Profit AGS02
+Error inserting EPS AGS02
+Error inserting data 19201--AWE
+Error inserting sales AWE
+Error inserting Operating Profit AWE
+Error inserting EPS AWE
+Error inserting data 19211--AJB
+Error inserting sales AJB
+Error inserting Operating Profit AJB
+Error inserting EPS AJB
+Error inserting data 19170--AMD
+Error inserting sales AMD
+Error inserting Operating Profit AMD
+Error inserting EPS AMD
+Error inserting data 19036--AEM
+Error inserting sales AEM
+Error inserting Operating Profit AEM
+Error inserting EPS AEM
+Error inserting sales AGL
+Error inserting Operating Profit AGL
+Error inserting EPS AGL
+Error inserting data 19056--ABM01
+Error inserting sales ABM01
+Error inserting Operating Profit ABM01
+Error inserting EPS ABM01
+Error inserting sales ABL
+Error inserting Operating Profit ABL
+Error inserting EPS ABL
+Error inserting data 19080--AP01
+Error inserting sales AP01
+Error inserting Operating Profit AP01
+Error inserting EPS AP01
+Error inserting sales AT19
+Error inserting Operating Profit AT19
+Error inserting EPS AT19
+Error inserting sales EP12
+Error inserting Operating Profit EP12
+Error inserting EPS EP12
+Error inserting data 19088--AE12
+Error inserting sales AE12
+Error inserting Operating Profit AE12
+Error inserting EPS AE12
+Error inserting sales ATL03
+Error inserting Operating Profit ATL03
+Error inserting EPS ATL03
+Error inserting sales ATW
+Error inserting Operating Profit ATW
+Error inserting EPS ATW
+Error inserting data 19115--AC01
+Error inserting sales AC01
+Error inserting Operating Profit AC01
+Error inserting EPS AC01
+Error inserting data 19120--ACF
+Error inserting sales ACF
+Error inserting Operating Profit ACF
+Error inserting EPS ACF
+Error inserting data 19126--ALP
+Error inserting sales ALP
+Error inserting Operating Profit ALP
+Error inserting EPS ALP
+Error inserting data 19134--AS
+Error inserting sales AS
+Error inserting Operating Profit AS
+Error inserting EPS AS
+Error inserting data 19135--AY
+Error inserting sales AY
+Error inserting Operating Profit AY
+Error inserting EPS AY
+Error inserting sales ABL02
+Error inserting Operating Profit ABL02
+Error inserting EPS ABL02
+Error inserting data 19170--AMD
+Error inserting sales AMD
+Error inserting Operating Profit AMD
+Error inserting EPS AMD
+Error inserting data 19187--AME01
+Error inserting sales AME01
+Error inserting Operating Profit AME01
+Error inserting EPS AME01
+Error inserting data 19195--ATF
+Error inserting sales ATF
+Error inserting Operating Profit ATF
+Error inserting EPS ATF
+Error inserting sales AGS02
+Error inserting Operating Profit AGS02
+Error inserting EPS AGS02
+Error inserting data 19201--AWE
+Error inserting sales AWE
+Error inserting Operating Profit AWE
+Error inserting EPS AWE
+Error inserting data 19211--AJB
+Error inserting sales AJB
+Error inserting Operating Profit AJB
+Error inserting EPS AJB
+Error inserting data 19240--AE02
+Error inserting sales AE02
+Error inserting Operating Profit AE02
+Error inserting EPS AE02
+Error inserting sales AH01
+Error inserting Operating Profit AH01
+Error inserting EPS AH01
+Error inserting data 19245--AM03
+Error inserting sales AM03
+Error inserting Operating Profit AM03
+Error inserting EPS AM03
+Error inserting data 19252--AM04
+Error inserting sales AM04
+Error inserting Operating Profit AM04
+Error inserting EPS AM04
+Error inserting data 19259--AF04
+Error inserting sales AF04
+Error inserting Operating Profit AF04
+Error inserting EPS AF04
+Error inserting data 19266--EC06
+Error inserting sales EC06
+Error inserting Operating Profit EC06
+Error inserting EPS EC06
+Error inserting data 19267--ADI01
+Error inserting sales ADI01
+Error inserting Operating Profit ADI01
+Error inserting EPS ADI01
+Error inserting data 19300--AI42
+Error inserting sales AI42
+Error inserting Operating Profit AI42
+Error inserting EPS AI42
+Error inserting data 19304--AMH
+Error inserting sales AMH
+Error inserting Operating Profit AMH
+Error inserting EPS AMH
+Error inserting data 19310--AP05
+Error inserting sales AP05
+Error inserting Operating Profit AP05
+Error inserting EPS AP05
+Error inserting data 19312--AAF
+Error inserting sales AAF
+Error inserting Operating Profit AAF
+Error inserting EPS AAF
+Error inserting data 19349--ACI04
+Error inserting sales ACI04
+Error inserting Operating Profit ACI04
+Error inserting EPS ACI04
+Error inserting data 19353--AF06
+Error inserting sales AF06
+Error inserting Operating Profit AF06
+Error inserting EPS AF06
+Error inserting sales AP33
+Error inserting Operating Profit AP33
+Error inserting EPS AP33
+Error inserting sales AI26
+Error inserting Operating Profit AI26
+Error inserting EPS AI26
+Error inserting sales AL12
+Error inserting Operating Profit AL12
+Error inserting EPS AL12
+Error inserting data 19516--AGI01
+Error inserting sales AGI01
+Error inserting Operating Profit AGI01
+Error inserting EPS AGI01
+Error inserting data 19517--AS14
+Error inserting sales AS14
+Error inserting Operating Profit AS14
+Error inserting EPS AS14
+Error inserting sales ACI06
+Error inserting Operating Profit ACI06
+Error inserting EPS ACI06
+Error inserting sales AF13
+Error inserting Operating Profit AF13
+Error inserting EPS AF13
+Error inserting sales ABI
+Error inserting Operating Profit ABI
+Error inserting EPS ABI
+Error inserting data 19532--AE10
+Error inserting sales AE10
+Error inserting Operating Profit AE10
+Error inserting EPS AE10
+Error inserting data 19533--AM05
+Error inserting sales AM05
+Error inserting Operating Profit AM05
+Error inserting EPS AM05
+Error inserting data 19535--AP14
+Error inserting sales AP14
+Error inserting Operating Profit AP14
+Error inserting EPS AP14
+Error inserting data 19544--AP27
+Error inserting sales AP27
+Error inserting Operating Profit AP27
+Error inserting EPS AP27
+Error inserting sales AR06
+Error inserting Operating Profit AR06
+Error inserting EPS AR06
+Error inserting data 19547--AI72
+Error inserting sales AI72
+Error inserting Operating Profit AI72
+Error inserting EPS AI72
+Error inserting sales AG02
+Error inserting Operating Profit AG02
+Error inserting EPS AG02
+Error inserting data 19593--AB13
+Error inserting sales AB13
+Error inserting Operating Profit AB13
+Error inserting EPS AB13
+Error inserting sales AE11
+Error inserting Operating Profit AE11
+Error inserting EPS AE11
+Error inserting sales AFP02
+Error inserting Operating Profit AFP02
+Error inserting EPS AFP02
+Error inserting sales APL04
+Error inserting Operating Profit APL04
+Error inserting EPS APL04
+Error inserting sales AMG
+Error inserting Operating Profit AMG
+Error inserting EPS AMG
+Error inserting sales ARI01
+Error inserting Operating Profit ARI01
+Error inserting EPS ARI01
+Error inserting data 19652--AFS03
+Error inserting sales AFS03
+Error inserting Operating Profit AFS03
+Error inserting EPS AFS03
+Error inserting data 19658--ASW
+Error inserting sales ASW
+Error inserting Operating Profit ASW
+Error inserting EPS ASW
+Error inserting data 19665--ATN01
+Error inserting sales ATN01
+Error inserting Operating Profit ATN01
+Error inserting EPS ATN01
+Error inserting data 19666--A06
+Error inserting sales A06
+Error inserting Operating Profit A06
+Error inserting EPS A06
+Error inserting data 19671--ASF02
+Error inserting data 19688--ACG
+Error inserting sales ACG
+Error inserting Operating Profit ACG
+Error inserting EPS ACG
+Error inserting data 19691--ASA01
+Error inserting sales ASA01
+Error inserting Operating Profit ASA01
+Error inserting EPS ASA01
+Error inserting data 19692--AT10
+Error inserting sales AT10
+Error inserting Operating Profit AT10
+Error inserting EPS AT10
+Error inserting data 19724--AB16
+Error inserting sales AB16
+Error inserting Operating Profit AB16
+Error inserting EPS AB16
+Error inserting data 19745--GM01
+Error inserting sales GM01
+Error inserting Operating Profit GM01
+Error inserting EPS GM01
+Error inserting data 19758--BC02
+Error inserting sales BC02
+Error inserting Operating Profit BC02
+Error inserting EPS BC02
+Error inserting data 19801--BFL02
+Error inserting sales BFL02
+Error inserting Operating Profit BFL02
+Error inserting EPS BFL02
+Error inserting data 19803--BB09
+Error inserting data 19807--BCL06
+Error inserting sales BCL06
+Error inserting Operating Profit BCL06
+Error inserting EPS BCL06
+Error inserting sales BTI
+Error inserting Operating Profit BTI
+Error inserting EPS BTI
+Error inserting data 19834--BEM01
+Error inserting sales BEM01
+Error inserting Operating Profit BEM01
+Error inserting EPS BEM01
+Error inserting data 19081--ACC06
+Error inserting sales ACC06
+Error inserting sales IT
+Error inserting sales IT
+Error inserting data --
+Error inserting data --
+Error inserting data 22193--IT
+Error inserting data 22193--IT
+Error inserting sales IT

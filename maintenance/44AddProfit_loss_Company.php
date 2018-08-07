@@ -12,17 +12,17 @@ set_time_limit(20000);
 //$row = mysql_fetch_array($result);
 //$iCount= $row[maxnum]; //commented ************************************************************
 //$res1=mysql_query("delete from profit_loss");
-$iCount=6495;//hard coded for fetching 100 records.
+$iCount=19081;//hard coded for fetching 100 records.?//naidu - uncomment  to delete old data
 // Open error log file
 		//$res1=mysql_query("delete from profit_loss");
 $myFile = "Profit_Loss_logs.txt";
 $fh = fopen($myFile, 'a') or die("can't open file");
 //loop to parse records
-for ($iLoop= 6494; $iLoop<($iCount+1);$iLoop++)
+for ($iLoop= 19081; $iLoop<($iCount+1);$iLoop++)
 {
-	$result=mysql_query("select * from name_code where number=$iLoop and Company_type NOT IN ('banks-public-sector','banks-private-sector')");
+	$result=mysqli_query($link, "select * from name_code where number=$iLoop and Company_type NOT IN ('banks-public-sector','banks-private-sector')");
 	//$result=mysql_query("select * from name_code where number=1");
-	$row = mysql_fetch_array($result);;
+	$row = mysqli_fetch_array($result);;
 	$moneycontrol_code = $row['code'];
 	$UrlName="http://www.moneycontrol.com/stocks/company_info/print_financials.php?sc_did=$moneycontrol_code&type=profit";
 	//echo $UrlName."<br>";
@@ -368,12 +368,13 @@ $IntupoonOp = intval( $IntupoonOp );
 			{
 			//echo "insert into profit_loss set  companynumber='$row[number]',companycode= '$row[code]', year='$tempyearData', salesTurnover='$tempsalesTurnoverData',	ExciseDuty='$tempExciseDutyData',	netSales='$tempnetSalesData',	otherIncome='$tempotherIncomeData',	stockAdj='$tempstockAdjData',	totalIncome='$temptotalIncomeData',	rawMaterial='$temprawMaterialData',	powerFuel='$temppowerFuelData',	employeeCost='$tempemployeeCostData',	otherManuCost='$tempotherManuCostData',	sGACost='$tempsGACostData',	miscCost='$tempmiscCostData',	preopExpCost='$temppreopExpCostData',	totalExp='$temptotalExpData',	PBDIT='$tempPBDITData',	interest='$tempinterestData',	depreciation='$tempdepreciationData',	PBT='$tempPBTData',	netProfit='$tempnetProfitData',	sharesIssued='$tempsharesIssuedData',	EPS='$tempEPSData',	equityDividends='$tempequityDividendsData',	bookValue='$tempbookValueData', grossProfit='$tempGrossProfit', operatingProfit='$tempoperatingProfit' , GPmargin = '$GPMargin' , SgaUponGp = '$SGAuponGp' , DepUponGp ='$DepuponGp' , OPMargin	='$OPMargin', IntUponOP = '$IntupoonOp' , NPMargin = '$NPMargin'";
 
-			$res=mysql_query("insert into profit_loss set  companynumber='$row[number]',companycode= '$row[code]', year='$tempyearData', salesTurnover='$tempsalesTurnoverData',	ExciseDuty='$tempExciseDutyData',	netSales='$tempnetSalesData',	otherIncome='$tempotherIncomeData',	stockAdj='$tempstockAdjData',	totalIncome='$temptotalIncomeData',	rawMaterial='$temprawMaterialData',	powerFuel='$temppowerFuelData',	employeeCost='$tempemployeeCostData',	otherManuCost='$tempotherManuCostData',	sGACost='$tempsGACostData',	miscCost='$tempmiscCostData',	preopExpCost='$temppreopExpCostData',	totalExp='$temptotalExpData',	PBDIT='$tempPBDITData',	interest='$tempinterestData',	depreciation='$tempdepreciationData',	PBT='$tempPBTData',	netProfit='$tempnetProfitData',	sharesIssued='$tempsharesIssuedData',	EPS='$tempEPSData',	equityDividends='$tempequityDividendsData',	bookValue='$tempbookValueData', grossProfit='$tempGrossProfit', operatingProfit='$tempoperatingProfit' , GPmargin = '$GPMargin' , SgaUponGp = '$SGAuponGp' , DepUponGp ='$DepuponGp' , OPMargin	='$OPMargin', IntUponOP = '$IntupoonOp' , NPMargin = '$NPMargin'");
+			$res=mysqli_query($link,"insert into profit_loss set  companynumber='$row[number]',companycode= '$row[code]', year='$tempyearData', salesTurnover='$tempsalesTurnoverData',	ExciseDuty='$tempExciseDutyData',	netSales='$tempnetSalesData',	otherIncome='$tempotherIncomeData',	stockAdj='$tempstockAdjData',	totalIncome='$temptotalIncomeData',	rawMaterial='$temprawMaterialData',	powerFuel='$temppowerFuelData',	employeeCost='$tempemployeeCostData',	otherManuCost='$tempotherManuCostData',	sGACost='$tempsGACostData',	miscCost='$tempmiscCostData',	preopExpCost='$temppreopExpCostData',	totalExp='$temptotalExpData',	PBDIT='$tempPBDITData',	interest='$tempinterestData',	depreciation='$tempdepreciationData',	PBT='$tempPBTData',	netProfit='$tempnetProfitData',	sharesIssued='$tempsharesIssuedData',	EPS='$tempEPSData',	equityDividends='$tempequityDividendsData',	bookValue='$tempbookValueData', grossProfit='$tempGrossProfit', operatingProfit='$tempoperatingProfit' , GPmargin = '$GPMargin' , SgaUponGp = '$SGAuponGp' , DepUponGp ='$DepuponGp' , OPMargin	='$OPMargin', IntUponOP = '$IntupoonOp' , NPMargin = '$NPMargin'"); //naidu uncomment
+			//echo "companynumber=".$row[number]."companycode= ".$row[code]."year=".$tempyearData.", salesTurnover=".$tempsalesTurnoverData.",	ExciseDuty=".$tempExciseDutyData.",	netSales=".$tempnetSalesData.",	otherIncome=".$tempotherIncomeData."stockAdj=".$tempstockAdjData."totalIncome=".$temptotalIncomeData.",	rawMaterial=".$temprawMaterialData."powerFuel=".$temppowerFuelData."	employeeCost=".$tempemployeeCostData."	otherManuCost=".$tempotherManuCostData."	sGACost=".$tempsGACostData."	miscCost=".$tempmiscCostData."	preopExpCost=".$temppreopExpCostData."	totalExp=".$temptotalExpData."	PBDIT=".$tempPBDITData."	interest=".$tempinterestData."	depreciation=".$tempdepreciationData."	PBT=".$tempPBTData."	netProfit=".$tempnetProfitData."	sharesIssued=".$tempsharesIssuedData."	EPS=".$tempEPSData."	equityDividends=".$tempequityDividendsData."	bookValue=".$tempbookValueData." grossProfit=".$tempGrossProfit." operatingProfit=".$tempoperatingProfit." GPmargin = ".$GPMargin."SgaUponGp = ".$SGAuponGp."DepUponGp =".$DepuponGp."OPMargin	=".$OPMargin." IntUponOP = ".$IntupoonOp."NPMargin = ".$NPMargin;
 			}
 		if(!$res)
 		{
 			//echo "Error inserting sales ". $row[code];
-			echo "Error inserting sales ". $row[number].mysql_error();
+			echo "Error inserting sales ". $row[number].mysqli_error();
 		}
 	
 	} 
