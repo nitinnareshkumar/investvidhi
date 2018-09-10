@@ -43,31 +43,31 @@ Give ratings from 1 to 5 where <br>
 </a></td> <td width="150" height = "10" align="left" valign="top"><h5>Last Updated</h5></td> </tr>
 	<tr><td height="30" ></td></tr>
   
-  <? 
+  <?php
  // echo "<br>".$searchCompanyName."<br>";
  // $query = "select * from name_code where name like = '$searchCompanyName' ";
  // echo "<br>".$query."<br>";
  
  		
-     $companylist=mysql_query("select * from user_companies where  userid in (select id from tbl_user where isAdmin = 'Y') and favorite_analyse = 'A' ");
-	  if($rows_st=mysql_num_rows($companylist))
+     $companylist=mysqli_query($link,"select * from user_companies where  userid in (select id from tbl_user where isAdmin = 'Y') and favorite_analyse = 'A' ");
+	  if($rows_st=mysqli_num_rows($companylist))
 					{   					
 						//while($row_st=mysql_fetch_assoc($area_suggested))
-						while($row_st=mysql_fetch_array($companylist))
+						while($row_st=mysqli_fetch_array($companylist))
 						{
 						   // print_r($row_st);
 							$Companynumber=$row_st['companynumber'];
 
-							$getnamesql = mysql_query("select name from name_code where number = $Companynumber");	
-							$getratingsql = mysql_query("select P_rating from user_analyze_companies  where companynumber = $Companynumber and P_code = '1100' and userid in (select id from tbl_user where isAdmin = 'Y') ");
-							$getvratingsql = mysql_query("select P_rating from user_analyze_companies  where companynumber = $Companynumber and P_code = '1102' and userid in (select id from tbl_user where isAdmin = 'Y') ");
-											 												$row_st1=mysql_fetch_array($getnamesql);
-$row_strating=mysql_fetch_array($getratingsql);	
-$row_Vtrating=mysql_fetch_array($getvratingsql);							
+							$getnamesql = mysqli_query($link,"select name from name_code where number = $Companynumber");	
+							$getratingsql = mysqli_query($link,"select P_rating from user_analyze_companies  where companynumber = $Companynumber and P_code = '1100' and userid in (select id from tbl_user where isAdmin = 'Y') ");
+							$getvratingsql = mysqli_query($link,"select P_rating from user_analyze_companies  where companynumber = $Companynumber and P_code = '1102' and userid in (select id from tbl_user where isAdmin = 'Y') ");
+											 												$row_st1=mysqli_fetch_array($getnamesql);
+$row_strating=mysqli_fetch_array($getratingsql);	
+$row_Vtrating=mysqli_fetch_array($getvratingsql);							
 					?>         
   
   <tr>
-    <td width="300" align="left" valign="top"><a href="<? echo "AnalyzedCompanies.php?frommyaccount=Y&number=".$Companynumber ;?>" style="color:#000000"  ><?php echo ucwords($row_st1['name']); ?></a></td> <td><span class="greytxt12"><?php echo $row_strating['P_rating']; ?></span></td> <td><span class="greytxt12"><?php echo $row_Vtrating['P_rating']; ?></span></td><td><span class="greytxt12"><?php echo $row_st['UpdateDate']; ?></span></td><? }}?> </tr>
+    <td width="300" align="left" valign="top"><a href="<?php echo "AnalyzedCompanies.php?frommyaccount=Y&number=".$Companynumber ; ?>" style="color:#000000"  ><?php echo ucwords($row_st1['name']); ?> </a></td> <td><span class="greytxt12"><?php echo $row_strating['P_rating']; ?></span></td> <td><span class="greytxt12"><?php echo $row_Vtrating['P_rating']; ?></span></td><td><span class="greytxt12"><?php echo $row_st['UpdateDate']; ?></span></td><?php }}?> </tr>
 </table>
 <div class="clear5"></div>
 <div class="clear2"></div>

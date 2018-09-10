@@ -26,31 +26,31 @@ include("header.inc.php");
   <?php 
     $searchCompanyCode = $_GET['mcode'];
 	$mcode = $_GET['mcode'];
-    $testcompanySearch=mysql_query("select * from profit_loss_banks where year = '12' and companycode = '$searchCompanyCode'");
-	$rows_test = mysql_num_rows($testcompanySearch);
+    $testcompanySearch=mysqli_query($link,"select * from profit_loss_banks where year = '18' and companycode = '$searchCompanyCode'");
+	$rows_test = mysqli_num_rows($testcompanySearch);
 	if ($rows_test == 0 ){
-     $companySearch=mysql_query("select * from profit_loss_banks where year = '11' and companycode = '$searchCompanyCode'"); 	 
-	$row5 = mysql_fetch_array($companySearch);
-	$companySearch=mysql_query("select * from profit_loss_banks where year = '10' and companycode = '$searchCompanyCode'"); 	 
-	$row4 = mysql_fetch_array($companySearch);
-	$companySearch=mysql_query("select * from profit_loss_banks where year = '09' and companycode = '$searchCompanyCode'"); 	 
-	$row3 = mysql_fetch_array($companySearch);
-	$companySearch=mysql_query("select * from profit_loss_banks where year = '08' and companycode = '$searchCompanyCode'"); 	 
-	$row2 = mysql_fetch_array($companySearch);
-	$companySearch=mysql_query("select * from profit_loss_banks where year = '07' and companycode = '$searchCompanyCode'"); 	 
-	$row1 = mysql_fetch_array($companySearch);
+     $companySearch=mysqli_query($link,"select * from profit_loss_banks where year = '17' and companycode = '$searchCompanyCode'"); 	 
+	$row5 = mysqli_fetch_array($companySearch);
+	$companySearch=mysqli_query($link,"select * from profit_loss_banks where year = '16' and companycode = '$searchCompanyCode'"); 	 
+	$row4 = mysqli_fetch_array($companySearch);
+	$companySearch=mysqli_query($link,"select * from profit_loss_banks where year = '15' and companycode = '$searchCompanyCode'"); 	 
+	$row3 = mysqli_fetch_array($companySearch);
+	$companySearch=mysqli_query($link,"select * from profit_loss_banks where year = '14' and companycode = '$searchCompanyCode'"); 	 
+	$row2 = mysqli_fetch_array($companySearch);
+	$companySearch=mysqli_query($link,"select * from profit_loss_banks where year = '13' and companycode = '$searchCompanyCode'"); 	 
+	$row1 = mysqli_fetch_array($companySearch);
 	}
 	else{
-	$companySearch=mysql_query("select * from profit_loss_banks where year = '12' and companycode = '$searchCompanyCode'"); 	 
-	$row5 = mysql_fetch_array($companySearch);
-	$companySearch=mysql_query("select * from profit_loss_banks where year = '11' and companycode = '$searchCompanyCode'"); 	 
-	$row4 = mysql_fetch_array($companySearch);
-	$companySearch=mysql_query("select * from profit_loss_banks where year = '10' and companycode = '$searchCompanyCode'"); 	 
-	$row3 = mysql_fetch_array($companySearch);
-	$companySearch=mysql_query("select * from profit_loss_banks where year = '09' and companycode = '$searchCompanyCode'"); 	 
-	$row2 = mysql_fetch_array($companySearch);
-	$companySearch=mysql_query("select * from profit_loss_banks where year = '08' and companycode = '$searchCompanyCode'"); 	 
-	$row1 = mysql_fetch_array($companySearch);
+	$companySearch=mysqli_query($link,"select * from profit_loss_banks where year = '18' and companycode = '$searchCompanyCode'"); 	 
+	$row5 = mysqli_fetch_array($companySearch);
+	$companySearch=mysqli_query($link,"select * from profit_loss_banks where year = '17' and companycode = '$searchCompanyCode'"); 	 
+	$row4 = mysqli_fetch_array($companySearch);
+	$companySearch=mysqli_query($link,"select * from profit_loss_banks where year = '16' and companycode = '$searchCompanyCode'"); 	 
+	$row3 = mysqli_fetch_array($companySearch);
+	$companySearch=mysqli_query($link,"select * from profit_loss_banks where year = '15' and companycode = '$searchCompanyCode'"); 	 
+	$row2 = mysqli_fetch_array($companySearch);
+	$companySearch=mysqli_query($link,"select * from profit_loss_banks where year = '14' and companycode = '$searchCompanyCode'"); 	 
+	$row1 = mysqli_fetch_array($companySearch);
 	}
 	
 //for sales start ---------------------------------------------------------------------
@@ -81,6 +81,10 @@ include("header.inc.php");
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+			continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "NULL" ) || ($arrayiTotalIncome[$i] == "" ) )
 		{
 			continue;
@@ -89,10 +93,7 @@ include("header.inc.php");
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -109,50 +110,50 @@ include("header.inc.php");
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="80" align="left" valign="top" class="cell">&nbsp;</td>
-    <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><? echo $row1['year']; ?></span>  </td> 
-    <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><? echo "Growth%" ?></span>  </td>
-   <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><? echo $row2['year']; ?></span>  </td>
-   <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><? echo "Growth%" ?></span>  </td>
-   <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><? echo $row3['year']; ?></span>  </td>
-    <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><? echo "Growth%" ?></span>  </td>
-  <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><? echo $row4['year']; ?></span></td>
-    <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><? echo "Growth%" ?></span>  </td> 
-    <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><? echo $row5['year']; ?></span>  </td>   
+    <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><?php echo $row1['year']; ?></span>  </td> 
+    <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><?php echo "Growth%" ?></span>  </td>
+   <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><?php echo $row2['year']; ?></span>  </td>
+   <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><?php echo "Growth%" ?></span>  </td>
+   <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><?php echo $row3['year']; ?></span>  </td>
+    <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><?php echo "Growth%" ?></span>  </td>
+  <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><?php echo $row4['year']; ?></span></td>
+    <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><?php echo "Growth%" ?></span>  </td> 
+    <td width="65" align="left" valign="top" class="cell"><span class="greytxt14"><?php echo $row5['year']; ?></span>  </td>   
   </tr>
   
   <tr bordercolor="#000000">
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="cell"><span class="greytxt14">Interest Earned </span></td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
   //for sales end ---------------------------------------------------------------------?>
@@ -180,6 +181,10 @@ include("header.inc.php");
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+		continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" )|| ($arrayiTotalIncome[$i] == "" ))
 		{
 			continue;
@@ -188,10 +193,7 @@ include("header.inc.php");
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -209,35 +211,35 @@ include("header.inc.php");
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="cell"><span class="greytxt14">Other Income</span></td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td> 
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td> 
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-    <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+    <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
     //for total income end---------------------------------------------------------------------?>
@@ -272,6 +274,10 @@ include("header.inc.php");
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+			continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" )  || ($arrayiTotalIncome[$i] == "" ))
 		{
 			continue;
@@ -280,10 +286,7 @@ include("header.inc.php");
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -301,36 +304,36 @@ include("header.inc.php");
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="celldark"><span class="greytxt14">Total Income</span></td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
     //for Gross profit end---------------------------------------------------------------------?>
@@ -365,6 +368,10 @@ include("header.inc.php");
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+			continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" )  || ($arrayiTotalIncome[$i] == "" ))
 		{
 			continue;
@@ -373,10 +380,7 @@ include("header.inc.php");
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -394,36 +398,36 @@ include("header.inc.php");
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="cell"><span class="greytxt14">Interest Expended</span></td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
     //for Gross profit end---------------------------------------------------------------------?>
@@ -457,6 +461,10 @@ $patterns =",";
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+			continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" )  || ($arrayiTotalIncome[$i] == "" ))
 		{
 			continue;
@@ -465,10 +473,7 @@ $patterns =",";
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -486,36 +491,36 @@ $patterns =",";
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="cell"><span class="greytxt14">Employee Cost</span></td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
     //for Gross profit end---------------------------------------------------------------------?>
@@ -549,6 +554,10 @@ $patterns =",";
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+		continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" )  || ($arrayiTotalIncome[$i] == "" ))
 		{
 			continue;
@@ -557,10 +566,7 @@ $patterns =",";
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -578,36 +584,36 @@ $patterns =",";
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="cell"><span class="greytxt14">Selling and Admin Expenses</span></td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
     //for Gross profit end---------------------------------------------------------------------?>
@@ -641,6 +647,10 @@ $patterns =",";
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+		continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" )  || ($arrayiTotalIncome[$i] == "" ))
 		{
 			continue;
@@ -649,10 +659,7 @@ $patterns =",";
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -670,36 +677,36 @@ $patterns =",";
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="cell"><span class="greytxt14">Depreciation</span></td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
     //for Gross profit end---------------------------------------------------------------------?>
@@ -734,6 +741,10 @@ $patterns =",";
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+			continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" )  || ($arrayiTotalIncome[$i] == "" ))
 		{
 			continue;
@@ -742,10 +753,7 @@ $patterns =",";
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -763,36 +771,36 @@ $patterns =",";
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="cell"><span class="greytxt14">Miscellaneous Expenses</span></td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
     //for Gross profit end---------------------------------------------------------------------?>
@@ -826,6 +834,10 @@ $patterns =",";
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+		continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" )  || ($arrayiTotalIncome[$i] == "" ))
 		{
 			continue;
@@ -834,10 +846,7 @@ $patterns =",";
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -855,36 +864,36 @@ $patterns =",";
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="celldark"><span class="greytxt14">Operating Expenses</span></td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
     //for Gross profit end---------------------------------------------------------------------?>
@@ -917,6 +926,10 @@ $patterns =",";
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+		continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" )  || ($arrayiTotalIncome[$i] == "" ))
 		{
 			continue;
@@ -925,10 +938,7 @@ $patterns =",";
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -946,36 +956,36 @@ $patterns =",";
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="cell"><span class="greytxt14">Provisions</span></td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
    <?php 
     //for Gross profit end---------------------------------------------------------------------?>
@@ -1004,6 +1014,10 @@ $patterns =",";
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+		continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" ) || ($arrayiTotalIncome[$i] == "" ) || ($arrayiTotalIncome[$i] == "--" ))
 		{
 			continue;
@@ -1012,10 +1026,7 @@ $patterns =",";
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -1033,36 +1044,36 @@ $patterns =",";
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="cell"><span class="greytxt14">Total Expenses</span>  </td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
     //for Net Profit end---------------------------------------------------------------------?>
@@ -1092,6 +1103,10 @@ $patterns =",";
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+		continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" ) || ($arrayiTotalIncome[$i] == "" ) || ($arrayiTotalIncome[$i] == "--" ))
 		{
 			continue;
@@ -1100,10 +1115,7 @@ $patterns =",";
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -1121,36 +1133,36 @@ $patterns =",";
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="celldark"><span class="greytxt14">Net Profit</span>  </td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
     //for Net Profit end---------------------------------------------------------------------?>
@@ -1179,6 +1191,10 @@ $patterns =",";
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+		continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" ) || ($arrayiTotalIncome[$i] == "" ) || ($arrayiTotalIncome[$i] == "--" ))
 		{
 			continue;
@@ -1187,10 +1203,7 @@ $patterns =",";
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -1208,36 +1221,36 @@ $patterns =",";
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="cell"><span class="greytxt14">EPS</span>  </td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
    <?php 
     //for Net Profit end---------------------------------------------------------------------?>
@@ -1266,6 +1279,10 @@ $patterns =",";
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+		continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" ) || ($arrayiTotalIncome[$i] == "" ) || ($arrayiTotalIncome[$i] == "--" ))
 		{
 			continue;
@@ -1274,10 +1291,7 @@ $patterns =",";
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -1295,36 +1309,36 @@ $patterns =",";
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="cell"><span class="greytxt14">Equity Dividend</span>  </td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
     //for Net Profit end---------------------------------------------------------------------?>
@@ -1353,6 +1367,10 @@ $patterns =",";
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+		continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" ) || ($arrayiTotalIncome[$i] == "" ) || ($arrayiTotalIncome[$i] == "--" ))
 		{
 			continue;
@@ -1361,10 +1379,7 @@ $patterns =",";
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
@@ -1382,36 +1397,36 @@ $patterns =",";
   <tr>
   <td width="36" align="left" valign="top"> </td>
     <td width="65" align="left" valign="top" class="cell"><span class="greytxt14">Book Value</span>  </td>
-    <td width="65" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[0]; ?></span>  </td>
-    <? if ($arrayiIncomeGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-    <? } 
+    <td width="65" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[0]; ?></span>  </td>
+    <?php if ($arrayiIncomeGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[0];?></span>  </td>
-     <? } ?> 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[0];?></span>  </td>
+     <?php } ?> 
     
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[1]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[1]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[1];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[2]; ?></span>  </td>
-   <? if ($arrayiIncomeGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[1];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[2]; ?></span>  </td>
+   <?php if ($arrayiIncomeGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[3]; ?></span></td>
-   <? if ($arrayiIncomeGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[2];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[3]; ?></span></td>
+   <?php if ($arrayiIncomeGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiIncomeGrowth[3];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiTotalIncome[4]; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiIncomeGrowth[3];?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiTotalIncome[4]; ?></span>  </td>
   </tr>
     <?php 
     //for Net Profit end---------------------------------------------------------------------?>
@@ -1426,7 +1441,7 @@ $patterns =",";
 <h3></h3></div>
 <div class="inn_box"  align="center"></div>
 
-<div class="inn_box"  align="center"><a href="Balance_Sheet_Banks.php?mcode=<? echo $mcode;?>" ><img src="images/balancesheet.jpg"  width="140" height="120" border="0" align="bottom"></a>
+<div class="inn_box"  align="center"><a href="Balance_Sheet_Banks.php?mcode=<?php echo $mcode;?>" ><img src="images/balancesheet.jpg"  width="140" height="120" border="0" align="bottom"></a>
 <h3>Analyze Balance Sheet</h3></div>
 </div>
 <div class="clear5"></div>

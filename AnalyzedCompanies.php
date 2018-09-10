@@ -3,18 +3,19 @@ include("config/config.inc.php");
 
 $number = $_GET['number'];
  $fromMyacount = $_GET['frommyaccount'];
-if($_POST['form_adminanalyze']==1)
+ $form= isset($_POST['form_adminanalyze'])? $_POST['form_adminanalyze']:null;
+if($form!=null && $form ==1)
 {
 
 	extract($_POST);
 	// check for email already
 	if($_SESSION['security_code']!=$_POST['security_code'] || $_POST['security_code'] == ''){
-	$errmsg = 'Incorrect image verification word.';
+		$errmsg = 'Incorrect image verification word.';
 	}
 	else
 	{
 	$today = date("Y-m-d h:i:s") ;
-		$res=mysql_query("insert into user_comments set name='$txt_name' , emailid='$txt_email' , date ='$today', comments = '$txt_comments', companynumber =$number");
+		$res=mysqli_query($link,"insert into user_comments set name='$txt_name' , emailid='$txt_email' , date ='$today', comments = '$txt_comments', companynumber =$number");
 	}
 }
 
@@ -31,14 +32,14 @@ if($_POST['form_adminanalyze']==1)
 		$_SESSION['SessionOverallRating'] = "";
 		}
 		$_SESSION['SessionValuationRating'] = "";
-	 $analyselist=mysql_query("select * from user_analyze_companies where companynumber  = $number and  userid in (select id from tbl_user where isAdmin = 'Y') ");
+	 $analyselist=mysqli_query($link,"select * from user_analyze_companies where companynumber  = $number and  userid in (select id from tbl_user where isAdmin = 'Y') ");
 
-	 $imageArray[25]  ;
+	 $imageArray[25]  ='';
 	 $imagecount = 0;
-	  				if($rows_st=mysql_num_rows($analyselist))
+	  				if($rows_st=mysqli_num_rows($analyselist))
 					{
 							//while($row_st=mysql_fetch_assoc($area_suggested))
-							while($row_st=mysql_fetch_array($analyselist))
+							while($row_st=mysqli_fetch_array($analyselist))
 							{
 							//echo $row_st['P_data'].$row_st['P_rating'].$row_st['P_remarks'];
 									if ( $row_st['P_code'] == 1001)
@@ -220,10 +221,10 @@ if($_POST['form_adminanalyze']==1)
 
 
 ?>
-<?
+<?php
 	 $number = $_GET['number'];
-     $companySearch1=mysql_query("select * from name_code where number = $number ");
-	 $row1 = mysql_fetch_array($companySearch1);
+     $companySearch1=mysqli_query($link,"select * from name_code where number = $number ");
+	 $row1 = mysqli_fetch_array($companySearch1);
 	$name = $row1['name'];
 	$bseScript = $row1['BSE_Script'];
 	$companyUrl = $row1['company_url'];
@@ -431,7 +432,7 @@ include("header.inc.php");
 
 <table width="900" border="0" align="center" bordercolor="#333333" bgcolor="#FFFFFF">
 <tr >
-  <td align="center"><h3><? echo ucwords($name) ?> : Analyis of the company based on 25 Fundamental Parameters</h3> </td>
+  <td align="center"><h3><?php echo ucwords($name) ?> : Analyis of the company based on 25 Fundamental Parameters</h3> </td>
 </tr></table>
 
 
@@ -640,7 +641,7 @@ on equity, needs lot of capital expenditure and have no competitive advantage.<b
      <option value="" > </option>
     <?php for ($icount = 1 ; $icount <6 ; $icount++)
 	{   ?>
-	<option value="<?php echo $icount ; ?>" <?php if ($_SESSION['SessionOverallRating'] == $icount) { ?> selected="selected"<? }?> ><?php echo $icount ; ?> </option>
+	<option value="<?php echo $icount ; ?>" <?php if ($_SESSION['SessionOverallRating'] == $icount) { ?> selected="selected"<?php }?> ><?php echo $icount ; ?> </option>
 	<?php }
 	?>
 
@@ -657,11 +658,11 @@ Give ratings from 1 to 5 where <br>
      <option value="" > </option>
     <?php for ($icount = 1 ; $icount <6 ; $icount++)
 	{   ?>
-	<option value="<?php echo $icount ; ?>" <?php if ($_SESSION['SessionValuationRating'] == $icount) { ?> selected="selected"<? }?> ><?php echo $icount ; ?> </option>
+	<option value="<?php echo $icount ; ?>" <?php if ($_SESSION['SessionValuationRating'] == $icount) { ?> selected="selected"<?php } ?> ><?php echo $icount ; ?> </option>
 	<?php }
 	?>
 
-</select></span>   </td></tr><tr><div class="headlink"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpupone.com%2FAnalyzedCompanies.php%3Ffrommyaccount%3DY%26number%3D<? echo $number;?>&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font=arial&amp;colorscheme=light&amp;action=like&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe></div></tr></table> <div class="clear2"></div>
+</select></span>   </td></tr><tr><div class="headlink"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpupone.com%2FAnalyzedCompanies.php%3Ffrommyaccount%3DY%26number%3D<?php echo $number;?>&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font=arial&amp;colorscheme=light&amp;action=like&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe></div></tr></table> <div class="clear2"></div>
 </div>
 <div class="clear12"></div>
 

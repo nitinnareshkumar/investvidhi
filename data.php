@@ -6,15 +6,15 @@ include("config/config.inc.php");
 
 $arr=array();
 
-$result=mysql_query("select * from name_code where visibleOnSearch != 'N' and ( name LIKE '%".mysql_real_escape_string($_GET['chars'])."%' or code LIKE '%".mysql_real_escape_string($_GET['chars'])."%' ) ORDER BY name LIMIT 0, 10") or die(mysql_error());
-if(mysql_num_rows($result)>0){
-    while($data=mysql_fetch_assoc($result)){
+$result=mysqli_query($link,"select * from name_code where visibleOnSearch != 'N' and ( name LIKE '%".mysqli_real_escape_string($link,$_GET['chars'])."%' or code LIKE '%".mysqli_real_escape_string($link,$_GET['chars'])."%' ) ORDER BY name LIMIT 0, 10") or die(mysqli_error());
+if(mysqli_num_rows($result)>0){
+    while($data=mysqli_fetch_assoc($result)){
         // Store data in array
         $arr[]=array("id" => $data['number'], "data" => ucwords($data['name']), "thumbnail" => '', "description" => $data['Company_type']);
     }
 }
 
-mysql_close($link);
+mysqli_close($link);
 
 if (!function_exists('json_encode'))
 {

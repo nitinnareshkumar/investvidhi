@@ -1,5 +1,6 @@
 <?php
 include("config/config.inc.php");
+$errmsg = '';
 function readmyfile($path)
 {
 	$text='';
@@ -13,12 +14,15 @@ function readmyfile($path)
 	return $text;
 }
 //include("includes/commonfunc.php");
-if($_POST['form_signup']==1)
+$m = isset($_POST['form_signup']) ? $_POST['form_signup'] : null;
+if($m!= null && $m==1)
+//if($_POST['form_signup']==1)
 {
 
+$n= isset($_SESSION['security_code'])?$_SESSION['security_code']:null;
 	extract($_POST);
 	// check for email already
-	if($_SESSION['security_code']!=$_POST['security_code'] || $_POST['security_code'] == ''){
+	if($n!=$_POST['security_code'] || $_POST['security_code'] == ''){
 	$errmsg = 'Incorrect image verification word.';
 	}
 	else

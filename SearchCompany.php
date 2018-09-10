@@ -65,9 +65,8 @@ include("header.inc.php");
 				</script>
 &nbsp;<input type="submit" class="btn" value="FIND"></form></div>
 <?php
-if($_POST['subfrm']==1)
+if(isset($_POST['subfrm']))
 {
-
 ?>
 <div class="clear12"></div>	
 <table width="800" border="1" align="left" cellpadding="0" cellspacing="1" bordercolor="#00CC00" bgcolor="#FFFFFF">
@@ -76,14 +75,14 @@ if($_POST['subfrm']==1)
         </span>  </div></td><td width="187" align="left" valign="top"><div align="center"><span class="greytxt12">Company Number </span> </div></td>   </tr>
 	
   
-  <? $searchCompanyName = "%".$_POST['txt_name']."%";
+  <?php $searchCompanyName = "%".$_POST['txt_name']."%";
  // echo "<br>".$searchCompanyName."<br>";
  // $query = "select * from name_code where name like = '$searchCompanyName' ";
  // echo "<br>".$query."<br>";
-     $companySearch=mysql_query("select * from name_code where name like '$searchCompanyName' ");?><?php if($rows_st=mysql_num_rows($companySearch))
+     $companySearch=mysqli_query($link,"select * from name_code where name like '$searchCompanyName' ");?><?php if($rows_st=mysqli_num_rows($companySearch))
 					{   					
 						//while($row_st=mysql_fetch_assoc($area_suggested))
-						while($row_st=mysql_fetch_array($companySearch))
+						while($row_st=mysqli_fetch_array($companySearch))
 						{
 						   // print_r($row_st);
 							$Companyname=$row_st['name'];
@@ -105,9 +104,9 @@ if($_POST['subfrm']==1)
 							}					 	
 					?>         
   <tr>
-    <td width="187" align="left" valign="top"><a href="Analyse_Sheet.php?mcode=<? echo $mcode;?>&firsttime=Y&isBank=<? echo $isBank;?>&number=<? echo $Companynumber;?>" style="color:#000000"  ><span class="greytxt12"><?= $Companyname  ?></span></a></td> <td width="187" align="left" valign="top"><span class="greytxt12"><? echo $Companynumber; ?></span>  </td><? }}?> </tr>
+    <td width="187" align="left" valign="top"><a href="Analyse_Sheet.php?mcode=<?php echo $mcode; ?> &firsttime=Y&isBank=<?php echo $isBank; ?>&number=<?php echo $Companynumber; ?> " style="color:#000000"  ><span class="greytxt12"><?= $Companyname  ?></span></a></td> <td width="187" align="left" valign="top"><span class="greytxt12"><?php echo $Companynumber; ?> </span>  </td><?php }} ?> </tr>
 </table>
-<?php }?>
+<?php } ?>
 <div class="clear12"></div>
 </div>
 

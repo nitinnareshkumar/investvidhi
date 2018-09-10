@@ -71,7 +71,7 @@ include("header.inc.php");
 ?>
 <div class="clear5"></div>
 
- <? 
+ <?php  
 	 $searchCompanyCode = $_GET['mcode'];
 	 $firsttime = $_GET['firsttime'];
 	 $bank = 	  $_GET['isBank'];
@@ -83,10 +83,16 @@ include("header.inc.php");
 	$_SESSION['companycode'] = $_GET['mcode'];
 	 $_SESSION['companynumber'] = $_GET['number'];
 	$_GET['firsttime'] = '' ;
-		$getProfitLossData=mysql_query("select * from profit_loss where companycode  = '$searchCompanyCode' order by year");
+		$getProfitLossData=mysqli_query($link, "select * from profit_loss where companycode  = '$searchCompanyCode' order by year");
 		$parameter1Data = '';
+		$parameter2Data = '';
+		$parameter3Data = '';
+		$parameter4Data = '';
+		$parameter5Data = '';
+		$parameter6Data = '';
+		$parameter9Data = '';
 		$iterator = 0;
-		while($row_st1=mysql_fetch_array($getProfitLossData))
+		while($row_st1=mysqli_fetch_array($getProfitLossData))
 		{
 	
 			$yearArray[$iterator] = $row_st1['year'];
@@ -118,18 +124,22 @@ include("header.inc.php");
 
 		}
 			//getting data from balance sheet table
-		$getBalanceSheetData=mysql_query("select * from balancesheet where companycode  = '$searchCompanyCode' order by year");
+		$getBalanceSheetData=mysqli_query($link, "select * from balancesheet where companycode  = '$searchCompanyCode' order by year");
 		$iterator = 0;
 		$ReturnOnEquity ="Return on Equity"."\n";
 		$ReutrnOnAssets ="Return on Assets"."\n";
-		while($row_st1=mysql_fetch_array($getBalanceSheetData))
+		$parameter11Data = '';
+		$parameter12Data ='';
+		$parameter13Data ='';
+		$parameter14Data ='';
+		while($row_st1=mysqli_fetch_array($getBalanceSheetData))
 		{
 			$yearArray[$iterator] = $row_st1['year'];
 			$arrayiInventory[$iterator] = $row_st1['inventories'];
 			$TotalDebt[$iterator] = $row_st1['totalDebt'];
 			$RetainedEarnings[$iterator] = $row_st1['reserves'];
-			$BookValue[$iterator] = $row_st1['bookvalue'];
-			$arrayiGrossPlusWorkingCapital[$iterator] = $row_st1['grossBlock'] + $row_st1['totalCALoansAdvances'] - $row_st1['cash'] - $row_st1['fixedDeposit'] - $row_st1['totalClProvisions'];
+			$BookValue[$iterator] = $row_st1['bookvalue'];						
+			$arrayiGrossPlusWorkingCapital[$iterator] = (is_numeric($row_st1['grossBlock'])?$row_st1['grossBlock']:0)  +  (is_numeric($row_st1['totalCALoansAdvances'])? $row_st1['totalCALoansAdvances']:0) - (is_numeric($row_st1['cash'])? $row_st1['cash']: 0 ) - (is_numeric($row_st1['fixedDeposit'])? $row_st1['fixedDeposit']:0 ) - (is_numeric($row_st1['totalClProvisions'])? $row_st1['totalClProvisions']:0);			
 			$parameter12Data = $parameter12Data."20".$row_st1['year']."--".$row_st1['CurretRatio']."\n";
 			$parameter13Data = $parameter13Data."20".$row_st1['year']."--".$row_st1['DebtEquityRatio']."\n";
 			$parameter14Data = $parameter14Data."20".$row_st1['year']."--".$row_st1['DebtUponEarnings']."\n";
@@ -143,27 +153,32 @@ include("header.inc.php");
 		}
 		$parameter16Data = $ReturnOnEquity."\n".$ReutrnOnAssets;
 		//end of balance sheet
-	 		 for($i=0;$i<25 ;$i++){
+	 	for($i=0;$i<25 ;$i++)
+		{
 			$_SESSION['sessionParameterData'][$i]='' ;
 			$_SESSION['SessionRating'][$i]='' ;
 			$_SESSION['sessionParameterRemarks'][$i]='';
-			}
-			$_SESSION['SessionOverallRating'] = '';
-			$_SESSION['SessionValuationRating'] = '';
-			//calculating capex
+		}
+		$_SESSION['SessionOverallRating'] = '';
+		$_SESSION['SessionValuationRating'] = '';
+		//calculating capex
 			
-			for ($i=0 ; $i < 5 ;$i++)
-			{
+		for ($i=0 ; $i < 5 ;$i++)
+		{
+			if ($i == 4){ 
+				continue;
+			}
 			$arrayCapex[$i] = $arrayiGrossPlusWorkingCapital[$i + 1] - $arrayiGrossPlusWorkingCapital[$i];
-			if ($i != 4){ 
-			$parameter11Data = $parameter11Data."20".$yearArray[$i + 1]."--  ".$arrayCapex[$i]."\n"; }
+			if ($i != 4)
+			{ 
+				$parameter11Data = $parameter11Data."20".$yearArray[$i + 1]."--  ".$arrayCapex[$i]."\n"; 
+			}			
+		}
+		$tempCapexData = $parameter11Data;
+		$parameter11Data ='';
+		//end of capex
 			
-			}
-			$tempCapexData = $parameter11Data;
-			$parameter11Data ='';
-			//end of capex
-			
-			//calculatin net profit growth rate
+		//calculatin net profit growth rate
 	$arrayiIncomeGrowth[1] = 0;
 	$arrayiIncomeGrowth[2] = 0;
 	$arrayiIncomeGrowth[3] = 0;
@@ -171,6 +186,10 @@ include("header.inc.php");
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+			continue;
+		}
 		if ( ($arrayiTotalIncome[$i] == "NA" ) || ($arrayiTotalIncome[$i] == "--" ) || ($arrayiTotalIncome[$i] == "0.00" ) || ($arrayiTotalIncome[$i] == "" ) || ($arrayiTotalIncome[$i] == "--" ))
 		{
 			continue;
@@ -179,24 +198,23 @@ include("header.inc.php");
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiTotalIncome[$i + 1] - $arrayiTotalIncome[$i])/$arrayiTotalIncome[$i]) * 100;
 		if ( $arrayiTotalIncome[$i] < 0 )
 		{
 			$arrayiIncomeGrowth[$i] = - $arrayiIncomeGrowth[$i];
 		} 
-	$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
-	$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
-	$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
-	$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
+		$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
+		$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
+		$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
+		$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
 	} 
 	
+	$parameter7Data='';
+
 	for ($profiti=0 ; $profiti < 5 ;$profiti++)
 	{
-	$parameter7Data = $parameter7Data."20".$yearArray[$profiti]."--".$arrayiTotalIncome[$profiti];
+		$parameter7Data = $parameter7Data."20".$yearArray[$profiti]."--".$arrayiTotalIncome[$profiti];
 		if ($profiti != 4){
 			$parameter7Data = $parameter7Data."&nbsp;&nbsp;Growth ".$arrayiIncomeGrowth[$profiti]."%"."\n";
 			$_SESSION['graphNPGrowthRateData'][$profiti]=  $arrayiIncomeGrowth[$profiti] ;
@@ -210,6 +228,10 @@ include("header.inc.php");
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+			continue;
+		}
 		if ( ($arrayiEPSIncome[$i] == "NA" ) || ($arrayiEPSIncome[$i] == "--" ) || ($arrayiEPSIncome[$i] == "0.00" ) || ($arrayiEPSIncome[$i] == "" ) || ($arrayiEPSIncome[$i] == "--" ))
 		{
 			continue;
@@ -218,23 +240,21 @@ include("header.inc.php");
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiEPSIncome[$i + 1] - $arrayiEPSIncome[$i])/$arrayiEPSIncome[$i]) * 100;
 		if ( $arrayiEPSIncome[$i] < 0 )
 		{
 			$arrayiIncomeGrowth[$i] = - $arrayiIncomeGrowth[$i];
 		} 
-	$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
-	$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
-	$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
-	$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
+		$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
+		$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
+		$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
+		$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
 	}
+	$parameter8Data='';	
 	for ($profiti=0 ; $profiti < 5 ;$profiti++)
 	{
-	$parameter8Data = $parameter8Data."20".$yearArray[$profiti]."--".$arrayiEPSIncome[$profiti];
+		$parameter8Data = $parameter8Data."20".$yearArray[$profiti]."--".$arrayiEPSIncome[$profiti];
 		if ($profiti != 4){
 			$parameter8Data = $parameter8Data."&nbsp;&nbsp;Growth ".$arrayiIncomeGrowth[$profiti]."%"."\n";
 			$_SESSION['graphEpsGrowthRateData'][$profiti]=  $arrayiIncomeGrowth[$profiti] ;
@@ -250,6 +270,10 @@ include("header.inc.php");
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+			continue;
+		}
 		if ( ($arrayiInventory[$i] == "NA" ) || ($arrayiInventory[$i] == "--" ) || ($arrayiInventory[$i] == "0.00" ) || ($arrayiInventory[$i] == "" ) || ($arrayiInventory[$i] == "--" ))
 		{
 			continue;
@@ -258,27 +282,26 @@ include("header.inc.php");
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiInventory[$i + 1] - $arrayiInventory[$i])/$arrayiInventory[$i]) * 100;
 		if ( $arrayiInventory[$i] < 0 )
 		{
 			$arrayiIncomeGrowth[$i] = - $arrayiIncomeGrowth[$i];
 		} 
-	$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
-	$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
-	$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
-	$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
+		$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
+		$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
+		$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
+		$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
 	}
+	$parameter10Data='';
 	for ($profiti=0 ; $profiti < 5 ;$profiti++)
 	{
-	$parameter10Data = $parameter10Data."20".$yearArray[$profiti]."--".$arrayiInventory[$profiti];
-		if ($profiti != 4){
+		$parameter10Data = $parameter10Data."20".$yearArray[$profiti]."--".$arrayiInventory[$profiti];
+		if ($profiti != 4)
+		{
 			$parameter10Data = $parameter10Data."&nbsp;&nbsp;Growth ".$arrayiIncomeGrowth[$profiti]."%"."\n";
 			$_SESSION['graphInventoryGrowthRateData'][$profiti] = $arrayiIncomeGrowth[$profiti];
-			}
+		}
 	}
 	//------------------------end of inventory growth calculation--------------------------------------- 
 	
@@ -290,6 +313,10 @@ include("header.inc.php");
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+			continue;
+		}
 		if ( ($arrayiGrossPlusWorkingCapital[$i] == "NA" ) || ($arrayiGrossPlusWorkingCapital[$i] == "--" ) || ($arrayiGrossPlusWorkingCapital[$i] == "0.00" ) || ($arrayiGrossPlusWorkingCapital[$i] == "" ) || ($arrayiGrossPlusWorkingCapital[$i] == "--" ))
 		{
 			continue;
@@ -298,19 +325,16 @@ include("header.inc.php");
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($arrayiGrossPlusWorkingCapital[$i + 1] - $arrayiGrossPlusWorkingCapital[$i])/$arrayiGrossPlusWorkingCapital[$i]) * 100;
 		if ( $arrayiGrossPlusWorkingCapital[$i] < 0 )
 		{
 			$arrayiIncomeGrowth[$i] = - $arrayiIncomeGrowth[$i];
 		} 
-	$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
-	$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
-	$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
-	$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
+		$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
+		$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
+		$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
+		$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
 	}
 	for ($profiti=0 ; $profiti < 4 ;$profiti++)
 	{
@@ -327,6 +351,10 @@ include("header.inc.php");
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+			continue;
+		}
 		if ( ($TotalDebt[$i] == "NA" ) || ($TotalDebt[$i] == "--" ) || ($TotalDebt[$i] == "0.00" ) || ($TotalDebt[$i] == "" ) || ($TotalDebt[$i] == "--" ))
 		{
 			continue;
@@ -335,23 +363,20 @@ include("header.inc.php");
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
 		$arrayiIncomeGrowth[$i] = (($TotalDebt[$i + 1] - $TotalDebt[$i])/$TotalDebt[$i]) * 100;
 		if ( $TotalDebt[$i] < 0 )
 		{
 			$arrayiIncomeGrowth[$i] = - $arrayiIncomeGrowth[$i];
 		} 
-	$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
-	$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
-	$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
-	$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
+		$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
+		$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
+		$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
+		$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
 	}
+	$parameter15Data='';
 	for ($profiti=0 ; $profiti < 5 ;$profiti++)
 	{
-	$parameter15Data = $parameter15Data."20".$yearArray[$profiti]."--".$TotalDebt[$profiti];
+		$parameter15Data = $parameter15Data."20".$yearArray[$profiti]."--".$TotalDebt[$profiti];
 		if ($profiti != 4){
 			$parameter15Data = $parameter15Data."&nbsp;&nbsp;Growth ".$arrayiIncomeGrowth[$profiti]."%"."\n";
 			$_SESSION['graphDebtGrowthRateData'][$profiti] = $arrayiIncomeGrowth[$profiti];
@@ -369,6 +394,10 @@ include("header.inc.php");
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+			continue;
+		}
 		if ( ($RetainedEarnings[$i] == "NA" ) || ($RetainedEarnings[$i] == "--" ) || ($RetainedEarnings[$i] == "0.00" ) || ($RetainedEarnings[$i] == "" ) || ($RetainedEarnings[$i] == "--" ))
 		{
 			continue;
@@ -377,23 +406,21 @@ include("header.inc.php");
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($RetainedEarnings[$i + 1] - $RetainedEarnings[$i])/$RetainedEarnings[$i]) * 100;
 		if ( $RetainedEarnings[$i] < 0 )
 		{
 			$arrayiIncomeGrowth[$i] = - $arrayiIncomeGrowth[$i];
 		} 
-	$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
-	$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
-	$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
-	$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
+		$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
+		$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
+		$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
+		$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
 	}
+	$parameter18Data='';
 	for ($profiti=0 ; $profiti < 5 ;$profiti++)
 	{
-	$parameter18Data = $parameter18Data."20".$yearArray[$profiti]."--".$RetainedEarnings[$profiti];
+		$parameter18Data = $parameter18Data."20".$yearArray[$profiti]."--".$RetainedEarnings[$profiti];
 		if ($profiti != 4){
 			$parameter18Data = $parameter18Data."&nbsp;&nbsp;Growth ".$arrayiIncomeGrowth[$profiti]."%"."\n";
 			}
@@ -408,6 +435,10 @@ include("header.inc.php");
 	
 	for ($i=0 ; $i < 5 ;$i++)
 	{
+		if ( $i==4)
+		{
+			continue;
+		}
 		if ( ($BookValue[$i] == "NA" ) || ($BookValue[$i] == "--" ) || ($BookValue[$i] == "0.00" ) || ($BookValue[$i] == "" ) || ($BookValue[$i] == "--" ))
 		{
 			continue;
@@ -416,19 +447,16 @@ include("header.inc.php");
 		{
 			continue;
 		}
-		if ( $i==4)
-		{
-		continue;
-		}
+		
 		$arrayiIncomeGrowth[$i] = (($BookValue[$i + 1] - $BookValue[$i])/$BookValue[$i]) * 100;
 		if ( $BookValue[$i] < 0 )
 		{
 			$arrayiIncomeGrowth[$i] = - $arrayiIncomeGrowth[$i];
 		} 
-	$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
-	$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
-	$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
-	$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
+		$arrayiIncomeGrowth[1] = intval($arrayiIncomeGrowth[1]);
+		$arrayiIncomeGrowth[2] = intval($arrayiIncomeGrowth[2]);
+		$arrayiIncomeGrowth[3] = intval($arrayiIncomeGrowth[3]);
+		$arrayiIncomeGrowth[0] = intval($arrayiIncomeGrowth[0]);    		 
 	}
 	for ($profiti=0 ; $profiti < 5 ;$profiti++)
 	{
@@ -470,8 +498,8 @@ $_SESSION['sessionParameterData'][17]= $parameter18Data;
 	}
 
 	$number = $_SESSION['companynumber'];
-     $companySearch1=mysql_query("select * from name_code where number = $number ");
-	 $row1 = mysql_fetch_array($companySearch1);
+     $companySearch1=mysqli_query($link, "select * from name_code where number = $number ");
+	 $row1 = mysqli_fetch_array($companySearch1);
 	$name = $row1['name'];
 	$bseScript = $row1['BSE_Script']; 
 	$companyUrl = $row1['company_url']; 
@@ -500,7 +528,7 @@ $_SESSION['sessionParameterData'][17]= $parameter18Data;
 <div class="clear2"></div>
 <table width="700" border="1" align="center" bordercolor="#000000" bgcolor="#FFFFFF">
 <tr>
-    <td width="300" align="left" valign="top"><span class="greytxt12">Company Name - <? echo $name ?></span> </td><td width="200" align="left" valign="top"><span class="greytxt12">Company Number - <? echo $number?>             </span>  </td><td width="200" align="left" valign="top"><span class="greytxt12"> BSE Script ID - <? echo "     ".$bseScript?></span> </td>   </tr>
+    <td width="300" align="left" valign="top"><span class="greytxt12">Company Name - <?php  echo $name ?></span> </td><td width="200" align="left" valign="top"><span class="greytxt12">Company Number - <?php  echo $number?>             </span>  </td><td width="200" align="left" valign="top"><span class="greytxt12"> BSE Script ID - <?php  echo "     ".$bseScript?></span> </td>   </tr>
 </table>
 <table width="850" border="0" align="center" bordercolor="#000000" bgcolor="#FFFFFF">
 <tr><td align="center"><span class="greytxt12"><strong>Standalone Data is considered for analysis ,please modify data to consider consolidated data</strong></span></td>
@@ -520,9 +548,9 @@ $_SESSION['sessionParameterData'][17]= $parameter18Data;
   	<td width="262" align="left" valign="top" class="cell"><span class="greytxt14">Remarks<br>%</span>  </td>
 </tr>
  
- <?php  $getparameters = mysql_query("select * from master_analyze_sheet where visible = 'Y' order by sequence limit 0,15"); 
+ <?php  $getparameters = mysqli_query($link, "select * from master_analyze_sheet where visible = 'Y' order by sequence limit 0,15"); 
  $i=0;
-	while($row_st1=mysql_fetch_array($getparameters))
+	while($row_st1=mysqli_fetch_array($getparameters))
 	{ 
 	
 	$i = $i + 1; 
@@ -543,7 +571,7 @@ $_SESSION['sessionParameterData'][17]= $parameter18Data;
      <option value=""> </option>
     <?php for ($icount = 1 ; $icount <6 ; $icount++)
 	{   ?>
-	<option value="<?php echo $icount ; ?>" <?php if ($_SESSION['SessionRating'][$i - 1] == $icount) { ?> selected="selected"<? }?> ><?php echo $icount ; ?> </option>
+	<option value="<?php echo $icount ; ?>" <?php if ($_SESSION['SessionRating'][$i - 1] == $icount) { ?> selected="selected"<?php  }?> ><?php echo $icount ; ?> </option>
 	<?php }
 	?>
   

@@ -20,14 +20,14 @@ include("header.inc.php");
         </span>  </div></td><td width="187" align="left" valign="top"><div align="center"><span class="greytxt12">Company Number </span> </div></td>   </tr>
 	
   
-  <? $searchCompanyName = "%".$_POST['txt_name']."%";
+  <?php $searchCompanyName = "%".$_POST['txt_name']."%";
  // echo "<br>".$searchCompanyName."<br>";
  // $query = "select * from name_code where name like = '$searchCompanyName' ";
  // echo "<br>".$query."<br>";
-     $companySearch=mysql_query("select * from name_code where visibleOnSearch != 'N' and name like '$searchCompanyName' ");?><?php if($rows_st=mysql_num_rows($companySearch))
+     $companySearch=mysqli_query($link,"select * from name_code where visibleOnSearch != 'N' and name like '$searchCompanyName' "); ?><?php if($rows_st=mysqli_num_rows($companySearch))
 					{   					
 						//while($row_st=mysql_fetch_assoc($area_suggested))
-						while($row_st=mysql_fetch_array($companySearch))
+						while($row_st=mysqli_fetch_array($companySearch))
 						{
 						   // print_r($row_st);
 							$Companyname=$row_st['name'];
@@ -39,7 +39,7 @@ include("header.inc.php");
 							$row_count++;	*/						 	
 					?>         
   <tr>
-    <td width="187" align="left" valign="top"><a href='<? echo 'CompanyDetails.php'.'?code='.$row_st['number'] ;?>' style="color:#000000"  ><span class="greytxt12"><?= $Companyname  ?></span></a></td> <td width="187" align="left" valign="top"><span class="greytxt12"><? echo $Companynumber; ?></span>  </td><? }}?> </tr>
+    <td width="187" align="left" valign="top"><a href='<?php echo 'CompanyDetails.php'.'?code='.$row_st['number'] ; ?> 'style="color:#000000"  ><span class="greytxt12"><?= $Companyname  ?></span></a></td> <td width="187" align="left" valign="top"><span class="greytxt12"><?php echo $Companynumber; ?></span>  </td><?php }} ?> </tr>
 </table>
 <div class="clear5"></div>
 <?php include("footer.inc.php"); ?>

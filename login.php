@@ -1,16 +1,16 @@
 <?php
 include("config/config.inc.php");
-
-
-if($_POST['form_login']==1)
+$errmsg = '';
+$m = isset($_POST['form_login']) ? $_POST['form_login'] : null;
+if($m!= null && $m==1)
 {
 	extract($_POST);
 	$next = "Myaccount.php";
 	// check for email already
-		$res=mysql_query("select * from tbl_user where email='$txt_email' and password='$txt_pswd' ");	
-	if($rows=mysql_num_rows($res))
+		$res=mysqli_query($link,"select * from tbl_user where email='$txt_email' and password='$txt_pswd' ");	
+	if($rows=mysqli_num_rows($res))
 	{	
-		$row=mysql_fetch_assoc($res);
+		$row=mysqli_fetch_assoc($res);
 		extract($row);	
 		if($txt_email!='')
 		{
@@ -120,7 +120,7 @@ function validate_form(objfrm)
 <table width="250" border="0" align="left" bordercolor="#333333" bgcolor="#FFFFFF">
 <tr > 
      <td width="50" align="left" valign="top">  </td>
-    <td width="200" align="left" valign="top"><?=$errmsg?></td>    
+    <td width="200" align="left" valign="top"><?=$errmsg ?></td>    
 </tr>
 <tr bordercolor="#FFFFFF"> 
      <td width="50" align="left" valign="top" class="cell" ><span class="greytxt14">Email</span>  </td>

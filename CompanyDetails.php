@@ -14,7 +14,7 @@ function vali_login()
  // var totalrow=document.ana_frm.elements['parameterData[]'].length;
  
  
- var loginid = "<?php echo $_SESSION['userid'] ;?>";
+ var loginid = "<?php echo $_SESSION['userid'] ; ?>";
   if(loginid>0)
   {
   return true;
@@ -34,7 +34,7 @@ function vali_login1()
  // var totalrow=document.ana_frm.elements['parameterData[]'].length;
  
  
- var loginid = "<?php echo $_SESSION['userid'] ;?>";
+ var loginid = "<?php echo $_SESSION['userid'] ; ?>";
   if(loginid>0)
   {
   return true;
@@ -57,18 +57,18 @@ include("header.inc.php");
 ?>
 <div class="clear5"></div>
 
- <? 
+ <?php 
 	 $searchCompanyCode = $_GET['code'];
 	 $companynumber = $_GET['code'];
-     $companySearch1=mysql_query("select * from name_code where number = $searchCompanyCode ");
-	 $row1 = mysql_fetch_array($companySearch1);
+     $companySearch1=mysqli_query($link,"select * from name_code where number = $searchCompanyCode ");
+	 $row1 = mysqli_fetch_array($companySearch1);
 	$name = $row1['name'];
 	$bseScript = $row1['BSE_Script']; 
 	$companyUrl = $row1['company_url']; 
 	$mcode = $row1['code']; //money control code
 	$companyType = $row1['Company_type']; 
 	$isBank ='' ;
-	if ($companyType == "banks-private-sector" || $companyType == "banks-public-sector")
+	if ($companyType == "banks-private-sector" || $companyType == "banks-public-sector" ||$companyType == "banksprivatesector" || $companyType == "bankspublicsector")
 	{	$ProfitLossPage = "Profit_Loss_Banks.php" ;
 		$BalanceSheetPage = "Balance_Sheet_Banks.php" ;
 		$isBank = 'Y' ;
@@ -87,7 +87,7 @@ include("header.inc.php");
 </table>
 <table width="700" border="1" align="center" bordercolor="#000000" bgcolor="#FFFFFF">
 <tr>
-    <td width="300" align="left" valign="top"><span class="greytxt12">Company Name - <? echo $name ?></span> </td><td width="200" align="left" valign="top"><span class="greytxt12">Company Number - <? echo $searchCompanyCode?>             </span>  </td><td width="200" align="left" valign="top"><span class="greytxt12"> BSE Script ID - <? echo "     ".$bseScript?></span> </td>   </tr>
+    <td width="300" align="left" valign="top"><span class="greytxt12">Company Name - <?php echo $name ?></span> </td><td width="200" align="left" valign="top"><span class="greytxt12">Company Number - <?php echo $searchCompanyCode ?>             </span>  </td><td width="200" align="left" valign="top"><span class="greytxt12"> BSE Script ID - <?php echo "     ".$bseScript ?></span> </td>   </tr>
 </table>
 <div  class="company-detailsleft">
 
@@ -117,10 +117,10 @@ include("header.inc.php");
 </tr>
   
   
-  <? 
-     $companySearch=mysql_query("select * from sales where companynumber = $searchCompanyCode ");?><?php 
+  <?php 
+     $companySearch=mysqli_query($link,"select * from sales where companynumber = $searchCompanyCode "); ?> <?php 
 	 
-	$row = mysql_fetch_array($companySearch);
+	$row = mysqli_fetch_array($companySearch);
 	
 	$arrayiSales[0] = $row['Mar07'];
 	$arrayiSales[1] = $row['Mar08'];
@@ -144,8 +144,8 @@ include("header.inc.php");
 	$arrayiGrowth[0] = intval($arrayiGrowth[0]);    		 
 	 
 	//to get quarterly results
-	$companySearch1=mysql_query("select * from data_companies_curr where CompNumber = $searchCompanyCode ");
-	$row1 = mysql_fetch_array($companySearch1);
+	$companySearch1=mysqli_query($link,"select * from data_companies_curr where CompNumber = $searchCompanyCode ");
+	$row1 = mysqli_fetch_array($companySearch1);
 	$arrayQuarter1Sales = $row1['Jun_Sales'];
 	
 	$arrayQuarter1profit = $row1['Jun_Operating_Profit'];
@@ -188,11 +188,11 @@ include("header.inc.php");
 		}
 		*/
 			//get help
-	$arrayHelpHeading[3];
-	$arrayHelpText[3];
-	$gethelp = mysql_query("select * from tbl_help where page = 'CompanyDetails' order by number"); 
+	//$arrayHelpHeading[3];
+	//$arrayHelpText[3];
+	$gethelp = mysqli_query($link,"select * from tbl_help where page = 'CompanyDetails' order by number"); 
  $ihelp=1;
-	while($row_help1=mysql_fetch_array($gethelp))
+	while($row_help1=mysqli_fetch_array($gethelp))
 	{ 
 	$arrayHelpHeading[$ihelp] = $row_help1['parameter'];
 	$arrayHelpText[$ihelp] = $row_help1['helptext'];
@@ -207,57 +207,57 @@ include("header.inc.php");
       <?php echo $arrayHelpText[1]; ?>    </span>
 </a></td>
     <td width="80" align="left" valign="top" class ="cellcompanydetails"><span class="greytxt14">Sales Cr</span>  </td>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[0]; ?></span>  </td>
-    <? if ($arrayiGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[0];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[0]; ?></span>  </td>
+    <?php if ($arrayiGrowth[0] > 0 ) { ?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[0]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[0];?></span>  </td>
-     <? } ?>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[1]; ?></span>  </td>
-  <? if ($arrayiGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[1];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[0]; ?></span>  </td>
+     <?php } ?>
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[1]; ?></span>  </td>
+  <?php if ($arrayiGrowth[1] > 0 ) { ?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[1]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[1];?></span>  </td>
-     <? } ?>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[2]; ?></span></td>
-   <? if ($arrayiGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[1]; ?></span>  </td>
+     <?php } ?>
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[2]; ?></span></td>
+   <?php if ($arrayiGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[2]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[3]; ?></span>  </td>
-    <? if ($arrayiGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[2]; ?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[3]; ?></span>  </td>
+    <?php if ($arrayiGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[3]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[3];?></span>  </td>
-     <? } ?>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[4]; ?></span></td>
-   <? if ($arrayiGrowth[4] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[4];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[3]; ?></span>  </td>
+     <?php } ?>
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[4]; ?></span></td>
+   <?php if ($arrayiGrowth[4] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[4]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[4];?></span>  </td>
-     <? } ?>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[5]; ?></span></td>
- <? if ($avgsalesGrowth > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $avgsalesGrowth;?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[4]; ?></span>  </td>
+     <?php } ?>
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[5]; ?></span></td>
+ <?php if ($avgsalesGrowth > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $avgsalesGrowth; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $avgsalesGrowth;?></span>  </td>
-     <? } ?>
-	<td width="45" align="left" valign="top"><span class="greytxt12"><? echo "$arrayQuarter1Sales" ?></span>  </td>  
-	<td width="45" align="left" valign="top"><span class="greytxt12"><? echo "$arrayQuarter2Sales" ?></span>  </td>
-    <td width="45" align="left" valign="top"><span class="greytxt12"><? echo "Awaited"; ?></span>  </td>
-	<td width="45" align="left" valign="top"><span class="greytxt12"><? echo "$quar1persales" ?></span>  </td>
-	<td width="45" align="left" valign="top"><span class="greytxt12"><? echo "$quar2persales" ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $avgsalesGrowth; ?></span>  </td>
+     <?php } ?>
+	<td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "$arrayQuarter1Sales" ?></span>  </td>  
+	<td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "$arrayQuarter2Sales" ?></span>  </td>
+    <td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "Awaited"; ?></span>  </td>
+	<td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "$quar1persales" ?></span>  </td>
+	<td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "$quar2persales" ?></span>  </td>
   </tr>
-	<? 
-     $companySearch=mysql_query("select * from operating_profit where companynumber = $searchCompanyCode ");?><?php 
-	$row = mysql_fetch_array($companySearch);
+	<?php 
+     $companySearch=mysqli_query($link,"select * from operating_profit where companynumber = $searchCompanyCode "); ?> <?php 
+	$row = mysqli_fetch_array($companySearch);
 	$arrayiSales[0] = $row['Mar07'];
 	$arrayiSales[1] = $row['Mar08'];
 	$arrayiSales[2] = $row['Mar09'];
@@ -332,57 +332,57 @@ include("header.inc.php");
       <?php echo $arrayHelpText[2]; ?>    </span>
 </a></td>
     <td width="66" align="left" valign="top" class="cellcompanydetails"><span class="greytxt14">Operating Profit</span>  </td>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[0]; ?></span>  </td>
-    <? if ($arrayiGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[0];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[0]; ?></span>  </td>
+    <?php if ($arrayiGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[0]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[0];?></span>  </td>
-     <? } ?>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[1]; ?></span>  </td>
-  <? if ($arrayiGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[1];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[0]; ?></span>  </td>
+     <?php } ?>
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[1]; ?></span>  </td>
+  <?php if ($arrayiGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[1]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[1];?></span>  </td>
-     <? } ?>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[2]; ?></span></td>
-   <? if ($arrayiGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[1]; ?></span>  </td>
+     <?php } ?>
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[2]; ?></span></td>
+   <?php if ($arrayiGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[2]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[3]; ?></span>  </td>
-    <? if ($arrayiGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[2]; ?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[3]; ?></span>  </td>
+    <?php if ($arrayiGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[3]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[3];?></span>  </td>
-     <? } ?>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[4]; ?></span></td>
-   <? if ($arrayiGrowth[4] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[4];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[3]; ?></span>  </td>
+     <?php } ?>
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[4]; ?></span></td>
+   <?php if ($arrayiGrowth[4] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[4]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[4];?></span>  </td>
-     <? } ?>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[5]; ?></span></td>
- <? if ($avgsalesGrowth > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $avgsalesGrowth;?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[4]; ?></span>  </td>
+     <?php } ?>
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[5]; ?></span></td>
+ <?php if ($avgsalesGrowth > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $avgsalesGrowth; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $avgsalesGrowth;?></span>  </td>
-     <? } ?>
-     <td width="45" align="left" valign="top"><span class="greytxt12"><? echo "$arrayQuarter1profit"; ?></span>  </td>  
-	<td width="45" align="left" valign="top"><span class="greytxt12"><? echo "$arrayQuarter2profit"; ?></span>  </td>
-    <td width="45" align="left" valign="top"><span class="greytxt12"><? echo "Awaited"; ?></span>  </td>
-	<td width="45" align="left" valign="top"><span class="greytxt12"><? echo "$quar1perprofit"; ?></span>  </td>
-<td width="45" align="left" valign="top"><span class="greytxt12"><? echo "$quar2perprofit"; ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $avgsalesGrowth; ?></span>  </td>
+     <?php } ?>
+     <td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "$arrayQuarter1profit"; ?></span>  </td>  
+	<td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "$arrayQuarter2profit"; ?></span>  </td>
+    <td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "Awaited"; ?></span>  </td>
+	<td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "$quar1perprofit"; ?></span>  </td>
+<td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "$quar2perprofit"; ?></span>  </td>
 	</tr>
-	<? 
-     $companySearch=mysql_query("select * from eps where companynumber = $searchCompanyCode ");?><?php 
-	$row = mysql_fetch_array($companySearch);
+	<?php 
+     $companySearch=mysqli_query($link,"select * from eps where companynumber = $searchCompanyCode "); ?><?php 
+	$row = mysqli_fetch_array($companySearch);
 	$arrayiSales[0] = $row['Mar07'];
 	$arrayiSales[1] = $row['Mar08'];
 	$arrayiSales[2] = $row['Mar09'];
@@ -436,53 +436,53 @@ include("header.inc.php");
       <?php echo $arrayHelpText[3]; ?>    </span>
 </a></td>
     <td width="66" align="left" valign="top" class="cellcompanydetails"><span class="greytxt14">Eps    	</span>  </td>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[0]; ?></span>  </td>
-    <? if ($arrayiGrowth[0] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[0];?></span>  </td>
-    <? } 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[0]; ?></span>  </td>
+    <?php if ($arrayiGrowth[0] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[0]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[0];?></span>  </td>
-     <? } ?>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[1]; ?></span>  </td>
-  <? if ($arrayiGrowth[1] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[1];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[0]; ?></span>  </td>
+     <?php } ?>
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[1]; ?></span>  </td>
+  <?php if ($arrayiGrowth[1] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[1]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[1];?></span>  </td>
-     <? } ?>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[2]; ?></span></td>
-   <? if ($arrayiGrowth[2] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[2];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[1]; ?></span>  </td>
+     <?php } ?>
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[2]; ?></span></td>
+   <?php if ($arrayiGrowth[2] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[2]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[2];?></span>  </td>
-     <? } ?> 
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[3]; ?></span>  </td>
-    <? if ($arrayiGrowth[3] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[3];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[2]; ?></span>  </td>
+     <?php } ?> 
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[3]; ?></span>  </td>
+    <?php if ($arrayiGrowth[3] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[3]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[3];?></span>  </td>
-     <? } ?>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[4]; ?></span></td>
-   <? if ($arrayiGrowth[4] > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $arrayiGrowth[4];?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[3]; ?></span>  </td>
+     <?php } ?>
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[4]; ?></span></td>
+   <?php if ($arrayiGrowth[4] > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $arrayiGrowth[4]; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $arrayiGrowth[4];?></span>  </td>
-     <? } ?>
-    <td width="52" align="left" valign="top"><span class="greytxt12"><? echo $arrayiSales[5]; ?></span></td>
- <? if ($avgsalesGrowth > 0 ) {?>
-    <td width="69" align="left" valign="top"><span class="greentxt12"><? echo $avgsalesGrowth;?></span>  </td>
-    <? } 
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $arrayiGrowth[4]; ?></span>  </td>
+     <?php } ?>
+    <td width="52" align="left" valign="top"><span class="greytxt12"><?php echo $arrayiSales[5]; ?></span></td>
+ <?php if ($avgsalesGrowth > 0 ) {?>
+    <td width="69" align="left" valign="top"><span class="greentxt12"><?php echo $avgsalesGrowth; ?></span>  </td>
+    <?php } 
 	else { ?>
-     <td width="69" align="left" valign="top"><span class="redtxt12"><? echo $avgsalesGrowth;?></span>  </td>
-     <? } ?>
-	<td width="45" align="left" valign="top"><span class="greytxt12"><? echo "$arrayQuarter1eps"; ?></span>  </td>  
-	<td width="45" align="left" valign="top"><span class="greytxt12"><? echo "$arrayQuarter2eps" ?></span>  </td>
-    <td width="45" align="left" valign="top"><span class="greytxt12"><? echo "Awaited" ?></span>  </td>
-	<td width="45" align="left" valign="top"><span class="greytxt12"><? echo "$quar1pereps" ?></span>  </td>
-<td width="45" align="left" valign="top"><span class="greytxt12"><? echo "$quar2pereps" ?></span>  </td>
+     <td width="69" align="left" valign="top"><span class="redtxt12"><?php echo $avgsalesGrowth; ?></span>  </td>
+     <?php } ?>
+	<td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "$arrayQuarter1eps"; ?></span>  </td>  
+	<td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "$arrayQuarter2eps" ?></span>  </td>
+    <td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "Awaited" ?></span>  </td>
+	<td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "$quar1pereps" ?></span>  </td>
+<td width="45" align="left" valign="top"><span class="greytxt12"><?php echo "$quar2pereps" ?></span>  </td>
 	</tr>
 </table>
 </div>
@@ -491,14 +491,14 @@ include("header.inc.php");
 <div align="center">
 <div class="inn_box" >
 <h3></h3></div>
-<div class="inn_box"  align="center"><a href="<? echo $ProfitLossPage ?>?mcode=<? echo $mcode;?>" ><img align="bottom" src="images/profitloss.jpg"  width="100" height="100" border="0" ></a>
+<div class="inn_box"  align="center"><a href="<?php echo $ProfitLossPage ?>?mcode=<?php echo $mcode; ?>" ><img align="bottom" src="images/profitloss.jpg"  width="100" height="100" border="0" ></a>
 <h3>Analyze Profit & Loss Statements</h3></div>
 <div class="inn_box" >
-<a  onClick="return vali_login()" href="Analyse_Sheet.php?mcode=<? echo $mcode;?>&firsttime=Y&isBank=<? echo $isBank;?>&number=<? echo $companynumber;?>" ><img align="bottom" src="images/analyze.jpg"  width="100" height="100" border="0"></a>
+<a  onClick="return vali_login()" href="Analyse_Sheet.php?mcode=<?php echo $mcode; ?>&firsttime=Y&isBank=<?php echo $isBank; ?>&number=<?php echo $companynumber; ?>" ><img align="bottom" src="images/analyze.jpg"  width="100" height="100" border="0"></a>
 <h3>Analyse Company</h3></div>
-<div class="inn_box"  align="center"><a href="<? echo $BalanceSheetPage ?>?mcode=<? echo $mcode;?>" ><img src="images/balancesheet.jpg"  width="140" height="100" border="0" align="bottom"></a>
+<div class="inn_box"  align="center"><a href="<?php echo $BalanceSheetPage ?>?mcode=<?php echo $mcode; ?>" ><img src="images/balancesheet.jpg"  width="140" height="100" border="0" align="bottom"></a>
 <h3>Analyze Balance Sheet</h3></div>
-<div class="inn_box"  align="center"><a onClick="return vali_login1()" href="<? echo 'Myaccount.php' ;?>?addToFavorites=1&number=<? echo $companynumber;?>" ><img src="images/favorite.jpg"  width="40" height="40" border="0" align="bottom"></a>
+<div class="inn_box"  align="center"><a onClick="return vali_login1()" href="<?php echo 'Myaccount.php' ; ?>?addToFavorites=1&number=<?php echo $companynumber; ?>" ><img src="images/favorite.jpg"  width="40" height="40" border="0" align="bottom"></a>
 <h5>Add to Favorites</h5></div>
 </div>
 <div class="clear5"></div>
