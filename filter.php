@@ -1,9 +1,7 @@
 <?php
 //we have taken (ReturnOnEquity !=0) as a additional parameter in search as currently banks does not have ratio data in balance_sheet_banks and profit_loss_banks table so when search is made like debt to equity ratio as zero , banks are getting displayed as search results as they have no data in tbl_forsearchonyearlyparameters table.Some companies do not have fy12 data so we need to have this filter to avoid displaying these companies
 include("config/config.inc.php");
-$res=mysql_query("select * from searchoption order by id");
-
-
+$res=mysqli_query($link, "select * from searchoption order by id");
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -41,32 +39,34 @@ $res=mysql_query("select * from searchoption order by id");
 
   $(document).ready(function() {
   <?php 
-  while($row=mysql_fetch_assoc($res))
+  while($row=mysqli_fetch_assoc($res))
 { 
-  if($_REQUEST['subfrm']==1){
-  ?>
-    $("#slider<?=$row['id']?>").slider({disabled: <? if($row['display']==0){?>false<? } else {?>false <? } ?>, range: true,min: 0,max: 100,step: .1,values: [ <?=$_REQUEST['minCost'.$row['id']]?>, <?=$_REQUEST['maxCost'.$row['id']]?>],	slide: function( event, ui ) {
+if ( isset( $_GET['subfrm'] ) ){ ?>
+    $("#slider<?php echo $row['id'] ?> ").slider({disabled: <?php if($row['display']==0){ ?> false <?php } else { ?> false <?php } ?>, range: true,min: 0,max: 100,step: .1,values: [<?php echo $_REQUEST['minCost'.$row['id']]?>,<?php echo $_REQUEST['maxCost'.$row['id']]?>],	slide: function( event, ui ) {
 	                                  //alert(ui.values[ 1 ]);
-							jQuery("#min<?=$row['id']?>").html(ui.values[0] );
-							jQuery("#max<?=$row['id']?>").html(ui.values[1]);							
-							jQuery("#minCost<?=$row['id']?>").val(ui.values[0]);
-							jQuery("#maxCost<?=$row['id']?>").val(ui.values[1]);
+							jQuery("#min<?php echo $row['id'] ?>").html(ui.values[0] );
+							jQuery("#max<?php echo $row['id'] ?>").html(ui.values[1]);							
+							jQuery("#minCost<?php echo $row['id'] ?>").val(ui.values[0]);
+							jQuery("#maxCost<?php echo $row['id'] ?>").val(ui.values[1]);
 						}					});
 						
-						<?
+						<?php					
   }
   else
   {
+	  $_REQUEST['minCost'.$row['id']]=0;
+	  $_REQUEST['maxCost'.$row['id']]=100;
 ?>
-    $("#slider<?=$row['id']?>").slider({disabled: <? if($row['display']==0){?>false<? } else {?>false <? } ?>, range: true,min: 0,max: 100,step: .1,values: [ 0, 100],	slide: function( event, ui ) {
-	                                  
-							jQuery("#min<?=$row['id']?>").html(  ui.values[ 0 ]  );
-							jQuery("#max<?=$row['id']?>").html(  ui.values[ 1 ]  );							
-							jQuery("#minCost<?=$row['id']?>").val(ui.values[0]);
-							jQuery("#maxCost<?=$row['id']?>").val(ui.values[1]);
+    $("#slider<?php echo $row['id'] ?>").slider({disabled: <?php if($row['display']==0){ ?>false <?php } else { ?>false <?php } ?>, range: true,min: 0,max: 100,step: .1,values: [ 0, 100],	slide: function( event, ui ) {
+	                               
+							jQuery("#min<?php echo $row['id'] ?>").html(  ui.values[ 0 ]  );
+							jQuery("#max<?php echo $row['id'] ?>").html(  ui.values[ 1 ]  );	 						
+							jQuery("#minCost<?php echo $row['id'] ?>").val(ui.values[0]);
+							jQuery("#maxCost<?php echo $row['id'] ?>").val(ui.values[1]);													
 						}					});
 						
-						<? } } ?>
+						<?php } 
+						} ?>
   });
   </script>
 </head>
@@ -87,8 +87,9 @@ include("header.inc.php");
 <tr><td><h3>Criteria</h3></td><td><h3>Min</h3></td><td>&nbsp;</td><td><h3>Max</h3></td><td><h3>Remove</h3></td></tr>
 <?php
 $category='';
-$res=mysql_query("select * from searchoption order by id");
-while($row=mysql_fetch_assoc($res))
+$res=mysqli_query($link, "select * from searchoption order by id");
+
+while($row=mysqli_fetch_assoc($res))
 {
   if($category!=$row['category'])
   {
@@ -109,14 +110,14 @@ while($row=mysql_fetch_assoc($res))
   $revenueYears = "<select name='epsYears' ><option value='5' > 5</option> <option value='4' > 4</option><option value='3' > 3</option><option value='2' > 2</option></select> years";
   }
 ?>
-<tr id="rw<?=$row['id']?>"><td><a  class="tooltip">
+<tr id="rw<?php echo $row['id'] ?>"><td><a  class="tooltip">
     <img align="bottom" src="images/help1.jpg"  class ="helpimagesize">
     <span>
-        <strong style="color:#009900"><?=$row['heading1']?></strong><br />
-        <?=$row['helptxt']?>
+        <strong style="color:#009900"><?php echo $row['heading1'] ?></strong><br />
+        <?php echo $row['helptxt'] ?>
     </span>
-</a><input type="hidden" name="para[]" value="<?=$row['id']?>"><?=$row['heading']." ".$revenueYears?> </td><td align="center"><span id="min<?=$row['id']?>"><? if($_REQUEST['minCost'.$row['id']]) echo $_REQUEST['minCost'.$row['id']]; else echo 0; ?></span><input type="hidden" id="minCost<?=$row['id']?>" name="minCost<?=$row['id']?>" value="<? if($_REQUEST['minCost'.$row['id']]) echo $_REQUEST['minCost'.$row['id']]; else echo 0; ?>" /></td><td align="center"><div class="slider" id="slider<?=$row['id']?>"></div></td><td align="center"><span id="max<?=$row['id']?>"><? if($_REQUEST['maxCost'.$row['id']]) echo $_REQUEST['maxCost'.$row['id']]; else echo 100; ?></span><input type="hidden" id="maxCost<?=$row['id']?>" name="maxCost<?=$row['id']?>" value="<? if($_REQUEST['maxCost'.$row['id']]) echo $_REQUEST['maxCost'.$row['id']]; else echo 100; ?>" /></td><td align="center"><? if($row['display']==0){?><? } ?></td></tr>
-<?
+</a><input type="hidden" name="para[]" value="<?php echo $row['id'] ?>"><?php echo $row['heading']." ".$revenueYears ?> </td><td align="center"><span id="min<?php echo $row['id'] ?>"><?php if($_REQUEST['minCost'.$row['id']]) echo $_REQUEST['minCost'.$row['id']]; else echo 0; ?></span><input type="hidden" id="minCost<?php echo $row['id'] ?>" name="minCost<?php echo $row['id'] ?>" value="<?php if($_REQUEST['minCost'.$row['id']]) echo $_REQUEST['minCost'.$row['id']]; else echo 0; ?>" /></td><td align="center"><div class="slider" id="slider<?php echo $row['id'] ?>"></div></td><td align="center"><span id="max<?php echo $row['id'] ?>"><?php if($_REQUEST['maxCost'.$row['id']]) echo $_REQUEST['maxCost'.$row['id']]; else echo 100; ?></span><input type="hidden" id="maxCost<?php echo $row['id'] ?>" name="maxCost<?php echo $row['id'] ?>" value=" <?php if($_REQUEST['maxCost'.$row['id']]) echo $_REQUEST['maxCost'.$row['id']]; else echo 100; ?>" /></td><td align="center"><?php if($row['display']==0){ ?> <?php } ?></td></tr>
+<?php
 }
 ?>
 <tr><td>&nbsp;</td></tr>
@@ -138,8 +139,9 @@ while($row=mysql_fetch_assoc($res))
 </a><h3>How to Filter?</h3><br><a href="FilteredCompanies.php" target="_blank" ><img src="images/alreadyAnalyzed.jpg"  width="80" height="80" border="0" align="bottom"></a><h3>Using Filter tool effectively</h3></div>
 <div class="clear5"></div>
 <?php
-if($_REQUEST['subfrm']==1)
+if ( isset( $_GET['subfrm'] ) )
 {
+
   // print_r($_GET);
    $revenue_growth_min=$_REQUEST['minCost'.$_REQUEST['para'][0]];
    $_SESSION['revmin'] = $revenue_growth_min;
@@ -179,29 +181,29 @@ if($_REQUEST['subfrm']==1)
    $showcolumn[]="";
    $searchparam[]="";
    for ($icount =0 ; $icount < 13 ; $icount++)
-   {
-   		if ( ($_REQUEST['minCost'.$_REQUEST['para'][$icount]] == 0) && ($_REQUEST['maxCost'.$_REQUEST['para'][$icount]] == 100))
+   {	   
+   		if ( ($_REQUEST["minCost".$_REQUEST['para'][$icount]] == 0) && ($_REQUEST["maxCost".$_REQUEST['para'][$icount]] == 100))
 		{
-		continue;
+			continue;
 		}
 			if ($icount==0)
 			{
 				$showcolumn[$icount] = "avgSalesGrowth";
 				if ($revenueYears ==5)
 				{
-					$searchparam[$icount]="(SalesGrowth7_8 >= "."$revenue_growth_min and SalesGrowth7_8 <= "."$revenue_growth_max) and "."(SalesGrowth8_9 >= "."$revenue_growth_min and SalesGrowth8_9 <= "."$revenue_growth_max) and "."(SalesGrowth9_10 >= "."$revenue_growth_min and SalesGrowth9_10 <= "."$revenue_growth_max) and "."(SalesGrowth10_11 >= "."$revenue_growth_min and SalesGrowth10_11 <= "."$revenue_growth_max) and "."(SalesGrowth11_12 >= "."$revenue_growth_min and SalesGrowth11_12 <= "."$revenue_growth_max)";
+					$searchparam[$icount]="(SalesGrowth13_14 >= "."$revenue_growth_min and SalesGrowth13_14 <= "."$revenue_growth_max) and "."(SalesGrowth14_15 >= "."$revenue_growth_min and SalesGrowth14_15 <= "."$revenue_growth_max) and "."(SalesGrowth15_16 >= "."$revenue_growth_min and SalesGrowth15_16 <= "."$revenue_growth_max) and "."(SalesGrowth16_17 >= "."$revenue_growth_min and SalesGrowth16_17 <= "."$revenue_growth_max) and "."(SalesGrowth17_18 >= "."$revenue_growth_min and SalesGrowth17_18 <= "."$revenue_growth_max)";
 				}
 				if ($revenueYears ==4)
 				{
-					$searchparam[$icount]="(SalesGrowth8_9 >= "."$revenue_growth_min and SalesGrowth8_9 <= "."$revenue_growth_max) and "."(SalesGrowth9_10 >= "."$revenue_growth_min and SalesGrowth9_10 <= "."$revenue_growth_max) and "."(SalesGrowth10_11 >= "."$revenue_growth_min and SalesGrowth10_11 <= "."$revenue_growth_max) and "."(SalesGrowth11_12 >= "."$revenue_growth_min and SalesGrowth11_12 <= "."$revenue_growth_max)";
+					$searchparam[$icount]="(SalesGrowth14_15 >= "."$revenue_growth_min and SalesGrowth14_15 <= "."$revenue_growth_max) and "."(SalesGrowth15_16 >= "."$revenue_growth_min and SalesGrowth15_16 <= "."$revenue_growth_max) and "."(SalesGrowth16_17 >= "."$revenue_growth_min and SalesGrowth16_17 <= "."$revenue_growth_max) and "."(SalesGrowth17_18 >= "."$revenue_growth_min and SalesGrowth17_18 <= "."$revenue_growth_max)";
 				}
 				if ($revenueYears ==3)
 				{
-					$searchparam[$icount]="(SalesGrowth9_10 >= "."$revenue_growth_min and SalesGrowth9_10 <= "."$revenue_growth_max) and "."(SalesGrowth10_11 >= "."$revenue_growth_min and SalesGrowth10_11 <= "."$revenue_growth_max) and "."(SalesGrowth11_12 >= "."$revenue_growth_min and SalesGrowth11_12 <= "."$revenue_growth_max)";
+					$searchparam[$icount]="(SalesGrowth15_16 >= "."$revenue_growth_min and SalesGrowth15_16 <= "."$revenue_growth_max) and "."(SalesGrowth16_17 >= "."$revenue_growth_min and SalesGrowth16_17 <= "."$revenue_growth_max) and "."(SalesGrowth17_18 >= "."$revenue_growth_min and SalesGrowth17_18 <= "."$revenue_growth_max)";
 				}
 				if ($revenueYears ==2)
 				{
-					$searchparam[$icount]="(SalesGrowth10_11 >= "."$revenue_growth_min and SalesGrowth10_11 <= "."$revenue_growth_max) and "."(SalesGrowth11_12 >= "."$revenue_growth_min and SalesGrowth11_12 <= "."$revenue_growth_max)";
+					$searchparam[$icount]="(SalesGrowth16_17 >= "."$revenue_growth_min and SalesGrowth16_17 <= "."$revenue_growth_max) and "."(SalesGrowth17_18 >= "."$revenue_growth_min and SalesGrowth17_18 <= "."$revenue_growth_max)";
 				}
 				//echo $searchparam[$icount];
 			}
@@ -210,19 +212,19 @@ if($_REQUEST['subfrm']==1)
 				$showcolumn[$icount] = "avgProfitGrowth";
 				if ($profitYears ==5)
 				{
-					$searchparam[$icount]="(ProfitGrowth7_8 >= "."$profit_growth_min and ProfitGrowth7_8 <= "."$profit_growth_max) and "."(ProfitGrowth8_9 >= "."$profit_growth_min and ProfitGrowth8_9 <= "."$profit_growth_max) and "."(ProfitGrowth9_10 >= "."$profit_growth_min and ProfitGrowth9_10 <= "."$profit_growth_max) and "."(ProfitGrowth10_11 >= "."$profit_growth_min and ProfitGrowth10_11 <= "."$profit_growth_max) and "."(ProfitGrowth11_12 >= "."$profit_growth_min and ProfitGrowth11_12 <= "."$profit_growth_max)";
+					$searchparam[$icount]="(ProfitGrowth13_14 >= "."$profit_growth_min and ProfitGrowth13_14 <= "."$profit_growth_max) and "."(ProfitGrowth14_15 >= "."$profit_growth_min and ProfitGrowth14_15 <= "."$profit_growth_max) and "."(ProfitGrowth15_16 >= "."$profit_growth_min and ProfitGrowth15_16 <= "."$profit_growth_max) and "."(ProfitGrowth16_17 >= "."$profit_growth_min and ProfitGrowth16_17 <= "."$profit_growth_max) and "."(ProfitGrowth17_18 >= "."$profit_growth_min and ProfitGrowth17_18 <= "."$profit_growth_max)";
 				}
 				if ($profitYears ==4)
 				{
-					$searchparam[$icount]="(ProfitGrowth8_9 >= "."$profit_growth_min and ProfitGrowth8_9 <= "."$profit_growth_max) and "."(ProfitGrowth9_10 >= "."$profit_growth_min and ProfitGrowth9_10 <= "."$profit_growth_max) and "."(ProfitGrowth10_11 >= "."$profit_growth_min and ProfitGrowth10_11 <= "."$profit_growth_max) and "."(ProfitGrowth11_12 >= "."$profit_growth_min and ProfitGrowth11_12 <= "."$profit_growth_max)";
+					$searchparam[$icount]="(ProfitGrowth14_15 >= "."$profit_growth_min and ProfitGrowth14_15 <= "."$profit_growth_max) and "."(ProfitGrowth15_16 >= "."$profit_growth_min and ProfitGrowth15_16 <= "."$profit_growth_max) and "."(ProfitGrowth16_17 >= "."$profit_growth_min and ProfitGrowth16_17 <= "."$profit_growth_max) and "."(ProfitGrowth17_18 >= "."$profit_growth_min and ProfitGrowth17_18 <= "."$profit_growth_max)";
 				}
 				if ($profitYears ==3)
 				{
-					$searchparam[$icount]="(ProfitGrowth9_10 >= "."$profit_growth_min and ProfitGrowth9_10 <= "."$profit_growth_max) and "."(ProfitGrowth10_11 >= "."$profit_growth_min and ProfitGrowth10_11 <= "."$profit_growth_max) and "."(ProfitGrowth11_12 >= "."$profit_growth_min and ProfitGrowth11_12 <= "."$profit_growth_max)";
+					$searchparam[$icount]="(ProfitGrowth15_16 >= "."$profit_growth_min and ProfitGrowth15_16 <= "."$profit_growth_max) and "."(ProfitGrowth16_17 >= "."$profit_growth_min and ProfitGrowth16_17 <= "."$profit_growth_max) and "."(ProfitGrowth17_18 >= "."$profit_growth_min and ProfitGrowth17_18 <= "."$profit_growth_max)";
 				}
 				if ($profitYears ==2)
 				{
-					$searchparam[$icount]="(ProfitGrowth10_11 >= "."$profit_growth_min and ProfitGrowth10_11 <= "."$profit_growth_max) and "."(ProfitGrowth11_12 >= "."$profit_growth_min and ProfitGrowth11_12 <= "."$profit_growth_max)";
+					$searchparam[$icount]="(ProfitGrowth16_17 >= "."$profit_growth_min and ProfitGrowth16_17 <= "."$profit_growth_max) and "."(ProfitGrowth17_18 >= "."$profit_growth_min and ProfitGrowth17_18 <= "."$profit_growth_max)";
 				}
 				//echo $searchparam[$icount];
 			}
@@ -232,19 +234,19 @@ if($_REQUEST['subfrm']==1)
 				$showcolumn[$icount] = "avgEPSGrowth";
 				if ($epsYears ==5)
 				{
-					$searchparam[$icount]="(EPSGrowth7_8 >= "."$eps_growth_min and EPSGrowth7_8 <= "."$eps_growth_max) and "."(EPSGrowth8_9 >= "."$eps_growth_min and EPSGrowth8_9 <= "."$eps_growth_max) and "."(EPSGrowth9_10 >= "."$eps_growth_min and EPSGrowth9_10 <= "."$eps_growth_max) and "."(EPSGrowth10_11 >= "."$eps_growth_min and EPSGrowth10_11 <= "."$eps_growth_max) and "."(EPSGrowth11_12 >= "."$eps_growth_min and EPSGrowth11_12 <= "."$eps_growth_max)";
+					$searchparam[$icount]="(EPSGrowth13_14 >= "."$eps_growth_min and EPSGrowth13_14 <= "."$eps_growth_max) and "."(EPSGrowth14_15 >= "."$eps_growth_min and EPSGrowth14_15 <= "."$eps_growth_max) and "."(EPSGrowth15_16 >= "."$eps_growth_min and EPSGrowth15_16 <= "."$eps_growth_max) and "."(EPSGrowth16_17 >= "."$eps_growth_min and EPSGrowth16_17 <= "."$eps_growth_max) and "."(EPSGrowth17_18 >= "."$eps_growth_min and EPSGrowth17_18 <= "."$eps_growth_max)";
 				}
 				if ($epsYears ==4)
 				{
-					$searchparam[$icount]="(EPSGrowth8_9 >= "."$eps_growth_min and EPSGrowth8_9 <= "."$eps_growth_max) and "."(EPSGrowth9_10 >= "."$eps_growth_min and EPSGrowth9_10 <= "."$eps_growth_max) and "."(EPSGrowth10_11 >= "."$eps_growth_min and EPSGrowth10_11 <= "."$eps_growth_max) and "."(EPSGrowth11_12 >= "."$eps_growth_min and EPSGrowth11_12 <= "."$eps_growth_max)";
+					$searchparam[$icount]="(EPSGrowth14_15 >= "."$eps_growth_min and EPSGrowth14_15 <= "."$eps_growth_max) and "."(EPSGrowth15_16 >= "."$eps_growth_min and EPSGrowth15_16 <= "."$eps_growth_max) and "."(EPSGrowth16_17 >= "."$eps_growth_min and EPSGrowth16_17 <= "."$eps_growth_max) and "."(EPSGrowth17_18 >= "."$eps_growth_min and EPSGrowth17_18 <= "."$eps_growth_max)";
 				}
 				if ($epsYears ==3)
 				{
-					$searchparam[$icount]="(EPSGrowth9_10 >= "."$eps_growth_min and EPSGrowth9_10 <= "."$eps_growth_max) and "."(EPSGrowth10_11 >= "."$eps_growth_min and EPSGrowth10_11 <= "."$eps_growth_max) and "."(EPSGrowth11_12 >= "."$eps_growth_min and EPSGrowth11_12 <= "."$eps_growth_max)";
+					$searchparam[$icount]="(EPSGrowth15_16 >= "."$eps_growth_min and EPSGrowth15_16 <= "."$eps_growth_max) and "."(EPSGrowth16_17 >= "."$eps_growth_min and EPSGrowth16_17 <= "."$eps_growth_max) and "."(EPSGrowth17_18 >= "."$eps_growth_min and EPSGrowth17_18 <= "."$eps_growth_max)";
 				}
 				if ($epsYears ==2)
 				{
-					$searchparam[$icount]="(EPSGrowth10_11 >= "."$eps_growth_min and EPSGrowth10_11 <= "."$eps_growth_max) and "."(EPSGrowth11_12 >= "."$eps_growth_min and EPSGrowth11_12 <= "."$eps_growth_max)";
+					$searchparam[$icount]="(EPSGrowth16_17 >= "."$eps_growth_min and EPSGrowth16_17 <= "."$eps_growth_max) and "."(EPSGrowth17_18 >= "."$eps_growth_min and EPSGrowth17_18 <= "."$eps_growth_max)";
 				}
 				//echo $searchparam[$icount];
 			}
@@ -310,14 +312,15 @@ if($_REQUEST['subfrm']==1)
 			}
 		
    }
-   //CAST(SalesGrowth7_8 AS INT)
+   //CAST(SalesGrowth13_14 AS INT)
   // echo $GP_min."--".$GP_max ;
+  
   $showcolumnSql ='';
   $searchparamSql = '';
   $validsqlcount =0 ;
   	for ($isql =0 ; $isql < 13 ; $isql++)
    {
-  	 	if ($showcolumn[$isql] != '')
+  	 	if ((isset($showcolumn[$isql])) && $showcolumn[$isql] != '')
 		{
 			if ($validsqlcount ==0)
 			{
@@ -334,16 +337,16 @@ if($_REQUEST['subfrm']==1)
    		
    }
    $searchSql = "select ".$showcolumnSql." from tbl_forsearchonyearlyparameters where ".$searchparamSql ;
-  		echo $searchSql;
-  // $searchSql = "select n.number ,n.name ,s.Mar07 as growth7to8 ,s.Mar08,s.Mar09 ,s.Mar10,s.Mar11,b.ReturnOnEquity, p.NPMargin,s.growth7_8,s.growth8_9,s.growth9_10,s.growth10_11 from  name_code n,  sales s , operating_profit o , profit_loss p ,balancesheet b  where n.number = s.companynumber and n.number = o.companynumber and n.number = p.companynumber and p.year='11' and n.number = b.companynumber and b.year ='11'
-//and s.growth7_8 >20 and s.growth8_9>20 and s.growth9_10 > 20 and s.growth10_11>20 and s.growth11_12>20
-//and o.growth7_8 >20 and o.growth8_9>20 and o.growth9_10 > 20 and o.growth10_11>20 and o.growth11_12>20
+  		//echo $searchSql;
+  // $searchSql = "select n.number ,n.name ,s.Mar07 as growth7to8 ,s.Mar08,s.Mar09 ,s.Mar10,s.Mar11,b.ReturnOnEquity, p.NPMargin,s.growth13_14,s.growth14_15,s.growth15_16,s.growth16_17 from  name_code n,  sales s , operating_profit o , profit_loss p ,balancesheet b  where n.number = s.companynumber and n.number = o.companynumber and n.number = p.companynumber and p.year='11' and n.number = b.companynumber and b.year ='11'
+//and s.growth13_14 >20 and s.growth14_15>20 and s.growth15_16 > 20 and s.growth16_17>20 and s.growth17_18>20
+//and o.growth13_14 >20 and o.growth14_15>20 and o.growth15_16 > 20 and o.growth16_17>20 and o.growth17_18>20
 //and p.NPMargin >10 and b.ReturnOnEquity >10 limit 1,20";
 //echo $searchSql;
-$resSearch=mysql_query($searchSql);
+$resSearch=mysqli_query($link, $searchSql);
 if ($resSearch)
 {
-$numofrow = mysql_num_rows ($resSearch);
+	$numofrow = mysqli_num_rows ($resSearch);
 }
 
 $category='';
@@ -353,7 +356,7 @@ $category='';
 	}
 	if ($numofrow > 0)
 	{
-	$numofcolumns = mysql_num_fields ( $resSearch );
+	$numofcolumns = mysqli_num_fields( $resSearch );
 	echo "<table width='909' border='0' align='center' bordercolor='#000000' bgcolor='#FFFFFF'> <tr>";
 	echo "<td width='15' align='left' valign='top' class='cell'><span class='greytxt14'>";
 	echo "Number</span>  </td>";
@@ -363,15 +366,18 @@ $category='';
 	
 			if ($icount == 0){}
 			else{
+				echo "naidu";
 			echo "<td width='45' align='left' valign='top' class='cell'><span class='greytxt14'>";
-			echo mysql_field_name($resSearch, $icount);
+			echo mysqli_field_name($resSearch, $icount);
 			echo "</span>  </td>";
+			 //$rowtemp = mysqli_fetch_array($resSearch);
+			//echo $rowtemp['number']."CompanyNumber"; 
 			}
 		
 	}
 	echo "</tr>";
 	$numi=1;
-	while($row=mysql_fetch_row($resSearch))
+	while($row=mysqli_fetch_row($resSearch))
 	{
 	
    		echo "<tr>";
@@ -401,7 +407,13 @@ $category='';
 	echo "</table>";
 	}
 }
-?>
+
+function mysqli_field_name($result, $field_offset)
+{
+    $properties = mysqli_fetch_field_direct($result, $field_offset);
+    return is_object($properties) ? $properties->name : null;
+}
+ ?>
 <div class="clear12"></div>
 <div class="clear12"></div>
 <div class="clear5"></div>
