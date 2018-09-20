@@ -97,23 +97,23 @@ include("header.inc.php");
 <tr >
 <td width="40" align="left" valign="top" bordercolor="#FF0000" > </td>
     <td width="66" align="left" valign="top" class="cellcompanydetails"><span class="greytxt14"></span>  </td>
-    <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">07</span>  </td>
+    <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">13</span>  </td>
   	<td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Growth<br>%</span>  </td>
-   <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">08</span></td>
+   <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">14</span></td>
   	<td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Growth<br>%</span>  </td>
-   <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">09</span>  </td>
+   <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">15</span>  </td>
   	<td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Growth<br>%</span>  </td>
-   <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">10</span></td>
+   <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">16</span></td>
   	<td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Growth<br>%</span>  </td>
-   <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">11</span></td>
+   <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">17</span></td>
   	<td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Growth<br>%</span>  </td>
-    <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">12</span></td>
+    <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">18</span></td>
     <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Avg <br>growth%</span>  </td>
-    <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Jun 12</span>  </td>  
-	<td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Sep 12</span>  </td>
-    <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Dec 12</span>  </td>
-	<td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Quar1/<br> Fy12 %</span>  </td>
-    <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Quar2/<br> Fy12 %</span>  </td>
+    <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Jun 18</span>  </td>  
+	<td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Sep 18</span>  </td>
+    <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Dec 18</span>  </td>
+	<td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Quar1/<br> Fy18 %</span>  </td>
+    <td width="66" align="left" valign="top" class="cell"><span class="greytxt14">Quar2/<br> Fy18 %</span>  </td>
 </tr>
   
   
@@ -122,19 +122,19 @@ include("header.inc.php");
 	 
 	$row = mysqli_fetch_array($companySearch);
 	
-	$arrayiSales[0] = $row['Mar07'];
-	$arrayiSales[1] = $row['Mar08'];
-	$arrayiSales[2] = $row['Mar09'];
-	$arrayiSales[3] = $row['Mar10'];
-	$arrayiSales[4] = $row['Mar11'];
-	$arrayiSales[5] = $row['Mar12'];
+	$arrayiSales[0] = $row['Mar13'];
+	$arrayiSales[1] = $row['Mar14'];
+	$arrayiSales[2] = $row['Mar15'];
+	$arrayiSales[3] = $row['Mar16'];
+	$arrayiSales[4] = $row['Mar17'];
+	$arrayiSales[5] = $row['Mar18'];
 	$avgsalesGrowth = $row['GrowthPer'];
 		
-	$arrayiGrowth[0] = $row['growth7_8'];
-	$arrayiGrowth[1] = $row['growth8_9'];
-	$arrayiGrowth[2] = $row['growth9_10'];
-	$arrayiGrowth[3] = $row['growth10_11'];
-	$arrayiGrowth[4] = $row['growth11_12'];
+	$arrayiGrowth[0] = $row['growth13_14'];
+	$arrayiGrowth[1] = $row['growth14_15'];
+	$arrayiGrowth[2] = $row['growth15_16'];
+	$arrayiGrowth[3] = $row['growth16_17'];
+	$arrayiGrowth[4] = $row['growth17_18'];
 	
 		
 	$arrayiGrowth[1] = intval($arrayiGrowth[1]);
@@ -161,7 +161,8 @@ include("header.inc.php");
 	//$arrayQuarter3profit = $row1['Dec_Operating_Profit'];
 	//$arrayQuarter3eps = $row1['Dec_EPS'];
 	
-		
+		$quar1persales=0;
+		$quar2persales=0;
 		if ( ($arrayQuarter1Sales != "NA" ) && ($arrayQuarter1Sales != "--" ) && ($arrayQuarter1Sales != "0.00" ) && ($arrayQuarter1Sales != "" ))
 		{
 			if ( ($arrayiSales[5] != "NA" ) && ($arrayiSales[5] != "--" ) && ($arrayiSales[5] != "0.00" ) && ($arrayiSales[5] != "" ))
@@ -170,9 +171,9 @@ include("header.inc.php");
 				$quar1persales = intval($quar1persales); 
 			}
 		}
-		if ( ($arrayQuarter2Sales != "NA" ) && ($arrayQuarter2Sales != "--" ) && ($arrayQuarter2Sales != "0.00" ))
+		if ( ($arrayQuarter2Sales != "NA" ) && ($arrayQuarter2Sales != "--" ) && ($arrayQuarter2Sales != "0.00" )&& ($arrayQuarter2Sales != "" ))
 		{
-		    if ( ($arrayiSales[5] != "NA" ) && ($arrayiSales[5] != "--" ) & ($arrayiSales[5] != "0.00" ))
+		    if ( ($arrayiSales[5] != "NA" ) && ($arrayiSales[5] != "--" ) && ($arrayiSales[5] != "0.00" ) && ($arrayiSales[5] != "" ))
 			{			
 			 	$quar2persales= ($arrayQuarter2Sales/$arrayiSales[5])*100;
 				$quar2persales = intval($quar2persales);
@@ -258,19 +259,19 @@ include("header.inc.php");
 	<?php 
      $companySearch=mysqli_query($link,"select * from operating_profit where companynumber = $searchCompanyCode "); ?> <?php 
 	$row = mysqli_fetch_array($companySearch);
-	$arrayiSales[0] = $row['Mar07'];
-	$arrayiSales[1] = $row['Mar08'];
-	$arrayiSales[2] = $row['Mar09'];
-	$arrayiSales[3] = $row['Mar10'];
-	$arrayiSales[4] = $row['Mar11'];
-	$arrayiSales[5] = $row['Mar12'];
+	$arrayiSales[0] = $row['Mar13'];
+	$arrayiSales[1] = $row['Mar14'];
+	$arrayiSales[2] = $row['Mar15'];
+	$arrayiSales[3] = $row['Mar16'];
+	$arrayiSales[4] = $row['Mar17'];
+	$arrayiSales[5] = $row['Mar18'];
 	$avgsalesGrowth = $row['GrowthPer'];
 		
-	$arrayiGrowth[0] = $row['growth7_8'];
-	$arrayiGrowth[1] = $row['growth8_9'];
-	$arrayiGrowth[2] = $row['growth9_10'];
-	$arrayiGrowth[3] = $row['growth10_11'];
-	$arrayiGrowth[4] = $row['growth11_12'];
+	$arrayiGrowth[0] = $row['growth13_14'];
+	$arrayiGrowth[1] = $row['growth14_15'];
+	$arrayiGrowth[2] = $row['growth15_16'];
+	$arrayiGrowth[3] = $row['growth16_17'];
+	$arrayiGrowth[4] = $row['growth17_18'];
 	
 	$arrayiGrowth[1] = intval($arrayiGrowth[1]);
 	$arrayiGrowth[2] = intval($arrayiGrowth[2]);
@@ -278,7 +279,8 @@ include("header.inc.php");
 	$arrayiGrowth[4] = intval($arrayiGrowth[4]);
 	$arrayiGrowth[0] = intval($arrayiGrowth[0]);    		 
 	 
-	
+	$quar1perprofit=0;
+	$quar2perprofit=0;
 	if ( ($arrayQuarter1profit != "NA" ) && ($arrayQuarter1profit != "--" ) && ($arrayQuarter1profit != "0.00" ) && ($arrayQuarter1profit != "" ))
 		{
 			if ( ($arrayiSales[5] != "NA" ) && ($arrayiSales[5] != "--" ) && ($arrayiSales[5] != "0.00" ) && ($arrayiSales[5] != "" ))
@@ -295,9 +297,9 @@ include("header.inc.php");
 			}
 			
 		}
-		if ( ($arrayQuarter2profit != "NA" ) && ($arrayQuarter2profit != "--" ) && ($arrayQuarter2profit != "0.00" ))
+		if ( ($arrayQuarter2profit != "NA" ) && ($arrayQuarter2profit != "--" ) && ($arrayQuarter2profit != "0.00" )&& ($arrayQuarter2profit != "" ))
 		{
-			if ( ($arrayiSales[5] != "NA" ) && ($arrayiSales[5] != "--" ) && ($arrayiSales[5] != "0.00" ))
+			if ( ($arrayiSales[5] != "NA" ) && ($arrayiSales[5] != "--" ) && ($arrayiSales[5] != "0.00" )&& ($arrayiSales[5] != "" ))
 			{			
 				$quar2perprofit= ($arrayQuarter2profit/$arrayiSales[5])*100;
 				$quar2perprofit = intval($quar2perprofit); 
@@ -383,19 +385,19 @@ include("header.inc.php");
 	<?php 
      $companySearch=mysqli_query($link,"select * from eps where companynumber = $searchCompanyCode "); ?><?php 
 	$row = mysqli_fetch_array($companySearch);
-	$arrayiSales[0] = $row['Mar07'];
-	$arrayiSales[1] = $row['Mar08'];
-	$arrayiSales[2] = $row['Mar09'];
-	$arrayiSales[3] = $row['Mar10'];
-	$arrayiSales[4] = $row['Mar11'];
-	$arrayiSales[5] = $row['Mar12'];
+	$arrayiSales[0] = $row['Mar13'];
+	$arrayiSales[1] = $row['Mar14'];
+	$arrayiSales[2] = $row['Mar15'];
+	$arrayiSales[3] = $row['Mar16'];
+	$arrayiSales[4] = $row['Mar17'];
+	$arrayiSales[5] = $row['Mar18'];
 	$avgsalesGrowth = $row['GrowthPer'];
 		
-	$arrayiGrowth[0] = $row['growth7_8'];
-	$arrayiGrowth[1] = $row['growth8_9'];
-	$arrayiGrowth[2] = $row['growth9_10'];
-	$arrayiGrowth[3] = $row['growth10_11'];
-	$arrayiGrowth[4] = $row['growth11_12'];
+	$arrayiGrowth[0] = $row['growth13_14'];
+	$arrayiGrowth[1] = $row['growth14_15'];
+	$arrayiGrowth[2] = $row['growth15_16'];
+	$arrayiGrowth[3] = $row['growth16_17'];
+	$arrayiGrowth[4] = $row['growth17_18'];
 	
 	$arrayiGrowth[1] = intval($arrayiGrowth[1]);
 	$arrayiGrowth[2] = intval($arrayiGrowth[2]);

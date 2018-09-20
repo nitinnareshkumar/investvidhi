@@ -16,7 +16,7 @@ include("config/config.inc.php");
 <link rel="stylesheet" type="text/css" href="css/jquery.coolautosuggest.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <style type="text/css">
-<!--
+
 a:link {
 	text-decoration: none;
 }
@@ -29,7 +29,6 @@ a:hover {
 a:active {
 	text-decoration: none;
 }
--->
 </style></head>
 <body>
 <script type="text/javascript">
@@ -62,7 +61,9 @@ return false;
 
 function validateForm()
 {
+	
 var x=document.forms["indexform"]["txt_name"].value;
+  alert(x);
 if (x==null || x=="")
   {
   alert("Please enter the company name");
@@ -70,6 +71,7 @@ if (x==null || x=="")
   }
 }
 </script>
+
 <?php
 include("header.inc.php");
 ?>
@@ -83,8 +85,14 @@ include("header.inc.php");
 
 </table>
 
-<div class="companyLabel"><span class="greytxt14grey">Enter Company Name </span></div><div class="company" align="center">  <form action="CompanySearchResults.php" onSubmit="return validateForm()" method="post" enctype="multipart/form-data" name="indexform" id=""><input type="hidden" name="code" id="code" size="5" /><input name="txt_name" type="text" class="company" id="txt_name" onfocus="if (this.value == 'ENTER COMPANY NAME') {this.value = '';}" onblur="if (this.value == '') {this.value = 'ENTER COMPANY NAME';}" value="ENTER COMPANY NAME">
-
+<div class="companyLabel"><span class="greytxt14grey">Enter Company Name </span></div><div class="company" align="center">  <form action="CompanySearchResults.php" onSubmit="return validateForm()" method="POST" enctype="multipart/form-data" name="indexform" id=""><input type="hidden" name="code" id="code" size="5" /><input name="txt_name" type="text" class="company" id="txt_name" onfocus="if (this.value == 'ENTER COMPANY NAME') {this.value = '';}" onblur="if (this.value == '') {this.value = 'ENTER COMPANY NAME';}" value="ENTER COMPANY NAME" autocomplete="off">
+<script language="javascript" type="text/javascript">
+					$("#txt_name").coolautosuggest({
+						url:"data.php?chars=",
+						idField:$("#code"),
+						width:225
+					});
+				</script>
 &nbsp;<input type="submit" class="btn" value="FIND"></form></div>
 
 <div class="clear5"></div>
